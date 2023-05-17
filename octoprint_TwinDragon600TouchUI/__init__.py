@@ -56,7 +56,7 @@ class TwinDragon600TouchUI(octoprint.plugin.StartupPlugin):
                 current=self._plugin_version,
 
                 # update method: pip
-                pip="https://github.com/FracktalWorks/TwinDragon600TouchUI/archive/{target_version}.zip"
+                pip="https://github.com/FracktalWorks/Twin-Dragon-600-TouchUI/archive/{target_version}.zip"
             )
         )
 
