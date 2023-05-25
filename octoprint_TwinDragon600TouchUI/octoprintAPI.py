@@ -77,9 +77,9 @@ class octoprintAPI:
         if exists:
             filename = os.path.basename(file)
             with open(file, 'rb') as f:
-                yield (filename, f, mime)
+                yield f
         else:
-            yield file + (mime,)
+            yield open(file, 'rb')
 
     def uploadGcode(self, file, location='local', select=False, prnt=False):
         '''
@@ -114,7 +114,7 @@ class octoprintAPI:
         # mime = 'application/octet-stream'
         mime = 'image/png'
         try:
-            exists = os.path.exists(file)
+            exists = os.path.exists(file)           
         except:
             exists = False
 

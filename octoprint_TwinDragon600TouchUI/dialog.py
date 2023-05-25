@@ -66,7 +66,7 @@ class SelfCenteringMessageBox(QtWidgets.QMessageBox):
         if objLabel:
             objLabel.setStyleSheet(styles.msgbox_label)
             objLabel.setAlignment(QtCore.Qt.AlignLeft | QtCore.Qt.AlignTop)
-            objLabel.setMinimumSize(250, 80)
+            objLabel.setMinimumSize(350, 120)
 
     def setLocalIcon(self, icon=None):
         if icon:

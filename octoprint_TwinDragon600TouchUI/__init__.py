@@ -52,16 +52,16 @@ class TwinDragon600TouchUI(octoprint.plugin.StartupPlugin):
                 # version check: github repository
                 type="github_release",
                 user="FracktalWorks",
-                repo="TwinDragon600TouchUI",
+                repo="Octoprint-TwinDragon600TouchUI",
                 current=self._plugin_version,
 
                 # update method: pip
-                pip="https://github.com/FracktalWorks/Twin-Dragon-600-TouchUI/archive/{target_version}.zip"
+                pip="https://github.com/FracktalWorks/TwinDragon600TouchUI/archive/{target_version}.zip"
             )
         )
 
 
-__plugin_name__ = "Twin Dragon 600 Touch UI"
+__plugin_name__ = "TwinDragon600TouchUI"
 __plugin_version__ = __version__
 __plugin_pythoncompat__ = ">=3,<4"
 
