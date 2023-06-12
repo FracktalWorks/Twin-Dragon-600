@@ -1950,16 +1950,16 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
                 self.printFromPath('gcode/' + tool0Diameter + '_BedLeveling.gcode', True)
             elif gcode is 'dualCalibration':
                 self.printFromPath(
-                    'gcode/' + tool0Diameter + '_' + tool1Diameter + '_dual_extruder_calibration_Idex.gcode',
+                    'gcode/' + tool0Diameter + '_' + tool1Diameter + '_dual_extruder_calibration_TwinDragon600.gcode',
                     True)
             elif gcode is 'movementTest':
                 self.printFromPath('gcode/movementTest.gcode', True)
             elif gcode is 'dualTest':
                 self.printFromPath(
-                    'gcode/' + tool0Diameter + '_' + tool1Diameter + '_Fracktal_logo_Idex.gcode',
+                    'gcode/' + tool0Diameter + '_' + tool1Diameter + '_Fracktal_logo_TwinDragon600.gcode',
                     True)
             elif gcode is 'singleTest':
-                self.printFromPath('gcode/' + tool0Diameter + '_Fracktal_logo_Idex.gcode',True)
+                self.printFromPath('gcode/' + tool0Diameter + '_Fracktal_logo_TwinDragon600.gcode',True)
 
             else:
                 print("gcode not found")
