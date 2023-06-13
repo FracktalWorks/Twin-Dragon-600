@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '.\mainGUI.ui'
+# Form implementation generated from reading ui file 'mainGUI.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -1598,7 +1598,7 @@ class Ui_MainWindow(object):
 "}")
         self.deleteStaticIPSettingsButton.setText("")
         icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap("templates/img/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon9.addPixmap(QtGui.QPixmap("../../../GitHub/JuliaProSingle2022TouchUI/octoprint_JuliaProSingle2022TouchUI/templates/img/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.deleteStaticIPSettingsButton.setIcon(icon9)
         self.deleteStaticIPSettingsButton.setIconSize(QtCore.QSize(40, 40))
         self.deleteStaticIPSettingsButton.setObjectName("deleteStaticIPSettingsButton")
@@ -3055,7 +3055,7 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         icon15 = QtGui.QIcon()
-        icon15.addPixmap(QtGui.QPixmap("templates/img/3d-printing.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon15.addPixmap(QtGui.QPixmap("../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/3d-printing.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.testPrintsButton.setIcon(icon15)
         self.testPrintsButton.setIconSize(QtCore.QSize(60, 60))
         self.testPrintsButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
@@ -3138,7 +3138,7 @@ class Ui_MainWindow(object):
 "}")
         self.testPrintsBackButton.setText("")
         icon16 = QtGui.QIcon()
-        icon16.addPixmap(QtGui.QPixmap("templates/img/arrows-4.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon16.addPixmap(QtGui.QPixmap("../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/arrows-4.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.testPrintsBackButton.setIcon(icon16)
         self.testPrintsBackButton.setIconSize(QtCore.QSize(40, 40))
         self.testPrintsBackButton.setObjectName("testPrintsBackButton")
@@ -3410,7 +3410,7 @@ class Ui_MainWindow(object):
         self.tool0Label_2.setStyleSheet("\n"
 "   color:  white;")
         self.tool0Label_2.setText("")
-        self.tool0Label_2.setPixmap(QtGui.QPixmap("templates/img/Nozzle.png"))
+        self.tool0Label_2.setPixmap(QtGui.QPixmap("../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/Nozzle.png"))
         self.tool0Label_2.setScaledContents(True)
         self.tool0Label_2.setObjectName("tool0Label_2")
         self.tool0Label_3 = QtWidgets.QLabel(self.testPrintsPage1)
@@ -3426,7 +3426,7 @@ class Ui_MainWindow(object):
         self.tool0Label_3.setStyleSheet("\n"
 "   color:  white;")
         self.tool0Label_3.setText("")
-        self.tool0Label_3.setPixmap(QtGui.QPixmap("templates/img/exclamation-mark.png"))
+        self.tool0Label_3.setPixmap(QtGui.QPixmap("../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/exclamation-mark.png"))
         self.tool0Label_3.setScaledContents(True)
         self.tool0Label_3.setObjectName("tool0Label_3")
         self.tool0Label_5 = QtWidgets.QLabel(self.testPrintsPage1)
@@ -3442,7 +3442,7 @@ class Ui_MainWindow(object):
         self.tool0Label_5.setStyleSheet("\n"
 "   color:  white;")
         self.tool0Label_5.setText("")
-        self.tool0Label_5.setPixmap(QtGui.QPixmap("templates/img/exclamation-mark.png"))
+        self.tool0Label_5.setPixmap(QtGui.QPixmap("../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/exclamation-mark.png"))
         self.tool0Label_5.setScaledContents(True)
         self.tool0Label_5.setObjectName("tool0Label_5")
         self.tool0TargetTemperature_5 = QtWidgets.QLabel(self.testPrintsPage1)
@@ -3488,7 +3488,7 @@ class Ui_MainWindow(object):
         self.tool1Label_2.setStyleSheet("\n"
 "   color:  white;")
         self.tool1Label_2.setText("")
-        self.tool1Label_2.setPixmap(QtGui.QPixmap("templates/img/Nozzle.png"))
+        self.tool1Label_2.setPixmap(QtGui.QPixmap("../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/Nozzle.png"))
         self.tool1Label_2.setScaledContents(True)
         self.tool1Label_2.setObjectName("tool1Label_2")
         self.calibrateLabel_2.raise_()
@@ -3750,7 +3750,7 @@ class Ui_MainWindow(object):
         self.tool0Label_4.setStyleSheet("\n"
 "   color:  white;")
         self.tool0Label_4.setText("")
-        self.tool0Label_4.setPixmap(QtGui.QPixmap("templates/img/exclamation-mark.png"))
+        self.tool0Label_4.setPixmap(QtGui.QPixmap("../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/exclamation-mark.png"))
         self.tool0Label_4.setScaledContents(True)
         self.tool0Label_4.setObjectName("tool0Label_4")
         self.stackedWidget.addWidget(self.testPrintsPage2)
@@ -6357,8 +6357,8 @@ class Ui_MainWindow(object):
 "}")
         self.toolToggleTemperatureButton.setText("")
         icon28 = QtGui.QIcon()
-        icon28.addPixmap(QtGui.QPixmap("templates/img/NozzleSelect_0.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon28.addPixmap(QtGui.QPixmap("templates/img/NozzleSelect_1.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon28.addPixmap(QtGui.QPixmap("../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/NozzleSelect_0.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon28.addPixmap(QtGui.QPixmap("../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/NozzleSelect_1.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.toolToggleTemperatureButton.setIcon(icon28)
         self.toolToggleTemperatureButton.setIconSize(QtCore.QSize(90, 90))
         self.toolToggleTemperatureButton.setCheckable(True)
@@ -6545,7 +6545,7 @@ class Ui_MainWindow(object):
 "}")
         self.setToolTempButton.setText("")
         icon29 = QtGui.QIcon()
-        icon29.addPixmap(QtGui.QPixmap("templates/img/verification-mark.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon29.addPixmap(QtGui.QPixmap("../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/verification-mark.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.setToolTempButton.setIcon(icon29)
         self.setToolTempButton.setIconSize(QtCore.QSize(50, 50))
         self.setToolTempButton.setObjectName("setToolTempButton")
@@ -6638,7 +6638,7 @@ class Ui_MainWindow(object):
 "   color:  white;\n"
 "background-color: rgba(255, 255, 255, 0);")
         self.bedLabel_4.setText("")
-        self.bedLabel_4.setPixmap(QtGui.QPixmap("templates/img/bed.png"))
+        self.bedLabel_4.setPixmap(QtGui.QPixmap("../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/bed.png"))
         self.bedLabel_4.setScaledContents(True)
         self.bedLabel_4.setObjectName("bedLabel_4")
         self.toolLabel.raise_()
