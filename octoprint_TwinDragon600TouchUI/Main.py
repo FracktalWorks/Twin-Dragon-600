@@ -461,25 +461,25 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.toolOffsetXYButton.pressed.connect(self.updateToolOffsetXY)
         self.toolOffsetZButton.pressed.connect(self.updateToolOffsetZ)
 
-        self.testPrintsButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.testPrintsPage1))
-        self.testPrintsNextButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.testPrintsPage2))
-        self.testPrintsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.calibratePage))
-        self.testPrintsCancelButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.calibratePage))
-        self.dualCaliberationPrintButton.pressed.connect(
-            lambda: self.testPrint(str(self.testPrintsTool0SizeComboBox.currentText()).replace('.', ''),
-                                   str(self.testPrintsTool1SizeComboBox.currentText()).replace('.', ''), 'dualCalibration'))
-        self.bedLevelPrintButton.pressed.connect(
-            lambda: self.testPrint(str(self.testPrintsTool0SizeComboBox.currentText()).replace('.', ''),
-                                   str(self.testPrintsTool1SizeComboBox.currentText()).replace('.', ''), 'bedLevel'))
-        self.movementTestPrintButton.pressed.connect(
-            lambda: self.testPrint(str(self.testPrintsTool0SizeComboBox.currentText()).replace('.', ''),
-                                   str(self.testPrintsTool1SizeComboBox.currentText()).replace('.', ''), 'movementTest'))
-        self.singleNozzlePrintButton.pressed.connect(
-            lambda: self.testPrint(str(self.testPrintsTool0SizeComboBox.currentText()).replace('.', ''),
-                                   str(self.testPrintsTool1SizeComboBox.currentText()).replace('.', ''), 'dualTest'))
-        self.dualNozzlePrintButton.pressed.connect(
-            lambda: self.testPrint(str(self.testPrintsTool0SizeComboBox.currentText()).replace('.', ''),
-                                   str(self.testPrintsTool1SizeComboBox.currentText()).replace('.', ''), 'singleTest'))
+        # self.testPrintsButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.testPrintsPage1))
+        # self.testPrintsNextButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.testPrintsPage2))
+        # self.testPrintsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.calibratePage))
+        # self.testPrintsCancelButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.calibratePage))
+        # self.dualCaliberationPrintButton.pressed.connect(
+        #     lambda: self.testPrint(str(self.testPrintsTool0SizeComboBox.currentText()).replace('.', ''),
+        #                            str(self.testPrintsTool1SizeComboBox.currentText()).replace('.', ''), 'dualCalibration'))
+        # self.bedLevelPrintButton.pressed.connect(
+        #     lambda: self.testPrint(str(self.testPrintsTool0SizeComboBox.currentText()).replace('.', ''),
+        #                            str(self.testPrintsTool1SizeComboBox.currentText()).replace('.', ''), 'bedLevel'))
+        # self.movementTestPrintButton.pressed.connect(
+        #     lambda: self.testPrint(str(self.testPrintsTool0SizeComboBox.currentText()).replace('.', ''),
+        #                            str(self.testPrintsTool1SizeComboBox.currentText()).replace('.', ''), 'movementTest'))
+        # self.singleNozzlePrintButton.pressed.connect(
+        #     lambda: self.testPrint(str(self.testPrintsTool0SizeComboBox.currentText()).replace('.', ''),
+        #                            str(self.testPrintsTool1SizeComboBox.currentText()).replace('.', ''), 'dualTest'))
+        # self.dualNozzlePrintButton.pressed.connect(
+        #     lambda: self.testPrint(str(self.testPrintsTool0SizeComboBox.currentText()).replace('.', ''),
+        #                            str(self.testPrintsTool1SizeComboBox.currentText()).replace('.', ''), 'singleTest'))
 
         # PrintLocationScreen
         self.printLocationScreenBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.MenuPage))
