@@ -176,7 +176,7 @@ QStatusBar::item {
 background-color: rgb(40, 40, 40);</string>
     </property>
     <property name="currentIndex">
-     <number>30</number>
+     <number>28</number>
     </property>
     <widget class="QWidget" name="loadingPage">
      <widget class="QLabel" name="LoadingLabel">
@@ -2916,7 +2916,7 @@ QPushButton:focus {
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../GitHub/JuliaProSingle2022TouchUI/octoprint_JuliaProSingle2022TouchUI/templates/img/delete.png</normaloff>../../../GitHub/JuliaProSingle2022TouchUI/octoprint_JuliaProSingle2022TouchUI/templates/img/delete.png</iconset>
+        <normaloff>templates/img/delete.png</normaloff>templates/img/delete.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -5347,7 +5347,7 @@ QToolButton:focus {
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/3d-printing.png</normaloff>../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/3d-printing.png</iconset>
+        <normaloff>templates/img/3d-printing.png</normaloff>templates/img/3d-printing.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -5514,7 +5514,7 @@ QPushButton:focus {
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/arrows-4.png</normaloff>../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/arrows-4.png</iconset>
+        <normaloff>templates/img/arrows/arrows-4.png</normaloff>templates/img/arrows/arrows-4.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -5888,7 +5888,7 @@ QComboBox QAbstractItemView {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/Nozzle.png</pixmap>
+       <pixmap>templates/img/Nozzle.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -5921,7 +5921,7 @@ QComboBox QAbstractItemView {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/exclamation-mark.png</pixmap>
+       <pixmap>templates/img/exclamation-mark.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -5954,7 +5954,7 @@ QComboBox QAbstractItemView {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/exclamation-mark.png</pixmap>
+       <pixmap>templates/img/exclamation-mark.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -6049,7 +6049,7 @@ background-color: rgba(255, 255, 255, 0);</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/Nozzle.png</pixmap>
+       <pixmap>templates/img/Nozzle.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -6502,7 +6502,7 @@ QPushButton:default {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/exclamation-mark.png</pixmap>
+       <pixmap>templates/img/exclamation-mark.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -9925,10 +9925,13 @@ background-color: rgba(255, 255, 255, 0);</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../JuliaMiniTouchUI/octoprint_JuliaMiniTouchUI/templates/img/thumbnail.png</pixmap>
+       <pixmap>templates/img/thumbnail.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
       </property>
      </widget>
     </widget>
@@ -10257,7 +10260,7 @@ QTabBar:focus {
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>1</number>
       </property>
       <property name="iconSize">
        <size>
@@ -11129,8 +11132,8 @@ QPushButton:focus {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/NozzleSelect_0.png</normaloff>
-          <normalon>../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/NozzleSelect_1.png</normalon>../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/NozzleSelect_0.png</iconset>
+          <normaloff>templates/img/NozzleSelect_0.png</normaloff>
+          <normalon>templates/img/NozzleSelect_1.png</normalon>templates/img/NozzleSelect_0.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -11436,7 +11439,7 @@ QPushButton:focus {
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/verification-mark.png</normaloff>../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/verification-mark.png</iconset>
+          <normaloff>templates/img/verification-mark.png</normaloff>templates/img/verification-mark.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -11612,7 +11615,7 @@ background-color: rgba(255, 255, 255, 0);</string>
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/bed.png</pixmap>
+         <pixmap>templates/img/bed.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
