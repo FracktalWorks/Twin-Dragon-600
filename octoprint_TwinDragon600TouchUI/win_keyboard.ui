@@ -6464,7 +6464,7 @@ QPushButton:focus {
     <zorder>btSubmitSpecial</zorder>
    </widget>
   </widget>
-  <widget class="QPushButton" name="btCursorLeft">
+  <widget class="QPushButton" name="btCursorLeft_2">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -6522,7 +6522,7 @@ QPushButton:focus {
     </size>
    </property>
   </widget>
-  <widget class="QPushButton" name="btCursorRight">
+  <widget class="QPushButton" name="btCursorRight_2">
    <property name="geometry">
     <rect>
      <x>400</x>

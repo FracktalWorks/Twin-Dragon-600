@@ -29,7 +29,7 @@ plugin_author = "Nishant Bilurkar"
 plugin_author_email = "nishant@fracktal.in"
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
-plugin_url = "https://github.com/FracktalWorks/TwinDragon600TouchUI"
+plugin_url = "https://github.com/FracktalWorks/Twin-Dragon-600-TouchUI"
 
 # The plugin's license. Can be overwritten within OctoPrint's internal data via __plugin_license__ in the plugin module
 plugin_license = "AGPLv3"

@@ -5,8 +5,8 @@
  *
  * Fracktal Works
  * __________________
- * Authors: Vijay Varada/Nishant Bilurkar
- * Created: May 2023
+ * Authors: Vijay Varada
+ * Created: Nov 2016
  *
  * Licence: AGPLv3
 *************************************************************************
@@ -41,10 +41,10 @@ import re
 import logging
 from collections import OrderedDict
 
-#if not Development:
-    #import RPi.GPIO as GPIO
-    #GPIO.setmode(GPIO.BCM)  # Use the board numbering scheme
-    #GPIO.setwarnings(False)  # Disable GPIO warnings H
+if not Development:
+    import RPi.GPIO as GPIO
+    GPIO.setmode(GPIO.BCM)  # Use the board numbering scheme
+    GPIO.setwarnings(False)  # Disable GPIO warnings H
 
 # TODO:
 '''
@@ -188,24 +188,24 @@ def getHostname():
     except:
         return "Error"
 
-#class BuzzerFeedback(object):
-    #def __init__(self, buzzerPin):
-        #if not Development:
-            #GPIO.cleanup()
-            #self.buzzerPin = buzzerPin
-            #GPIO.setup(self.buzzerPin, GPIO.OUT)
-            #GPIO.output(self.buzzerPin, GPIO.LOW)
-        #pass
+class BuzzerFeedback(object):
+    def __init__(self, buzzerPin):
+        if not Development:
+            GPIO.cleanup()
+            self.buzzerPin = buzzerPin
+            GPIO.setup(self.buzzerPin, GPIO.OUT)
+            GPIO.output(self.buzzerPin, GPIO.LOW)
+        pass
 
-    #@run_async
-    #def buzz(self):
-        #if not Development:
-            #GPIO.output(self.buzzerPin, (GPIO.HIGH))
-            #time.sleep(0.005)
-            #GPIO.output(self.buzzerPin, GPIO.LOW)
-        #pass
+    @run_async
+    def buzz(self):
+        if not Development:
+            GPIO.output(self.buzzerPin, (GPIO.HIGH))
+            time.sleep(0.005)
+            GPIO.output(self.buzzerPin, GPIO.LOW)
+        pass
 
-#buzzer = BuzzerFeedback(12)
+buzzer = BuzzerFeedback(12)
 
 
 '''
@@ -217,13 +217,13 @@ OriginalToolButton = QtWidgets.QToolButton
 
 class QPushButtonFeedback(QtWidgets.QPushButton):
     def mousePressEvent(self, QMouseEvent):
-        #buzzer.buzz()
+        buzzer.buzz()
         OriginalPushButton.mousePressEvent(self, QMouseEvent)
 
 
 class QToolButtonFeedback(QtWidgets.QToolButton):
     def mousePressEvent(self, QMouseEvent):
-        #buzzer.buzz()
+        buzzer.buzz()
         OriginalToolButton.mousePressEvent(self, QMouseEvent)
 
 
@@ -260,7 +260,7 @@ class ClickableLineEdit(QtWidgets.QLineEdit):
     def __init__(self, parent):
         QtWidgets.QLineEdit.__init__(self, parent)
     def mousePressEvent(self, QMouseEvent):
-        #buzzer.buzz()
+        buzzer.buzz()
         self.clicked_signal.emit()
 
 
@@ -283,23 +283,17 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.wifiPasswordLineEdit.setObjectName(_fromUtf8("wifiPasswordLineEdit"))
 
         font.setPointSize(11)
-        self.staticIPLineEdit = ClickableLineEdit(self.ethStaticSettings)
-        self.staticIPLineEdit.setGeometry(QtCore.QRect(120, 20, 300, 30))
-        self.staticIPLineEdit.setFont(font)
-        self.staticIPLineEdit.setStyleSheet(styles.textedit)
-        self.staticIPLineEdit.setObjectName(_fromUtf8("staticIPLineEdit"))
+        self.ethStaticIpLineEdit = ClickableLineEdit(self.ethStaticSettings)
+        self.ethStaticIpLineEdit.setGeometry(QtCore.QRect(120, 10, 300, 30))
+        self.ethStaticIpLineEdit.setFont(font)
+        self.ethStaticIpLineEdit.setStyleSheet(styles.textedit)
+        self.ethStaticIpLineEdit.setObjectName(_fromUtf8("ethStaticIpLineEdit"))
 
-        self.staticIPGatewayLineEdit = ClickableLineEdit(self.ethStaticSettings)
-        self.staticIPGatewayLineEdit.setGeometry(QtCore.QRect(120, 90, 300, 30))
-        self.staticIPGatewayLineEdit.setFont(font)
-        self.staticIPGatewayLineEdit.setStyleSheet(styles.textedit)
-        self.staticIPGatewayLineEdit.setObjectName(_fromUtf8("staticIPGatewayLineEdit"))
-
-        self.staticIPNameServerLineEdit = ClickableLineEdit(self.ethStaticSettings)
-        self.staticIPNameServerLineEdit.setGeometry(QtCore.QRect(120, 160, 300, 30))
-        self.staticIPNameServerLineEdit.setFont(font)
-        self.staticIPNameServerLineEdit.setStyleSheet(styles.textedit)
-        self.staticIPNameServerLineEdit.setObjectName(_fromUtf8("staticIPNameServerLineEdit"))
+        self.ethStaticGatewayLineEdit = ClickableLineEdit(self.ethStaticSettings)
+        self.ethStaticGatewayLineEdit.setGeometry(QtCore.QRect(120, 60, 300, 30))
+        self.ethStaticGatewayLineEdit.setFont(font)
+        self.ethStaticGatewayLineEdit.setStyleSheet(styles.textedit)
+        self.ethStaticGatewayLineEdit.setObjectName(_fromUtf8("ethStaticGatewayLineEdit"))
 
         self.menuCartButton.setDisabled(True)
 
@@ -315,7 +309,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         if not Development:
             formatter = logging.Formatter("%(asctime)s %(message)s")
             self._logger = logging.getLogger("TouchUI")
-            file_handler = logging.FileHandler("/home/biqu/ui.log")
+            file_handler = logging.FileHandler("/home/pi/ui.log")
             file_handler.setFormatter(formatter)
             stream_handler = logging.StreamHandler()
             stream_handler.setFormatter(formatter)
@@ -351,7 +345,6 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             self.setNewToolZOffsetFromCurrentZBool = False
             self.setActiveExtruder(0)
 
-            self.dialog_filamentsensor = None
 
             for spinbox in self.findChildren(QtWidgets.QSpinBox):
                 lineEdit = spinbox.lineEdit()
@@ -367,7 +360,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
 
     def proceed(self):
         '''
-        Startes websocket, as well as initialises button actions and callbacks. THis is done in such a manner so that the callbacks that depend on websockets
+        Startes websocket, as well as initialises button actions and callbacks. THis is done in such a manner so that the callbacks that dnepend on websockets
         load only after the socket is available which in turn is dependent on the server being available which is checked in the sanity check thread
         '''
         self.QtSocket = QtWebsocket()
@@ -409,9 +402,8 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
 
         # Text Input events
         self.wifiPasswordLineEdit.clicked_signal.connect(lambda: self.startKeyboard(self.wifiPasswordLineEdit.setText))
-        self.staticIPLineEdit.clicked_signal.connect(lambda: self.staticIPShowKeyboard(self.staticIPLineEdit))
-        self.staticIPGatewayLineEdit.clicked_signal.connect(lambda: self.staticIPShowKeyboard(self.staticIPGatewayLineEdit))
-        self.staticIPNameServerLineEdit.clicked_signal.connect(lambda: self.staticIPShowKeyboard(self.staticIPNameServerLineEdit))
+        self.ethStaticIpLineEdit.clicked_signal.connect(lambda: self.ethShowKeyboard(self.ethStaticIpLineEdit))
+        self.ethStaticGatewayLineEdit.clicked_signal.connect(lambda: self.ethShowKeyboard(self.ethStaticGatewayLineEdit))
 
         # Button Events:
 
@@ -445,13 +437,13 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.quickStep1NextButton.clicked.connect(self.quickStep2)
         self.quickStep2NextButton.clicked.connect(self.quickStep3)
         self.quickStep3NextButton.clicked.connect(self.quickStep4)
-        #self.quickStep4NextButton.clicked.connect(self.nozzleHeightStep1)
-        #self.nozzleHeightStep1NextButton.clicked.connect(self.nozzleHeightStep1)
+        self.quickStep4NextButton.clicked.connect(self.nozzleHeightStep1)
+        self.nozzleHeightStep1NextButton.clicked.connect(self.nozzleHeightStep1)
         self.quickStep1CancelButton.pressed.connect(self.cancelStep)
         self.quickStep2CancelButton.pressed.connect(self.cancelStep)
         self.quickStep3CancelButton.pressed.connect(self.cancelStep)
         self.quickStep4CancelButton.pressed.connect(self.cancelStep)
-        #self.nozzleHeightStep1CancelButton.pressed.connect(self.cancelStep)
+        self.nozzleHeightStep1CancelButton.pressed.connect(self.cancelStep)
         
         self.toolOffsetXSetButton.pressed.connect(self.setToolOffsetX)
         self.toolOffsetYSetButton.pressed.connect(self.setToolOffsetY)
@@ -461,6 +453,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.toolOffsetXYButton.pressed.connect(self.updateToolOffsetXY)
         self.toolOffsetZButton.pressed.connect(self.updateToolOffsetZ)
 
+<<<<<<< HEAD
         # self.testPrintsButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.testPrintsPage1))
         # self.testPrintsNextButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.testPrintsPage2))
         # self.testPrintsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.calibratePage))
@@ -481,6 +474,8 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         #     lambda: self.testPrint(str(self.testPrintsTool0SizeComboBox.currentText()).replace('.', ''),
         #                            str(self.testPrintsTool1SizeComboBox.currentText()).replace('.', ''), 'singleTest'))
 
+=======
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         # PrintLocationScreen
         self.printLocationScreenBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.MenuPage))
         self.fromLocalButton.pressed.connect(self.fileListLocal)
@@ -535,33 +530,24 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.toolToggleMotionButton.clicked.connect(self.selectToolMotion)
         self.controlBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.homePage))
         self.setToolTempButton.pressed.connect(self.setToolTemp)
-        self.tool180PreheatButton.pressed.connect(lambda: octopiclient.gcode(command='M104 T1 S180') if self.toolToggleTemperatureButton.isChecked() else octopiclient.gcode(command='M104 T0 S180'))
-        self.tool250PreheatButton.pressed.connect(lambda: octopiclient.gcode(command='M104 T1 S250') if self.toolToggleTemperatureButton.isChecked() else octopiclient.gcode(command='M104 T0 S250'))
-        self.tool180PreheatButton.pressed.connect(lambda: self.preheatToolTemp(180))
-        self.tool250PreheatButton.pressed.connect(lambda: self.preheatToolTemp(250))
         self.setBedTempButton.pressed.connect(lambda: octopiclient.setBedTemperature(self.bedTempSpinBox.value()))
-        self.bed60PreheatButton.pressed.connect(lambda: self.preheatBedTemp(60))
-        self.bed100PreheatButton.pressed.connect(lambda: self.preheatBedTemp(100))
-        #self.chamber40PreheatButton.pressed.connect(lambda: self.preheatChamberTemp(40))
-        #self.chamber70PreheatButton.pressed.connect(lambda: self.preheatChamberTemp(70))
-        #self.setChamberTempButton.pressed.connect(lambda: octopiclient.gcode(command='M141 S{}'.format(self.chamberTempSpinBox.value())))
         self.setFlowRateButton.pressed.connect(lambda: octopiclient.flowrate(self.flowRateSpinBox.value()))
         self.setFeedRateButton.pressed.connect(lambda: octopiclient.feedrate(self.feedRateSpinBox.value()))
 
-        self.moveZPBabyStep.pressed.connect(lambda: octopiclient.gcode(command='SET_GCODE_OFFSET Z_ADJUST=0.025 MOVE=1'))
-        self.moveZMBabyStep.pressed.connect(lambda: octopiclient.gcode(command='SET_GCODE_OFFSET Z_ADJUST=-0.025 MOVE=1'))
+        self.moveZPBabyStep.pressed.connect(lambda: octopiclient.gcode(command='M290 Z0.025'))
+        self.moveZMBabyStep.pressed.connect(lambda: octopiclient.gcode(command='M290 Z-0.025'))
 
         # ChangeFilament rutien
         self.changeFilamentButton.pressed.connect(self.changeFilament)
         self.toolToggleChangeFilamentButton.clicked.connect(self.selectToolChangeFilament)
         self.changeFilamentBackButton.pressed.connect(self.control)
         self.changeFilamentBackButton2.pressed.connect(self.changeFilamentCancel)
-        self.changeFilamentUnloadButton.pressed.connect(self.unloadFilament)
-        self.changeFilamentLoadButton.pressed.connect(self.loadFilament)
+        self.changeFilamentUnloadButton.pressed.connect(lambda: self.unloadFilament())
+        self.changeFilamentLoadButton.pressed.connect(lambda: self.loadFilament())
         self.loadDoneButton.pressed.connect(self.control)
         self.unloadDoneButton.pressed.connect(self.changeFilament)
-        #self.retractFilamentButton.pressed.connect(lambda: octopiclient.extrude(-20))
-        #self.ExtrudeButton.pressed.connect(lambda: octopiclient.extrude(20))
+        self.retractFilamentButton.pressed.connect(lambda: octopiclient.extrude(-20))
+        self.ExtrudeButton.pressed.connect(lambda: octopiclient.extrude(20))
 
         # Settings Page
         self.settingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.MenuPage))
@@ -579,7 +565,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         # Network settings page
         self.networkInfoButton.pressed.connect(self.networkInfo)
         self.configureWifiButton.pressed.connect(self.wifiSettings)
-        self.configureStaticIPButton.pressed.connect(self.staticIPSettings)
+        self.configureEthButton.pressed.connect(self.ethSettings)
         self.networkSettingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
 
         # Network Info Page
@@ -593,15 +579,14 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             lambda: self.stackedWidget.setCurrentWidget(self.networkSettingsPage))
         self.wifiSettingsDoneButton.pressed.connect(self.acceptWifiSettings)
 
-        # Static IP settings page
-        self.staticIPKeyboardButton.pressed.connect(lambda: self.staticIPShowKeyboard(self.staticIPLineEdit))                                                                            
-        self.staticIPGatewayKeyboardButton.pressed.connect(lambda: self.staticIPShowKeyboard(self.staticIPGatewayLineEdit))
-        self.staticIPNameServerKeyboardButton.pressed.connect(
-            lambda: self.staticIPShowKeyboard(self.staticIPNameServerLineEdit))
-        self.staticIPSettingsDoneButton.pressed.connect(self.staticIPSaveStaticNetworkInfo)
-        self.staticIPSettingsCancelButton.pressed.connect(
+        # Ethernet setings page
+        self.ethStaticCheckBox.stateChanged.connect(self.ethStaticChanged)
+        # self.ethStaticCheckBox.stateChanged.connect(lambda: self.ethStaticSettings.setVisible(self.ethStaticCheckBox.isChecked()))
+        self.ethStaticIpKeyboardButton.pressed.connect(lambda: self.ethShowKeyboard(self.ethStaticIpLineEdit))
+        self.ethStaticGatewayKeyboardButton.pressed.connect(lambda: self.ethShowKeyboard(self.ethStaticGatewayLineEdit))
+        self.ethSettingsDoneButton.pressed.connect(self.ethSaveStaticNetworkInfo)
+        self.ethSettingsCancelButton.pressed.connect(
             lambda: self.stackedWidget.setCurrentWidget(self.networkSettingsPage))
-        self.deleteStaticIPSettingsButton.pressed.connect(self.deleteStaticIPSettings)
 
         # Display settings
         self.rotateDisplay.pressed.connect(self.showRotateDisplaySettingsPage)
@@ -692,6 +677,8 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
                 dialog.WarningOk(response["status"])
             else:
                 dialog.WarningOk(response["status"])
+        else:
+            octoprintAPI.restore(restore=False)
 
     def onServerConnected(self):
         self.isFilamentSensorInstalled()
@@ -1057,13 +1044,50 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             time.sleep(60)
 
 
-    ''' +++++++++++++++++++++++++++++++++Static IP Settings+++++++++++++++++++++++++++++ '''
+    ''' +++++++++++++++++++++++++++++++++Ethernet Settings+++++++++++++++++++++++++++++ '''
 
-    def staticIPSettings(self):
-        self.stackedWidget.setCurrentWidget(self.staticIPSettingsPage)
-        #add "eth0" and "wlan0" to staticIPComboBox:
-        self.staticIPComboBox.clear()
-        self.staticIPComboBox.addItems(["eth0", "wlan0"])
+    def ethSettings(self):
+        self.stackedWidget.setCurrentWidget(self.ethSettingsPage)
+        # self.ethStaticCheckBox.setChecked(True)
+        self.ethNetworkInfo()
+
+    def ethStaticChanged(self, state):
+        self.ethStaticSettings.setVisible(self.ethStaticCheckBox.isChecked())
+        self.ethStaticSettings.setEnabled(self.ethStaticCheckBox.isChecked())
+        # if state == QtCore.Qt.Checked:
+        #     self.ethStaticSettings.setVisible(True)
+        # else:
+        #     self.ethStaticSettings.setVisible(False)
+
+    def ethNetworkInfo(self):
+        txt = subprocess.Popen("cat /etc/dhcpcd.conf", stdout=subprocess.PIPE, shell=True).communicate()[0]
+
+        reEthGlobal = b"interface\s+eth0\s?(static\s+[a-z0-9./_=\s]+\n)*"
+        reEthAddress = b"static\s+ip_address=([\d.]+)(/[\d]{1,2})?"
+        reEthGateway = b"static\s+routers=([\d.]+)(/[\d]{1,2})?"
+
+        mtEthGlobal = re.search(reEthGlobal, txt)
+
+        cbStaticEnabled = False
+        txtEthAddress = ""
+        txtEthGateway = ""
+
+        if mtEthGlobal:
+            sz = len(mtEthGlobal.groups())
+            cbStaticEnabled = (sz == 1)
+
+            if sz == 1:
+                mtEthAddress = re.search(reEthAddress, mtEthGlobal.group(0))
+                if mtEthAddress and len(mtEthAddress.groups()) == 2:
+                    txtEthAddress = mtEthAddress.group(1)
+                mtEthGateway = re.search(reEthGateway, mtEthGlobal.group(0))
+                if mtEthGateway and len(mtEthGateway.groups()) == 2:
+                    txtEthGateway = mtEthGateway.group(1)
+
+        self.ethStaticCheckBox.setChecked(cbStaticEnabled)
+        self.ethStaticSettings.setVisible(cbStaticEnabled)
+        self.ethStaticIpLineEdit.setText(txtEthAddress)
+        self.ethStaticGatewayLineEdit.setText(txtEthGateway)
 
     def isIpErr(self, ip):
         return (re.search(r"^(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$", ip) is None)
@@ -1071,85 +1095,66 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
     def showIpErr(self, var):
         return dialog.WarningOk(self, "Invalid input: {0}".format(var))
 
-    def staticIPSaveStaticNetworkInfo(self):
-        txtStaticIPInterface = self.staticIPComboBox.currentText()
-        txtStaticIPAddress = str(self.staticIPLineEdit.text())
-        txtStaticIPGateway = str(self.staticIPGatewayLineEdit.text())
-        txtStaticIPNameServer = str(self.staticIPNameServerLineEdit.text())
-        if self.isIpErr(txtStaticIPAddress):
-            return self.showIpErr("IP Address")
-        if self.isIpErr(txtStaticIPGateway):
-            return self.showIpErr("Gateway")
-        if txtStaticIPNameServer is not "":
-            if self.isIpErr(txtStaticIPNameServer):
-                return self.showIpErr("NameServer")
-        Globaltxt = subprocess.Popen("cat /etc/dhcpcd.conf", stdout=subprocess.PIPE, shell=True).communicate()[
-            0].decode('utf8')
-        staticIPConfig = ""
-        # using regex remove all lines staring with "interface" and "static" from txt
-        Globaltxt = re.sub(r"interface.*\n", "", Globaltxt)
-        Globaltxt = re.sub(r"static.*\n", "", Globaltxt)
-        Globaltxt = re.sub(r"^\s+", "", Globaltxt)                                                 
-        staticIPConfig = "\ninterface {0}\nstatic ip_address={1}/24\nstatic routers={2}\nstatic domain_name_servers=8.8.8.8 8.8.4.4 {3}\n\n".format(
-            txtStaticIPInterface, txtStaticIPAddress, txtStaticIPGateway, txtStaticIPNameServer)
-        Globaltxt = staticIPConfig + Globaltxt
-        with open("/etc/dhcpcd.conf", "w") as f:
-            f.write(Globaltxt)
+    def ethSaveStaticNetworkInfo(self):
+        cbStaticEnabled = self.ethStaticCheckBox.isChecked()
+        txtEthAddress = str(self.ethStaticIpLineEdit.text())
+        txtEthGateway = str(self.ethStaticGatewayLineEdit.text())
 
-        if txtStaticIPInterface == 'eth0':
-            print("Restarting networking for eth0")
-            self.restartStaticIPThreadObject = ThreadRestartNetworking(ThreadRestartNetworking.ETH)
-            self.restartStaticIPThreadObject.signal.connect(self.staticIPReconnectResult)
-            self.restartStaticIPThreadObject.start()
-            # self.connect(self.restartStaticIPThreadObject, QtCore.SIGNAL(signal), self.staticIPReconnectResult)
-            self.staticIPMessageBox = dialog.dialog(self,
-                                                    "Restarting networking, please wait...",
-                                                    icon="exclamation-mark.png",
-                                                    buttons=QtWidgets.QMessageBox.Cancel)
-            if self.staticIPMessageBox.exec_() in {QtWidgets.QMessageBox.Ok, QtWidgets.QMessageBox.Cancel}:
-                self.stackedWidget.setCurrentWidget(self.networkSettingsPage)
-        elif txtStaticIPInterface == 'wlan0':
-            print("Restarting networking for wlan0")
-            self.restartWifiThreadObject = ThreadRestartNetworking(ThreadRestartNetworking.WLAN)
-            self.restartWifiThreadObject.signal.connect(self.wifiReconnectResult)
-            self.restartWifiThreadObject.start()
-            self.wifiMessageBox = dialog.dialog(self,
-                                                "Restarting networking, please wait...",
-                                                icon="exclamation-mark.png",
-                                                buttons=QtWidgets.QMessageBox.Cancel)
-            if self.wifiMessageBox.exec_() in {QtWidgets.QMessageBox.Ok, QtWidgets.QMessageBox.Cancel}:
-                self.stackedWidget.setCurrentWidget(self.networkSettingsPage)
+        if cbStaticEnabled:
+            if self.isIpErr(txtEthAddress):
+                return self.showIpErr("IP Address")
+            if self.isIpErr(txtEthGateway):
+                return self.showIpErr("Gateway")
 
-    def deleteStaticIPSettings(self):
-        Globaltxt = subprocess.Popen("cat /etc/dhcpcd.conf", stdout=subprocess.PIPE, shell=True).communicate()[
-            0].decode('utf8')
-        # using regex remove all lines staring with "interface" and "static" from txt
-        Globaltxt = re.sub(r"interface.*\n", "", Globaltxt)
-        Globaltxt = re.sub(r"static.*\n", "", Globaltxt)
-        Globaltxt = re.sub(r"^\s+", "", Globaltxt)
-        with open("/etc/dhcpcd.conf", "w") as f:
-            f.write(Globaltxt)
-        self.stackedWidget.setCurrentWidget(self.networkSettingsPage)                                                  
-                                                                                                  
-    def staticIPReconnectResult(self, x):
-        self.staticIPMessageBox.setStandardButtons(QtWidgets.QMessageBox.Ok)
+        txt = subprocess.Popen("cat /etc/dhcpcd.conf", stdout=subprocess.PIPE, shell=True).communicate()[0]
+        op = ""
+
+        reEthGlobal = r"interface\s+eth0"
+        mtEthGlobal = re.search(reEthGlobal, txt)
+
+        if cbStaticEnabled:
+            if not mtEthGlobal:
+                txt = txt + "\n" + "interface eth0" + "\n"
+            op = "interface eth0\nstatic ip_address={0}/24\nstatic routers={1}\nstatic domain_name_servers=8.8.8.8 8.8.4.4\n\n".format(
+                txtEthAddress, txtEthGateway)
+
+        res = re.sub(r"interface\s+eth0\s?(static\s+[a-z0-9./_=\s]+\n)*", op, txt)
+        try:
+            file = open("/etc/dhcpcd.conf", "w")
+            file.write(res)
+            file.close()
+        except:
+            if dialog.WarningOk(self, "Failed to change Ethernet Interface configuration."):
+                pass
+
+        # signal = 'ETH_RECONNECT_RESULT'
+        # self.restartEthThreadObject = ThreadRestartNetworking(ThreadRestartNetworking.ETH, signal)
+        self.restartEthThreadObject = ThreadRestartNetworking(ThreadRestartNetworking.ETH)
+        self.restartEthThreadObject.signal.connect(self.ethReconnectResult)
+        self.restartEthThreadObject.start()
+        # self.connect(self.restartEthThreadObject, QtCore.SIGNAL(signal), self.ethReconnectResult)
+        self.ethMessageBox = dialog.dialog(self,
+                                           "Restarting networking, please wait...",
+                                           icon="exclamation-mark.png",
+                                           buttons=QtWidgets.QMessageBox.Cancel)
+        if self.ethMessageBox.exec_() in {QtWidgets.QMessageBox.Ok, QtWidgets.QMessageBox.Cancel}:
+            self.stackedWidget.setCurrentWidget(self.networkSettingsPage)
+
+    def ethReconnectResult(self, x):
+        self.ethMessageBox.setStandardButtons(QtWidgets.QMessageBox.Ok)
         if x is not None:
-            self.staticIPMessageBox.setLocalIcon('success.png')
-            self.staticIPMessageBox.setText('Connected, IP: ' + x)
+            self.ethMessageBox.setLocalIcon('success.png')
+            self.ethMessageBox.setText('Connected, IP: ' + x)
         else:
 
-            self.staticIPMessageBox.setText("Not able to set Static IP")
+            self.ethMessageBox.setText("Not able to connect to Ethernet")
 
-    def staticIPShowKeyboard(self, textbox):
+    def ethShowKeyboard(self, textbox):
         self.startKeyboard(textbox.setText, onlyNumeric=True, noSpace=True, text=str(textbox.text()))
     ''' ++++++++++++++++++++++++++++++++Display Settings+++++++++++++++++++++++++++++++ '''
 
     def touchCalibration(self):
-        #os.system('sudo /home/biqu/setenv.sh')
-        os.system('sudo su')
-        os.system('export TSLIB_TSDEVICE=/dev/input/event0')
-        os.system('export TSLIB_FBDEVICE=/dev/fb0')
-        os.system('ts_calibrate')
+        os.system('sudo /home/pi/setenv.sh')
 
 
     def showRotateDisplaySettingsPage(self):
@@ -1469,8 +1474,8 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         if temperature['tool1Target'] == 0:
             self.tool1TempBar.setMaximum(300)
             self.tool1TempBar.setStyleSheet(styles.bar_heater_cold)
-        elif temperature['tool1Actual'] <= temperature['tool1Target']:
-            self.tool1TempBar.setMaximum(temperature['tool1Target'])
+        elif temperature['tool1Actual'] <= temperature['tool0Target']:
+            self.tool1TempBar.setMaximum(temperature['tool0Target'])
             self.tool1TempBar.setStyleSheet(styles.bar_heater_heating)
         else:
             self.tool1TempBar.setMaximum(temperature['tool1Actual'])
@@ -1729,17 +1734,6 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             octopiclient.gcode(command='M104 T0 S' + str(self.toolTempSpinBox.value()))
             # octopiclient.setToolTemperature({"tool0": self.toolTempSpinBox.value()})
 
-    def preheatToolTemp(self, temp):
-        if self.toolToggleTemperatureButton.isChecked():
-            octopiclient.gcode(command='M104 T1 S' + str(temp))
-        else:
-            octopiclient.gcode(command='M104 T0 S' + str(temp))
-        self.toolTempSpinBox.setProperty("value", temp)
-
-    def preheatBedTemp(self, temp):
-        octopiclient.gcode(command='M140 S' + str(temp))
-        self.bedTempSpinBox.setProperty("value", temp)
-
     def coolDownAction(self):
         ''''
         Turns all heaters and fans off
@@ -1765,14 +1759,11 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.currentZPosition = offset #gets the current z position, used to set new tool offsets.
         # clean this shit up.
         #fuck you past vijay for not cleaning this up
-        try:
-            if self.setNewToolZOffsetFromCurrentZBool:
-                newToolOffsetZ = float(self.toolOffsetZ) - float(self.currentZPosition)
-                octopiclient.gcode(command='M218 T1 Z{}'.format(newToolOffsetZ))  # restore eeprom settings to get Z home offset, mesh bed leveling back
-                self.setNewToolZOffsetFromCurrentZBool =False
-                octopiclient.gcode(command='M500')  # store eeprom settings to get Z home offset, mesh bed leveling back
-        except Exception as e:
-                    print("error: " + str(e))
+        if self.setNewToolZOffsetFromCurrentZBool:
+            newToolOffsetZ = float(self.toolOffsetZ) - float(self.currentZPosition)
+            octopiclient.gcode(command='M218 T1 Z{}'.format(newToolOffsetZ))  # restore eeprom settings to get Z home offset, mesh bed leveling back
+            self.setNewToolZOffsetFromCurrentZBool =False
+            octopiclient.gcode(command='M500')  # store eeprom settings to get Z home offset, mesh bed leveling back
 
     def showProbingFailed(self):
         self.tellAndReboot("Bed position is not calibrated. Please run calibration wizard after restart.")
@@ -1834,13 +1825,13 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         octopiclient.gcode(command='M500')
 
     def getToolOffset(self, M218Data):
-        if float(M218Data[M218Data.index('X') + 1:].split(' ', 1)[0] ) > 0:
-            self.toolOffsetZ = M218Data[M218Data.index('Z') + 1:].split(' ', 1)[0]
-            self.toolOffsetX = M218Data[M218Data.index('X') + 1:].split(' ', 1)[0]
-            self.toolOffsetY = M218Data[M218Data.index('Y') + 1:].split(' ', 1)[0]
-            self.toolOffsetXDoubleSpinBox.setValue(float(self.toolOffsetX))
-            self.toolOffsetYDoubleSpinBox.setValue(float(self.toolOffsetY))
-            self.toolOffsetZDoubleSpinBox.setValue(float(self.toolOffsetZ))
+
+        self.toolOffsetZ = M218Data[M218Data.index('Z') + 1:].split(' ', 1)[0]
+        self.toolOffsetX = M218Data[M218Data.index('X') + 1:].split(' ', 1)[0]
+        self.toolOffsetY = M218Data[M218Data.index('Y') + 1:].split(' ', 1)[0]
+        self.toolOffsetXDoubleSpinBox.setValue(float(self.toolOffsetX))
+        self.toolOffsetYDoubleSpinBox.setValue(float(self.toolOffsetY))
+        self.toolOffsetZDoubleSpinBox.setValue(float(self.toolOffsetZ))
 
     def quickStep1(self):
         '''
@@ -1852,7 +1843,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.toolZOffsetCaliberationPageCount = 0
         octopiclient.gcode(command='M104 S200')
         octopiclient.gcode(command='M104 T1 S200')
-        #octopiclient.gcode(command='M211 S0')  # Disable software endstop
+        octopiclient.gcode(command='M211 S0')  # Disable software endstop
         octopiclient.gcode(command='T0')  # Set active tool to t0
         octopiclient.gcode(command='M503')  # makes sure internal value of Z offset and Tool offsets are stored before erasing
         octopiclient.gcode(command='M420 S0')  # Dissable mesh bed leveling for good measure
@@ -1897,22 +1888,22 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
     #     octopiclient.jog(z=15, absolute=True, speed=1500)
     #     octopiclient.gcode(command='M272 S')
 
-    #def nozzleHeightStep1(self):
-        #if self.toolZOffsetCaliberationPageCount == 0 :
-            #self.toolZOffsetLabel.setText("Move the bed up or down to the First Nozzle , testing height using paper")
-            #self.stackedWidget.setCurrentWidget(self.nozzleHeightStep1Page)
-            #octopiclient.jog(z=10, absolute=True, speed=1500)
-            #octopiclient.jog(x=calibrationPosition['X4'], y=calibrationPosition['Y4'], absolute=True, speed=2000)
-            #octopiclient.jog(z=1, absolute=True, speed=1500)
-            #self.toolZOffsetCaliberationPageCount = 1
-        #elif self.toolZOffsetCaliberationPageCount == 1:
-            #self.toolZOffsetLabel.setText("Move the bed up or down to the Second Nozzle , testing height using paper")
-            #octopiclient.gcode(command='G92 Z0')#set the current Z position to zero
-            #octopiclient.jog(z=1, absolute=True, speed=1500)
-            #octopiclient.gcode(command='T1')
-            #self.toolZOffsetCaliberationPageCount = 2
-        #else:
-            #self.doneStep()
+    def nozzleHeightStep1(self):
+        if self.toolZOffsetCaliberationPageCount == 0 :
+            self.toolZOffsetLabel.setText("Move the bed up or down to the First Nozzle , testing height using paper")
+            self.stackedWidget.setCurrentWidget(self.nozzleHeightStep1Page)
+            octopiclient.jog(z=10, absolute=True, speed=1500)
+            octopiclient.jog(x=calibrationPosition['X4'], y=calibrationPosition['Y4'], absolute=True, speed=2000)
+            octopiclient.jog(z=1, absolute=True, speed=1500)
+            self.toolZOffsetCaliberationPageCount = 1
+        elif self.toolZOffsetCaliberationPageCount == 1:
+            self.toolZOffsetLabel.setText("Move the bed up or down to the Second Nozzle , testing height using paper")
+            octopiclient.gcode(command='G92 Z0')#set the current Z position to zero
+            octopiclient.jog(z=1, absolute=True, speed=1500)
+            octopiclient.gcode(command='T1')
+            self.toolZOffsetCaliberationPageCount = 2
+        else:
+            self.doneStep()
 
     def doneStep(self):
         '''
@@ -1923,7 +1914,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         octopiclient.gcode(command='M114')
         octopiclient.jog(z=4, absolute=True, speed=1500)
         octopiclient.gcode(command='T0')
-        #octopiclient.gcode(command='M211 S1')  # Disable software endstop
+        octopiclient.gcode(command='M211 S1')  # Disable software endstop
         self.stackedWidget.setCurrentWidget(self.calibratePage)
         octopiclient.home(['x', 'y', 'z'])
         octopiclient.gcode(command='M104 S0')
@@ -1935,46 +1926,6 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         octopiclient.home(['x', 'y', 'z'])
         octopiclient.gcode(command='M104 S0')
         octopiclient.gcode(command='M104 T1 S0')
-    
-    def testPrint(self,tool0Diameter,tool1Diameter,gcode):
-        '''
-        Prints a test print
-        :param tool0Diameter: Diameter of tool 0 nozzle.04,06 or 08
-        :param tool1Diameter: Diameter of tool 1 nozzle.40,06 or 08
-        :param gcode: type of gcode to print, dual nozzle calibration, bed leveling, movement or samaple prints in
-        single and dual. bedLevel, dualCalibration, movementTest, dualTest, singleTest
-        :return:
-        '''
-        try:
-            if gcode is 'bedLevel':
-                self.printFromPath('gcode/' + tool0Diameter + '_BedLeveling.gcode', True)
-            elif gcode is 'dualCalibration':
-                self.printFromPath(
-                    'gcode/' + tool0Diameter + '_' + tool1Diameter + '_dual_extruder_calibration_TwinDragon600.gcode',
-                    True)
-            elif gcode is 'movementTest':
-                self.printFromPath('gcode/movementTest.gcode', True)
-            elif gcode is 'dualTest':
-                self.printFromPath(
-                    'gcode/' + tool0Diameter + '_' + tool1Diameter + '_Fracktal_logo_TwinDragon600.gcode',
-                    True)
-            elif gcode is 'singleTest':
-                self.printFromPath('gcode/' + tool0Diameter + '_Fracktal_logo_TwinDragon600.gcode',True)
-
-            else:
-                print("gcode not found")
-        except Exception as e:
-            print("Eror:" + e)
-    def printFromPath(self,path,prnt=True):
-        '''
-        Transfers a file from a specific to octoprint's watched folder so that it gets automatically detected by Octoprint.
-        Warning: If the file is read-only, octoprint API for reading the file crashes.
-        '''
-
-        self.uploadThread = ThreadFileUpload(path, prnt=prnt)
-        self.uploadThread.start()
-        if prnt:
-            self.stackedWidget.setCurrentWidget(self.homePage)
 
     ''' +++++++++++++++++++++++++++++++++++Keyboard++++++++++++++++++++++++++++++++ '''
 
@@ -1994,12 +1945,12 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
                                overlay=True):
             os.system('sudo cp -f config/dhcpcd.conf /etc/dhcpcd.conf')
             os.system('sudo cp -f config/wpa_supplicant.conf /etc/wpa_supplicant/wpa_supplicant.conf')
-            os.system('sudo rm -rf /home/biqu/.octoprint/users.yaml')
-            os.system('sudo cp -f config/users.yaml /home/biqu/.octoprint/users.yaml')
-            os.system('sudo rm -rf /home/biqu/.octoprint/printerProfiles/*')
-            os.system('sudo rm -rf /home/biqu/.octoprint/scripts/gcode')
-            os.system('sudo rm -rf /home/biqu/.octoprint/print_restore.json')
-            os.system('sudo cp -f config/config.yaml /home/biqu/.octoprint/config.yaml')
+            os.system('sudo rm -rf /home/pi/.octoprint/users.yaml')
+            os.system('sudo cp -f config/users.yaml /home/pi/.octoprint/users.yaml')
+            os.system('sudo rm -rf /home/pi/.octoprint/printerProfiles/*')
+            os.system('sudo rm -rf /home/pi/.octoprint/scripts/gcode')
+            os.system('sudo rm -rf /home/pi/.octoprint/print_restore.json')
+            os.system('sudo cp -f config/config.yaml /home/pi/.octoprint/config.yaml')
             # os.system('sudo rm -rf /home/pi/.fw_logo.dat')
             self.tellAndReboot("Settings restored. Rebooting...")
 
@@ -2037,7 +1988,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             if dialog.WarningOk(self, "Network Disconnected"):
                 return
         self.QRCodeLabel.setPixmap(
-            qrcode.make("http://"+ qrip, image_factory=Image).pixmap())
+            qrcode.make(json.dumps(qrip), image_factory=Image).pixmap())
         self.stackedWidget.setCurrentWidget(self.QRCodePage)
 
 
@@ -2156,7 +2107,7 @@ class QtWebsocket(QtCore.QThread):
                     #     self.emit(QtCore.SIGNAL('SET_Z_HOME_OFFSET'), item[item.index('Z') + 2:].split(' ', 1)[0],
                     #               False)
                     if 'Count' in item:  # can get thris throught the positionUpdate event
-                        self.set_z_tool_offset_signal.emit(item[item.index('z') + 2:].split(',', 1)[0],
+                        self.set_z_tool_offset_signal.emit(item[item.index('Z') + 2:].split(' ', 1)[0],
                                   False)
                     if 'M218' in item:
                         self.tool_offset_signal.emit(item[item.index('M218'):])

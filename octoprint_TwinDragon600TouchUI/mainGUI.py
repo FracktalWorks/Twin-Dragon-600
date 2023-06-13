@@ -83,7 +83,7 @@ class Ui_MainWindow(object):
         self.LoadingLabel.setFont(font)
         self.LoadingLabel.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.LoadingLabel.setText("")
-        self.LoadingLabel.setPixmap(QtGui.QPixmap("templates/img/splash.png"))
+        self.LoadingLabel.setPixmap(QtGui.QPixmap(".\\templates/img/splash.png"))
         self.LoadingLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.LoadingLabel.setObjectName("LoadingLabel")
         self.loadingGif = QtWidgets.QLabel(self.loadingPage)
@@ -100,7 +100,11 @@ class Ui_MainWindow(object):
         self.homePage = QtWidgets.QWidget()
         self.homePage.setObjectName("homePage")
         self.playPauseButton = QtWidgets.QPushButton(self.homePage)
+<<<<<<< HEAD
         self.playPauseButton.setGeometry(QtCore.QRect(400, 350, 191, 91))
+=======
+        self.playPauseButton.setGeometry(QtCore.QRect(400, 380, 191, 71))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.playPauseButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("Roboto")
@@ -131,8 +135,8 @@ class Ui_MainWindow(object):
 "}")
         self.playPauseButton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("templates/img/play-button.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon.addPixmap(QtGui.QPixmap("templates/img/pause-button.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon.addPixmap(QtGui.QPixmap(".\\templates/img/play-button.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(".\\templates/img/pause-button.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.playPauseButton.setIcon(icon)
         self.playPauseButton.setIconSize(QtCore.QSize(30, 30))
         self.playPauseButton.setCheckable(True)
@@ -142,7 +146,11 @@ class Ui_MainWindow(object):
         self.playPauseButton.setFlat(False)
         self.playPauseButton.setObjectName("playPauseButton")
         self.stopButton = QtWidgets.QPushButton(self.homePage)
+<<<<<<< HEAD
         self.stopButton.setGeometry(QtCore.QRect(590, 350, 211, 91))
+=======
+        self.stopButton.setGeometry(QtCore.QRect(590, 380, 211, 71))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.stopButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("Roboto")
@@ -172,7 +180,7 @@ class Ui_MainWindow(object):
 "}")
         self.stopButton.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("templates/img/video-player-stop-button.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(".\\templates/img/video-player-stop-button.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.stopButton.setIcon(icon1)
         self.stopButton.setIconSize(QtCore.QSize(25, 25))
         self.stopButton.setObjectName("stopButton")
@@ -185,7 +193,11 @@ class Ui_MainWindow(object):
         self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.line.setObjectName("line")
         self.tool0Label = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.tool0Label.setGeometry(QtCore.QRect(32, 128, 51, 51))
+=======
+        self.tool0Label.setGeometry(QtCore.QRect(32, 158, 51, 51))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham Medium")
         font.setPointSize(20)
@@ -197,11 +209,15 @@ class Ui_MainWindow(object):
         self.tool0Label.setStyleSheet("\n"
 "   color:  white;")
         self.tool0Label.setText("")
-        self.tool0Label.setPixmap(QtGui.QPixmap("templates/img/Nozzle.png"))
+        self.tool0Label.setPixmap(QtGui.QPixmap(".\\templates/img/Nozzle.png"))
         self.tool0Label.setScaledContents(True)
         self.tool0Label.setObjectName("tool0Label")
         self.FileNameLabel = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.FileNameLabel.setGeometry(QtCore.QRect(10, 230, 61, 31))
+=======
+        self.FileNameLabel.setGeometry(QtCore.QRect(10, 270, 61, 31))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -211,7 +227,11 @@ class Ui_MainWindow(object):
         self.FileNameLabel.setStyleSheet("color: rgb(255, 255, 255);")
         self.FileNameLabel.setObjectName("FileNameLabel")
         self.printTimeLabel = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.printTimeLabel.setGeometry(QtCore.QRect(10, 270, 141, 31))
+=======
+        self.printTimeLabel.setGeometry(QtCore.QRect(10, 310, 141, 31))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -221,7 +241,11 @@ class Ui_MainWindow(object):
         self.printTimeLabel.setStyleSheet("color: rgb(255, 255, 255);")
         self.printTimeLabel.setObjectName("printTimeLabel")
         self.fileName = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.fileName.setGeometry(QtCore.QRect(70, 230, 281, 31))
+=======
+        self.fileName.setGeometry(QtCore.QRect(60, 270, 281, 31))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -232,7 +256,11 @@ class Ui_MainWindow(object):
         self.fileName.setWordWrap(False)
         self.fileName.setObjectName("fileName")
         self.printTime = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.printTime.setGeometry(QtCore.QRect(160, 270, 211, 31))
+=======
+        self.printTime.setGeometry(QtCore.QRect(130, 310, 211, 31))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -241,7 +269,11 @@ class Ui_MainWindow(object):
 "background-color: rgba(255, 255, 255, 0);")
         self.printTime.setObjectName("printTime")
         self.timeLeftLabel = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.timeLeftLabel.setGeometry(QtCore.QRect(10, 310, 151, 21))
+=======
+        self.timeLeftLabel.setGeometry(QtCore.QRect(10, 350, 151, 21))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -251,10 +283,14 @@ class Ui_MainWindow(object):
         self.timeLeftLabel.setStyleSheet("color: rgb(255, 255, 255);")
         self.timeLeftLabel.setObjectName("timeLeftLabel")
         self.bedTempBar = QtWidgets.QProgressBar(self.homePage)
+<<<<<<< HEAD
         self.bedTempBar.setGeometry(QtCore.QRect(395, 90, 21, 121))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.bedTempBar.setFont(font)
+=======
+        self.bedTempBar.setGeometry(QtCore.QRect(395, 120, 21, 121))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.bedTempBar.setStyleSheet("QProgressBar::chunk {\n"
 "    border-radius: 5px;\n"
 "    background-color: qlineargradient(spread:pad, x1:0.517, y1:0, x2:0.522, y2:0, stop:0.0336134 rgba(74, 183, 255, 255), stop:1 rgba(53, 173, 242, 255));\n"
@@ -272,7 +308,11 @@ class Ui_MainWindow(object):
         self.bedTempBar.setOrientation(QtCore.Qt.Vertical)
         self.bedTempBar.setObjectName("bedTempBar")
         self.bedLabel = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.bedLabel.setGeometry(QtCore.QRect(320, 120, 61, 61))
+=======
+        self.bedLabel.setGeometry(QtCore.QRect(320, 150, 61, 61))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham Medium")
         font.setPointSize(20)
@@ -285,11 +325,15 @@ class Ui_MainWindow(object):
 "   color:  white;\n"
 "background-color: rgba(255, 255, 255, 0);")
         self.bedLabel.setText("")
-        self.bedLabel.setPixmap(QtGui.QPixmap("templates/img/bed.png"))
+        self.bedLabel.setPixmap(QtGui.QPixmap(".\\templates/img/bed.png"))
         self.bedLabel.setScaledContents(True)
         self.bedLabel.setObjectName("bedLabel")
         self.tool0TargetTemperature = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.tool0TargetTemperature.setGeometry(QtCore.QRect(40, 70, 61, 31))
+=======
+        self.tool0TargetTemperature.setGeometry(QtCore.QRect(40, 100, 61, 31))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -304,10 +348,14 @@ class Ui_MainWindow(object):
         self.tool0TargetTemperature.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.tool0TargetTemperature.setObjectName("tool0TargetTemperature")
         self.tool0TempBar = QtWidgets.QProgressBar(self.homePage)
+<<<<<<< HEAD
         self.tool0TempBar.setGeometry(QtCore.QRect(105, 90, 21, 121))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.tool0TempBar.setFont(font)
+=======
+        self.tool0TempBar.setGeometry(QtCore.QRect(105, 120, 21, 121))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.tool0TempBar.setStyleSheet("QProgressBar::chunk {\n"
 "    border-radius: 5px;\n"
 "    background-color: qlineargradient(spread:pad, x1:0.517, y1:0, x2:0.522, y2:0, stop:0.0336134 rgba(74, 183, 255, 255), stop:1 rgba(53, 173, 242, 255));\n"
@@ -325,7 +373,11 @@ class Ui_MainWindow(object):
         self.tool0TempBar.setOrientation(QtCore.Qt.Vertical)
         self.tool0TempBar.setObjectName("tool0TempBar")
         self.tool0ActualTemperature = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.tool0ActualTemperature.setGeometry(QtCore.QRect(30, 190, 61, 31))
+=======
+        self.tool0ActualTemperature.setGeometry(QtCore.QRect(30, 220, 61, 31))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -340,7 +392,11 @@ class Ui_MainWindow(object):
         self.tool0ActualTemperature.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.tool0ActualTemperature.setObjectName("tool0ActualTemperature")
         self.bedActualTemperatute = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.bedActualTemperatute.setGeometry(QtCore.QRect(340, 200, 41, 21))
+=======
+        self.bedActualTemperatute.setGeometry(QtCore.QRect(340, 230, 41, 21))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -355,7 +411,11 @@ class Ui_MainWindow(object):
         self.bedActualTemperatute.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.bedActualTemperatute.setObjectName("bedActualTemperatute")
         self.bedTargetTemperature = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.bedTargetTemperature.setGeometry(QtCore.QRect(340, 80, 41, 21))
+=======
+        self.bedTargetTemperature.setGeometry(QtCore.QRect(340, 110, 41, 21))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -370,7 +430,11 @@ class Ui_MainWindow(object):
         self.bedTargetTemperature.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.bedTargetTemperature.setObjectName("bedTargetTemperature")
         self.menuButton = QtWidgets.QPushButton(self.homePage)
+<<<<<<< HEAD
         self.menuButton.setGeometry(QtCore.QRect(0, 350, 211, 91))
+=======
+        self.menuButton.setGeometry(QtCore.QRect(0, 380, 211, 71))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.menuButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("Gotham Light")
@@ -402,7 +466,7 @@ class Ui_MainWindow(object):
 "}")
         self.menuButton.setText("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("templates/img/menu.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(".\\templates/img/menu.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.menuButton.setIcon(icon2)
         self.menuButton.setIconSize(QtCore.QSize(40, 40))
         self.menuButton.setCheckable(False)
@@ -411,7 +475,7 @@ class Ui_MainWindow(object):
         self.menuButton.setFlat(False)
         self.menuButton.setObjectName("menuButton")
         self.printProgressBar = QtWidgets.QProgressBar(self.homePage)
-        self.printProgressBar.setGeometry(QtCore.QRect(0, 440, 801, 41))
+        self.printProgressBar.setGeometry(QtCore.QRect(0, 450, 801, 31))
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -440,7 +504,11 @@ class Ui_MainWindow(object):
         self.printProgressBar.setOrientation(QtCore.Qt.Horizontal)
         self.printProgressBar.setObjectName("printProgressBar")
         self.timeLeft = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.timeLeft.setGeometry(QtCore.QRect(150, 300, 211, 41))
+=======
+        self.timeLeft.setGeometry(QtCore.QRect(120, 340, 211, 41))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -466,7 +534,11 @@ class Ui_MainWindow(object):
         self.printerStatus.setWordWrap(True)
         self.printerStatus.setObjectName("printerStatus")
         self.controlButton = QtWidgets.QPushButton(self.homePage)
+<<<<<<< HEAD
         self.controlButton.setGeometry(QtCore.QRect(210, 350, 191, 91))
+=======
+        self.controlButton.setGeometry(QtCore.QRect(210, 380, 191, 71))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.controlButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("Gotham Light")
@@ -496,7 +568,7 @@ class Ui_MainWindow(object):
 "}")
         self.controlButton.setText("")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("templates/img/settings-1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(".\\templates/img/settings-1.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.controlButton.setIcon(icon3)
         self.controlButton.setIconSize(QtCore.QSize(40, 40))
         self.controlButton.setCheckable(False)
@@ -521,7 +593,11 @@ class Ui_MainWindow(object):
         self.printerStatusColour.setAlignment(QtCore.Qt.AlignCenter)
         self.printerStatusColour.setObjectName("printerStatusColour")
         self.celciusLabel = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.celciusLabel.setGeometry(QtCore.QRect(420, 80, 70, 21))
+=======
+        self.celciusLabel.setGeometry(QtCore.QRect(420, 110, 70, 21))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham Medium")
         font.setPointSize(20)
@@ -535,7 +611,11 @@ class Ui_MainWindow(object):
 "background-color: rgba(255, 255, 255, 0);")
         self.celciusLabel.setObjectName("celciusLabel")
         self.tool1TargetTemperature = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.tool1TargetTemperature.setGeometry(QtCore.QRect(180, 70, 61, 31))
+=======
+        self.tool1TargetTemperature.setGeometry(QtCore.QRect(180, 100, 61, 31))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -550,7 +630,11 @@ class Ui_MainWindow(object):
         self.tool1TargetTemperature.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
         self.tool1TargetTemperature.setObjectName("tool1TargetTemperature")
         self.tool1Label = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.tool1Label.setGeometry(QtCore.QRect(180, 128, 51, 51))
+=======
+        self.tool1Label.setGeometry(QtCore.QRect(180, 158, 51, 51))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham Medium")
         font.setPointSize(20)
@@ -562,14 +646,18 @@ class Ui_MainWindow(object):
         self.tool1Label.setStyleSheet("\n"
 "   color:  white;")
         self.tool1Label.setText("")
-        self.tool1Label.setPixmap(QtGui.QPixmap("templates/img/Nozzle.png"))
+        self.tool1Label.setPixmap(QtGui.QPixmap(".\\templates/img/Nozzle.png"))
         self.tool1Label.setScaledContents(True)
         self.tool1Label.setObjectName("tool1Label")
         self.tool1TempBar = QtWidgets.QProgressBar(self.homePage)
+<<<<<<< HEAD
         self.tool1TempBar.setGeometry(QtCore.QRect(250, 90, 21, 121))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.tool1TempBar.setFont(font)
+=======
+        self.tool1TempBar.setGeometry(QtCore.QRect(250, 120, 21, 121))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.tool1TempBar.setStyleSheet("QProgressBar::chunk {\n"
 "    border-radius: 5px;\n"
 "    background-color: qlineargradient(spread:pad, x1:0.517, y1:0, x2:0.522, y2:0, stop:0.0336134 rgba(74, 183, 255, 255), stop:1 rgba(53, 173, 242, 255));\n"
@@ -587,7 +675,11 @@ class Ui_MainWindow(object):
         self.tool1TempBar.setOrientation(QtCore.Qt.Vertical)
         self.tool1TempBar.setObjectName("tool1TempBar")
         self.tool1ActualTemperature = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.tool1ActualTemperature.setGeometry(QtCore.QRect(170, 180, 71, 51))
+=======
+        self.tool1ActualTemperature.setGeometry(QtCore.QRect(170, 210, 71, 51))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -620,7 +712,7 @@ class Ui_MainWindow(object):
         self.printPreviewMain.setFont(font)
         self.printPreviewMain.setStyleSheet("background-color: rgba(255, 255, 255, 0);")
         self.printPreviewMain.setText("")
-        self.printPreviewMain.setPixmap(QtGui.QPixmap("templates/img/thumbnail.png"))
+        self.printPreviewMain.setPixmap(QtGui.QPixmap(".\\templates/img/thumbnail.png"))
         self.printPreviewMain.setScaledContents(True)
         self.printPreviewMain.setObjectName("printPreviewMain")
         self.ipStatus = QtWidgets.QLabel(self.homePage)
@@ -640,7 +732,11 @@ class Ui_MainWindow(object):
         self.ipStatus.setWordWrap(True)
         self.ipStatus.setObjectName("ipStatus")
         self.celciusLabel_2 = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.celciusLabel_2.setGeometry(QtCore.QRect(280, 80, 70, 21))
+=======
+        self.celciusLabel_2.setGeometry(QtCore.QRect(280, 110, 70, 21))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham Medium")
         font.setPointSize(20)
@@ -654,7 +750,11 @@ class Ui_MainWindow(object):
 "background-color: rgba(255, 255, 255, 0);")
         self.celciusLabel_2.setObjectName("celciusLabel_2")
         self.celciusLabel_3 = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.celciusLabel_3.setGeometry(QtCore.QRect(130, 80, 70, 21))
+=======
+        self.celciusLabel_3.setGeometry(QtCore.QRect(130, 110, 70, 21))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham Medium")
         font.setPointSize(20)
@@ -668,19 +768,27 @@ class Ui_MainWindow(object):
 "background-color: rgba(255, 255, 255, 0);")
         self.celciusLabel_3.setObjectName("celciusLabel_3")
         self.label = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.label.setGeometry(QtCore.QRect(200, 130, 20, 41))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.label.setFont(font)
+=======
+        self.label.setGeometry(QtCore.QRect(200, 160, 20, 41))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.label.setStyleSheet("\n"
 "color: black;\n"
 "background-color: rgb(255, 255, 255,0);")
         self.label.setObjectName("label")
         self.label_3 = QtWidgets.QLabel(self.homePage)
+<<<<<<< HEAD
         self.label_3.setGeometry(QtCore.QRect(50, 130, 20, 41))
         font = QtGui.QFont()
         font.setPointSize(20)
         self.label_3.setFont(font)
+=======
+        self.label_3.setGeometry(QtCore.QRect(50, 160, 20, 41))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.label_3.setStyleSheet("\n"
 "color: black;\n"
 "background-color: rgb(255, 255, 255,0);")
@@ -749,7 +857,7 @@ class Ui_MainWindow(object):
 "}")
         self.menuBackButton.setText("")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("templates/img/arrows-4.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(".\\templates/img/arrows-4.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.menuBackButton.setIcon(icon4)
         self.menuBackButton.setIconSize(QtCore.QSize(80, 80))
         self.menuBackButton.setCheckable(False)
@@ -814,7 +922,7 @@ class Ui_MainWindow(object):
 "    border-color: navy; /* make the default button prominent */\n"
 "}")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("templates/img/printer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap(".\\templates/img/printer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.menuPrintButton.setIcon(icon5)
         self.menuPrintButton.setIconSize(QtCore.QSize(100, 100))
         self.menuPrintButton.setCheckable(False)
@@ -847,7 +955,7 @@ class Ui_MainWindow(object):
 "    border-color: navy; /* make the default button prominent */\n"
 "}")
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("templates/img/settings.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(QtGui.QPixmap(".\\templates/img/settings.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.menuSettingsButton.setIcon(icon6)
         self.menuSettingsButton.setIconSize(QtCore.QSize(100, 100))
         self.menuSettingsButton.setCheckable(False)
@@ -880,7 +988,7 @@ class Ui_MainWindow(object):
 "    border-color: navy; /* make the default button prominent */\n"
 "}")
         icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap("templates/img/cart.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7.addPixmap(QtGui.QPixmap(".\\templates/img/cart.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.menuCartButton.setIcon(icon7)
         self.menuCartButton.setIconSize(QtCore.QSize(100, 100))
         self.menuCartButton.setCheckable(False)
@@ -914,7 +1022,7 @@ class Ui_MainWindow(object):
 "    border-color: navy; /* make the default button prominent */\n"
 "}")
         icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap("templates/img/reload.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon8.addPixmap(QtGui.QPixmap(".\\templates/img/reload.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.menuCalibrateButton.setIcon(icon8)
         self.menuCalibrateButton.setIconSize(QtCore.QSize(100, 100))
         self.menuCalibrateButton.setCheckable(False)
@@ -1604,7 +1712,11 @@ class Ui_MainWindow(object):
         self.ethSettingsDoneButton.setGeometry(QtCore.QRect(0, 360, 401, 121))
         font = QtGui.QFont()
         font.setFamily("Gotham")
+<<<<<<< HEAD
         font.setPointSize(20)
+=======
+        font.setPointSize(13)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.ethSettingsDoneButton.setFont(font)
         self.ethSettingsDoneButton.setStyleSheet("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
@@ -1635,7 +1747,11 @@ class Ui_MainWindow(object):
         self.ethSettingsCancelButton.setGeometry(QtCore.QRect(400, 360, 401, 121))
         font = QtGui.QFont()
         font.setFamily("Gotham")
+<<<<<<< HEAD
         font.setPointSize(20)
+=======
+        font.setPointSize(13)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.ethSettingsCancelButton.setFont(font)
         self.ethSettingsCancelButton.setStyleSheet("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
@@ -1666,7 +1782,11 @@ class Ui_MainWindow(object):
         self.ethStaticCheckBox.setGeometry(QtCore.QRect(10, 20, 161, 41))
         font = QtGui.QFont()
         font.setFamily("Gotham")
+<<<<<<< HEAD
         font.setPointSize(20)
+=======
+        font.setPointSize(14)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.ethStaticCheckBox.setFont(font)
         self.ethStaticCheckBox.setStyleSheet("QCheckBox {\n"
 "    color: rgb(255, 255, 255);\n"
@@ -1693,6 +1813,7 @@ class Ui_MainWindow(object):
         self.ethStaticSettings = QtWidgets.QWidget(self.ethSettingsPage)
         self.ethStaticSettings.setEnabled(True)
         self.ethStaticSettings.setGeometry(QtCore.QRect(20, 80, 771, 151))
+<<<<<<< HEAD
         font = QtGui.QFont()
         font.setPointSize(20)
         self.ethStaticSettings.setFont(font)
@@ -1702,6 +1823,14 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(20)
+=======
+        self.ethStaticSettings.setObjectName("ethStaticSettings")
+        self.ethStaticIpLabel = QtWidgets.QLabel(self.ethStaticSettings)
+        self.ethStaticIpLabel.setGeometry(QtCore.QRect(10, 10, 121, 51))
+        font = QtGui.QFont()
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(11)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font.setBold(False)
         font.setWeight(50)
         self.ethStaticIpLabel.setFont(font)
@@ -1711,7 +1840,11 @@ class Ui_MainWindow(object):
         self.ethStaticGatewayLabel.setGeometry(QtCore.QRect(10, 70, 181, 61))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
+<<<<<<< HEAD
         font.setPointSize(20)
+=======
+        font.setPointSize(11)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font.setBold(False)
         font.setWeight(50)
         self.ethStaticGatewayLabel.setFont(font)
@@ -1721,7 +1854,11 @@ class Ui_MainWindow(object):
         self.ethStaticGatewayKeyboardButton.setGeometry(QtCore.QRect(669, 70, 91, 51))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
+<<<<<<< HEAD
         font.setPointSize(20)
+=======
+        font.setPointSize(18)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font.setBold(True)
         font.setWeight(75)
         self.ethStaticGatewayKeyboardButton.setFont(font)
@@ -1755,7 +1892,11 @@ class Ui_MainWindow(object):
         self.ethStaticIpKeyboardButton.setGeometry(QtCore.QRect(669, 10, 91, 51))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
+<<<<<<< HEAD
         font.setPointSize(20)
+=======
+        font.setPointSize(18)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font.setBold(True)
         font.setWeight(75)
         self.ethStaticIpKeyboardButton.setFont(font)
@@ -1856,8 +1997,13 @@ class Ui_MainWindow(object):
         self.configureEthButton.setGeometry(QtCore.QRect(0, 200, 801, 100))
         self.configureEthButton.setMinimumSize(QtCore.QSize(0, 70))
         font = QtGui.QFont()
+<<<<<<< HEAD
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(20)
+=======
+        font.setFamily("Gotham")
+        font.setPointSize(13)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.configureEthButton.setFont(font)
         self.configureEthButton.setStyleSheet("QPushButton {\n"
 "     border: 1px solid rgb(87, 87, 87);\n"
@@ -2523,7 +2669,11 @@ class Ui_MainWindow(object):
 "    border-color: navy; /* make the default button prominent */\n"
 "}")
         icon9 = QtGui.QIcon()
+<<<<<<< HEAD
         icon9.addPixmap(QtGui.QPixmap("templates/img/update-arrows.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon9.addPixmap(QtGui.QPixmap(".\\templates/img/update-arrows.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.performUpdateButton.setIcon(icon9)
         self.performUpdateButton.setIconSize(QtCore.QSize(40, 40))
         self.performUpdateButton.setCheckable(False)
@@ -2768,7 +2918,11 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         icon10 = QtGui.QIcon()
+<<<<<<< HEAD
         icon10.addPixmap(QtGui.QPixmap("templates/img/magic-wand.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon10.addPixmap(QtGui.QPixmap(".\\templates/img/magic-wand.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.calibrationWizardButton.setIcon(icon10)
         self.calibrationWizardButton.setIconSize(QtCore.QSize(60, 60))
         self.calibrationWizardButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
@@ -2805,7 +2959,11 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         icon11 = QtGui.QIcon()
+<<<<<<< HEAD
         icon11.addPixmap(QtGui.QPixmap("templates/img/Tool Offset Icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon11.addPixmap(QtGui.QPixmap(".\\templates/img/Tool Offset Icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.toolOffsetXYButton.setIcon(icon11)
         self.toolOffsetXYButton.setIconSize(QtCore.QSize(70, 70))
         self.toolOffsetXYButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
@@ -2842,7 +3000,11 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         icon12 = QtGui.QIcon()
+<<<<<<< HEAD
         icon12.addPixmap(QtGui.QPixmap("templates/img/Nozzle Offset Icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon12.addPixmap(QtGui.QPixmap(".\\templates/img/Nozzle Offset Icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.nozzleOffsetButton.setIcon(icon12)
         self.nozzleOffsetButton.setIconSize(QtCore.QSize(70, 70))
         self.nozzleOffsetButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
@@ -2879,7 +3041,11 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         icon13 = QtGui.QIcon()
+<<<<<<< HEAD
         icon13.addPixmap(QtGui.QPixmap("templates/img/Tool Z Offset Icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon13.addPixmap(QtGui.QPixmap(".\\templates/img/Tool Z Offset Icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.toolOffsetZButton.setIcon(icon13)
         self.toolOffsetZButton.setIconSize(QtCore.QSize(70, 70))
         self.toolOffsetZButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
@@ -3060,7 +3226,11 @@ class Ui_MainWindow(object):
 "}")
         self.toolOffsetXSetButton.setText("")
         icon14 = QtGui.QIcon()
+<<<<<<< HEAD
         icon14.addPixmap(QtGui.QPixmap("templates/img/verification-mark.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon14.addPixmap(QtGui.QPixmap(".\\templates/img/verification-mark.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.toolOffsetXSetButton.setIcon(icon14)
         self.toolOffsetXSetButton.setIconSize(QtCore.QSize(50, 50))
         self.toolOffsetXSetButton.setObjectName("toolOffsetXSetButton")
@@ -3761,7 +3931,11 @@ class Ui_MainWindow(object):
 "}")
         self.moveZMT1CaliberateButton.setText("")
         icon15 = QtGui.QIcon()
+<<<<<<< HEAD
         icon15.addPixmap(QtGui.QPixmap("templates/img/arrows.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon15.addPixmap(QtGui.QPixmap(".\\templates/img/arrows.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.moveZMT1CaliberateButton.setIcon(icon15)
         self.moveZMT1CaliberateButton.setIconSize(QtCore.QSize(40, 40))
         self.moveZMT1CaliberateButton.setCheckable(False)
@@ -3802,7 +3976,11 @@ class Ui_MainWindow(object):
 "}")
         self.moveZPT1CaliberateButton.setText("")
         icon16 = QtGui.QIcon()
+<<<<<<< HEAD
         icon16.addPixmap(QtGui.QPixmap("templates/img/arrows-5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon16.addPixmap(QtGui.QPixmap(".\\templates/img/arrows-5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.moveZPT1CaliberateButton.setIcon(icon16)
         self.moveZPT1CaliberateButton.setIconSize(QtCore.QSize(40, 40))
         self.moveZPT1CaliberateButton.setCheckable(False)
@@ -3975,7 +4153,7 @@ class Ui_MainWindow(object):
         self.printPreviewSelected_2.setFont(font)
         self.printPreviewSelected_2.setStyleSheet("background-color: rgba(255, 255, 255, 0);")
         self.printPreviewSelected_2.setText("")
-        self.printPreviewSelected_2.setPixmap(QtGui.QPixmap("templates/img/Nozzle Offset.png"))
+        self.printPreviewSelected_2.setPixmap(QtGui.QPixmap(".\\templates/img/Nozzle Offset.png"))
         self.printPreviewSelected_2.setScaledContents(True)
         self.printPreviewSelected_2.setObjectName("printPreviewSelected_2")
         self.feedRateLabelControlPage_3.raise_()
@@ -4013,7 +4191,11 @@ class Ui_MainWindow(object):
 "    border-color: navy; /* make the default button prominent */\n"
 "}")
         icon17 = QtGui.QIcon()
+<<<<<<< HEAD
         icon17.addPixmap(QtGui.QPixmap("templates/img/usb.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon17.addPixmap(QtGui.QPixmap(".\\templates/img/usb.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.fromUsbButton.setIcon(icon17)
         self.fromUsbButton.setIconSize(QtCore.QSize(40, 40))
         self.fromUsbButton.setObjectName("fromUsbButton")
@@ -4088,7 +4270,11 @@ class Ui_MainWindow(object):
 "    border-color: navy; /* make the default button prominent */\n"
 "}")
         icon18 = QtGui.QIcon()
+<<<<<<< HEAD
         icon18.addPixmap(QtGui.QPixmap("templates/img/folder.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon18.addPixmap(QtGui.QPixmap(".\\templates/img/folder.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.fromLocalButton.setIcon(icon18)
         self.fromLocalButton.setIconSize(QtCore.QSize(40, 40))
         self.fromLocalButton.setObjectName("fromLocalButton")
@@ -4333,7 +4519,11 @@ class Ui_MainWindow(object):
 "}")
         self.localStorageDeleteButton.setText("")
         icon19 = QtGui.QIcon()
+<<<<<<< HEAD
         icon19.addPixmap(QtGui.QPixmap("templates/img/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon19.addPixmap(QtGui.QPixmap(".\\templates/img/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.localStorageDeleteButton.setIcon(icon19)
         self.localStorageDeleteButton.setIconSize(QtCore.QSize(50, 50))
         self.localStorageDeleteButton.setCheckable(False)
@@ -4375,7 +4565,11 @@ class Ui_MainWindow(object):
 "}")
         self.USBStorageSaveButton.setText("")
         icon20 = QtGui.QIcon()
+<<<<<<< HEAD
         icon20.addPixmap(QtGui.QPixmap("templates/img/icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon20.addPixmap(QtGui.QPixmap(".\\templates/img/icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.USBStorageSaveButton.setIcon(icon20)
         self.USBStorageSaveButton.setIconSize(QtCore.QSize(50, 50))
         self.USBStorageSaveButton.setCheckable(False)
@@ -4797,7 +4991,7 @@ class Ui_MainWindow(object):
         self.printPreviewSelected.setFont(font)
         self.printPreviewSelected.setStyleSheet("background-color: rgba(255, 255, 255, 0);")
         self.printPreviewSelected.setText("")
-        self.printPreviewSelected.setPixmap(QtGui.QPixmap("../../JuliaMiniTouchUI/octoprint_JuliaMiniTouchUI/templates/img/thumbnail.png"))
+        self.printPreviewSelected.setPixmap(QtGui.QPixmap(".\\../../JuliaMiniTouchUI/octoprint_JuliaMiniTouchUI/templates/img/thumbnail.png"))
         self.printPreviewSelected.setScaledContents(True)
         self.printPreviewSelected.setObjectName("printPreviewSelected")
         self.stackedWidget.addWidget(self.printSelectedLocalPage)
@@ -4912,7 +5106,7 @@ class Ui_MainWindow(object):
         self.printPreviewSelectedUSB.setFont(font)
         self.printPreviewSelectedUSB.setStyleSheet("background-color: rgba(255, 255, 255, 0);")
         self.printPreviewSelectedUSB.setText("")
-        self.printPreviewSelectedUSB.setPixmap(QtGui.QPixmap("templates/img/thumbnail.png"))
+        self.printPreviewSelectedUSB.setPixmap(QtGui.QPixmap(".\\templates/img/thumbnail.png"))
         self.printPreviewSelectedUSB.setScaledContents(True)
         self.printPreviewSelectedUSB.setObjectName("printPreviewSelectedUSB")
         self.stackedWidget.addWidget(self.printSelectedUSBPage)
@@ -5112,7 +5306,11 @@ class Ui_MainWindow(object):
         self.setFeedRateButton.setIconSize(QtCore.QSize(50, 50))
         self.setFeedRateButton.setObjectName("setFeedRateButton")
         self.moveZMBabyStep = QtWidgets.QPushButton(self.feedRateTab)
+<<<<<<< HEAD
         self.moveZMBabyStep.setGeometry(QtCore.QRect(390, 190, 261, 141))
+=======
+        self.moveZMBabyStep.setGeometry(QtCore.QRect(390, 220, 231, 111))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.moveZMBabyStep.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("Gotham")
@@ -5151,7 +5349,11 @@ class Ui_MainWindow(object):
         self.moveZMBabyStep.setFlat(False)
         self.moveZMBabyStep.setObjectName("moveZMBabyStep")
         self.moveZPBabyStep = QtWidgets.QPushButton(self.feedRateTab)
+<<<<<<< HEAD
         self.moveZPBabyStep.setGeometry(QtCore.QRect(120, 190, 271, 141))
+=======
+        self.moveZPBabyStep.setGeometry(QtCore.QRect(150, 220, 241, 111))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.moveZPBabyStep.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("Gotham")
@@ -5207,13 +5409,22 @@ class Ui_MainWindow(object):
         self.moveZPBabyStep.raise_()
         self.flowRateLabelControlPage_5.raise_()
         icon21 = QtGui.QIcon()
+<<<<<<< HEAD
         icon21.addPixmap(QtGui.QPixmap("templates/img/wrench.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         icon21.addPixmap(QtGui.QPixmap("templates/img/wrench_selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+=======
+        icon21.addPixmap(QtGui.QPixmap(".\\templates/img/wrench.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon21.addPixmap(QtGui.QPixmap(".\\templates/img/wrench_selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.controlTabWidget.addTab(self.feedRateTab, icon21, "")
         self.temperatureTab = QtWidgets.QWidget()
         self.temperatureTab.setObjectName("temperatureTab")
         self.toolLabel = QtWidgets.QLabel(self.temperatureTab)
+<<<<<<< HEAD
         self.toolLabel.setGeometry(QtCore.QRect(20, 110, 70, 21))
+=======
+        self.toolLabel.setGeometry(QtCore.QRect(0, 80, 70, 21))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham Light")
         font.setPointSize(14)
@@ -5233,7 +5444,11 @@ class Ui_MainWindow(object):
         self.bedLabel_2.setStyleSheet("color: rgb(255, 255, 255);")
         self.bedLabel_2.setObjectName("bedLabel_2")
         self.cooldownButton = QtWidgets.QPushButton(self.temperatureTab)
+<<<<<<< HEAD
         self.cooldownButton.setGeometry(QtCore.QRect(230, 0, 121, 81))
+=======
+        self.cooldownButton.setGeometry(QtCore.QRect(250, 0, 101, 60))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.cooldownButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("Gotham")
@@ -5263,12 +5478,20 @@ class Ui_MainWindow(object):
 "}")
         self.cooldownButton.setText("")
         icon22 = QtGui.QIcon()
+<<<<<<< HEAD
         icon22.addPixmap(QtGui.QPixmap("templates/img/snowflake.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon22.addPixmap(QtGui.QPixmap(".\\templates/img/snowflake.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.cooldownButton.setIcon(icon22)
         self.cooldownButton.setIconSize(QtCore.QSize(40, 40))
         self.cooldownButton.setObjectName("cooldownButton")
         self.fanOffButton = QtWidgets.QPushButton(self.temperatureTab)
+<<<<<<< HEAD
         self.fanOffButton.setGeometry(QtCore.QRect(460, 0, 111, 81))
+=======
+        self.fanOffButton.setGeometry(QtCore.QRect(430, 0, 81, 60))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.fanOffButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("Gotham")
@@ -5299,7 +5522,11 @@ class Ui_MainWindow(object):
 "}")
         self.fanOffButton.setText("")
         icon23 = QtGui.QIcon()
+<<<<<<< HEAD
         icon23.addPixmap(QtGui.QPixmap("templates/img/fan-black-silhouette-off.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon23.addPixmap(QtGui.QPixmap(".\\templates/img/fan-black-silhouette-off.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.fanOffButton.setIcon(icon23)
         self.fanOffButton.setIconSize(QtCore.QSize(40, 40))
         self.fanOffButton.setCheckable(False)
@@ -5308,7 +5535,11 @@ class Ui_MainWindow(object):
         self.fanOffButton.setFlat(False)
         self.fanOffButton.setObjectName("fanOffButton")
         self.fanOnButton = QtWidgets.QPushButton(self.temperatureTab)
+<<<<<<< HEAD
         self.fanOnButton.setGeometry(QtCore.QRect(350, 0, 111, 81))
+=======
+        self.fanOnButton.setGeometry(QtCore.QRect(350, 0, 81, 60))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.fanOnButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("Gotham")
@@ -5338,7 +5569,11 @@ class Ui_MainWindow(object):
 "}")
         self.fanOnButton.setText("")
         icon24 = QtGui.QIcon()
+<<<<<<< HEAD
         icon24.addPixmap(QtGui.QPixmap("templates/img/fan-black-silhouette.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon24.addPixmap(QtGui.QPixmap(".\\templates/img/fan-black-silhouette.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.fanOnButton.setIcon(icon24)
         self.fanOnButton.setIconSize(QtCore.QSize(40, 40))
         self.fanOnButton.setCheckable(False)
@@ -5347,7 +5582,11 @@ class Ui_MainWindow(object):
         self.fanOnButton.setFlat(False)
         self.fanOnButton.setObjectName("fanOnButton")
         self.toolTempSpinBox = QtWidgets.QSpinBox(self.temperatureTab)
+<<<<<<< HEAD
         self.toolTempSpinBox.setGeometry(QtCore.QRect(90, 200, 161, 131))
+=======
+        self.toolTempSpinBox.setGeometry(QtCore.QRect(90, 150, 161, 131))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -5418,7 +5657,11 @@ class Ui_MainWindow(object):
         self.toolTempSpinBox.setProperty("value", 0)
         self.toolTempSpinBox.setObjectName("toolTempSpinBox")
         self.bedTempSpinBox = QtWidgets.QSpinBox(self.temperatureTab)
+<<<<<<< HEAD
         self.bedTempSpinBox.setGeometry(QtCore.QRect(370, 170, 181, 131))
+=======
+        self.bedTempSpinBox.setGeometry(QtCore.QRect(390, 158, 161, 131))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -5487,7 +5730,11 @@ class Ui_MainWindow(object):
         self.bedTempSpinBox.setProperty("value", 0)
         self.bedTempSpinBox.setObjectName("bedTempSpinBox")
         self.setToolTempButton = QtWidgets.QPushButton(self.temperatureTab)
+<<<<<<< HEAD
         self.setToolTempButton.setGeometry(QtCore.QRect(250, 200, 71, 130))
+=======
+        self.setToolTempButton.setGeometry(QtCore.QRect(250, 150, 71, 130))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(13)
@@ -5520,7 +5767,11 @@ class Ui_MainWindow(object):
         self.setToolTempButton.setIconSize(QtCore.QSize(50, 50))
         self.setToolTempButton.setObjectName("setToolTempButton")
         self.setBedTempButton = QtWidgets.QPushButton(self.temperatureTab)
+<<<<<<< HEAD
         self.setBedTempButton.setGeometry(QtCore.QRect(550, 170, 71, 131))
+=======
+        self.setBedTempButton.setGeometry(QtCore.QRect(550, 160, 71, 127))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(13)
@@ -5554,7 +5805,11 @@ class Ui_MainWindow(object):
         self.setBedTempButton.setIconSize(QtCore.QSize(50, 50))
         self.setBedTempButton.setObjectName("setBedTempButton")
         self.toolToggleTemperatureButton = QtWidgets.QPushButton(self.temperatureTab)
+<<<<<<< HEAD
         self.toolToggleTemperatureButton.setGeometry(QtCore.QRect(185, 130, 136, 71))
+=======
+        self.toolToggleTemperatureButton.setGeometry(QtCore.QRect(185, 100, 136, 51))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.toolToggleTemperatureButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("Gotham")
@@ -5585,8 +5840,13 @@ class Ui_MainWindow(object):
 "}")
         self.toolToggleTemperatureButton.setText("")
         icon25 = QtGui.QIcon()
+<<<<<<< HEAD
         icon25.addPixmap(QtGui.QPixmap("templates/img/NozzleSelect_0.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         icon25.addPixmap(QtGui.QPixmap("templates/img/NozzleSelect_1.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+=======
+        icon25.addPixmap(QtGui.QPixmap(".\\templates/img/NozzleSelect_0.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon25.addPixmap(QtGui.QPixmap(".\\templates/img/NozzleSelect_1.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.toolToggleTemperatureButton.setIcon(icon25)
         self.toolToggleTemperatureButton.setIconSize(QtCore.QSize(90, 90))
         self.toolToggleTemperatureButton.setCheckable(True)
@@ -5606,13 +5866,22 @@ class Ui_MainWindow(object):
         self.toolTempSpinBox.raise_()
         self.toolToggleTemperatureButton.raise_()
         icon26 = QtGui.QIcon()
+<<<<<<< HEAD
         icon26.addPixmap(QtGui.QPixmap("templates/img/thermometer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         icon26.addPixmap(QtGui.QPixmap("templates/img/thermometer_Selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+=======
+        icon26.addPixmap(QtGui.QPixmap(".\\templates/img/thermometer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon26.addPixmap(QtGui.QPixmap(".\\templates/img/thermometer_Selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.controlTabWidget.addTab(self.temperatureTab, icon26, "")
         self.motionTab = QtWidgets.QWidget()
         self.motionTab.setObjectName("motionTab")
         self.step1Button = QtWidgets.QPushButton(self.motionTab)
+<<<<<<< HEAD
         self.step1Button.setGeometry(QtCore.QRect(200, 0, 111, 61))
+=======
+        self.step1Button.setGeometry(QtCore.QRect(200, 0, 100, 45))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.step1Button.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -5650,7 +5919,11 @@ class Ui_MainWindow(object):
         self.step1Button.setFlat(False)
         self.step1Button.setObjectName("step1Button")
         self.step10Button = QtWidgets.QPushButton(self.motionTab)
+<<<<<<< HEAD
         self.step10Button.setGeometry(QtCore.QRect(309, 0, 111, 61))
+=======
+        self.step10Button.setGeometry(QtCore.QRect(300, 0, 100, 45))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.step10Button.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -5688,7 +5961,11 @@ class Ui_MainWindow(object):
         self.step10Button.setFlat(False)
         self.step10Button.setObjectName("step10Button")
         self.step100Button = QtWidgets.QPushButton(self.motionTab)
+<<<<<<< HEAD
         self.step100Button.setGeometry(QtCore.QRect(420, 0, 131, 61))
+=======
+        self.step100Button.setGeometry(QtCore.QRect(400, 0, 101, 45))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.step100Button.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -5727,7 +6004,11 @@ class Ui_MainWindow(object):
         self.step100Button.setFlat(False)
         self.step100Button.setObjectName("step100Button")
         self.moveYPButton = QtWidgets.QPushButton(self.motionTab)
+<<<<<<< HEAD
         self.moveYPButton.setGeometry(QtCore.QRect(120, 90, 101, 91))
+=======
+        self.moveYPButton.setGeometry(QtCore.QRect(90, 130, 70, 70))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.moveYPButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -5765,7 +6046,11 @@ class Ui_MainWindow(object):
         self.moveYPButton.setFlat(False)
         self.moveYPButton.setObjectName("moveYPButton")
         self.moveYMButton = QtWidgets.QPushButton(self.motionTab)
+<<<<<<< HEAD
         self.moveYMButton.setGeometry(QtCore.QRect(120, 270, 101, 81))
+=======
+        self.moveYMButton.setGeometry(QtCore.QRect(90, 270, 70, 70))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.moveYMButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -5804,7 +6089,11 @@ class Ui_MainWindow(object):
         self.moveYMButton.setFlat(False)
         self.moveYMButton.setObjectName("moveYMButton")
         self.moveXPButton = QtWidgets.QPushButton(self.motionTab)
+<<<<<<< HEAD
         self.moveXPButton.setGeometry(QtCore.QRect(220, 180, 91, 91))
+=======
+        self.moveXPButton.setGeometry(QtCore.QRect(160, 200, 70, 70))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.moveXPButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -5836,7 +6125,11 @@ class Ui_MainWindow(object):
 "}")
         self.moveXPButton.setText("")
         icon27 = QtGui.QIcon()
+<<<<<<< HEAD
         icon27.addPixmap(QtGui.QPixmap("templates/img/arrows-2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon27.addPixmap(QtGui.QPixmap(".\\templates/img/arrows-2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.moveXPButton.setIcon(icon27)
         self.moveXPButton.setIconSize(QtCore.QSize(40, 40))
         self.moveXPButton.setCheckable(False)
@@ -5845,7 +6138,11 @@ class Ui_MainWindow(object):
         self.moveXPButton.setFlat(False)
         self.moveXPButton.setObjectName("moveXPButton")
         self.moveXMButton = QtWidgets.QPushButton(self.motionTab)
+<<<<<<< HEAD
         self.moveXMButton.setGeometry(QtCore.QRect(29, 180, 91, 91))
+=======
+        self.moveXMButton.setGeometry(QtCore.QRect(20, 200, 70, 70))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.moveXMButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -5884,7 +6181,11 @@ class Ui_MainWindow(object):
         self.moveXMButton.setFlat(False)
         self.moveXMButton.setObjectName("moveXMButton")
         self.homeXYButton = QtWidgets.QPushButton(self.motionTab)
+<<<<<<< HEAD
         self.homeXYButton.setGeometry(QtCore.QRect(120, 180, 101, 91))
+=======
+        self.homeXYButton.setGeometry(QtCore.QRect(90, 200, 70, 70))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.homeXYButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -5914,7 +6215,11 @@ class Ui_MainWindow(object):
 "}")
         self.homeXYButton.setText("")
         icon28 = QtGui.QIcon()
+<<<<<<< HEAD
         icon28.addPixmap(QtGui.QPixmap("templates/img/home-icon-silhouette.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon28.addPixmap(QtGui.QPixmap(".\\templates/img/home-icon-silhouette.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.homeXYButton.setIcon(icon28)
         self.homeXYButton.setIconSize(QtCore.QSize(40, 40))
         self.homeXYButton.setCheckable(False)
@@ -5923,7 +6228,11 @@ class Ui_MainWindow(object):
         self.homeXYButton.setFlat(False)
         self.homeXYButton.setObjectName("homeXYButton")
         self.homeZButton = QtWidgets.QPushButton(self.motionTab)
+<<<<<<< HEAD
         self.homeZButton.setGeometry(QtCore.QRect(380, 180, 101, 91))
+=======
+        self.homeZButton.setGeometry(QtCore.QRect(340, 200, 70, 70))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.homeZButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -5960,7 +6269,11 @@ class Ui_MainWindow(object):
         self.homeZButton.setFlat(False)
         self.homeZButton.setObjectName("homeZButton")
         self.motorOffButton = QtWidgets.QPushButton(self.motionTab)
+<<<<<<< HEAD
         self.motorOffButton.setGeometry(QtCore.QRect(550, 0, 91, 61))
+=======
+        self.motorOffButton.setGeometry(QtCore.QRect(500, 0, 81, 45))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.motorOffButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -5990,7 +6303,11 @@ class Ui_MainWindow(object):
 "}")
         self.motorOffButton.setText("")
         icon29 = QtGui.QIcon()
+<<<<<<< HEAD
         icon29.addPixmap(QtGui.QPixmap("templates/img/motor.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon29.addPixmap(QtGui.QPixmap(".\\templates/img/motor.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.motorOffButton.setIcon(icon29)
         self.motorOffButton.setIconSize(QtCore.QSize(40, 40))
         self.motorOffButton.setCheckable(False)
@@ -5999,7 +6316,11 @@ class Ui_MainWindow(object):
         self.motorOffButton.setFlat(False)
         self.motorOffButton.setObjectName("motorOffButton")
         self.moveZMButton = QtWidgets.QPushButton(self.motionTab)
+<<<<<<< HEAD
         self.moveZMButton.setGeometry(QtCore.QRect(380, 90, 101, 91))
+=======
+        self.moveZMButton.setGeometry(QtCore.QRect(340, 130, 70, 70))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.moveZMButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -6038,7 +6359,11 @@ class Ui_MainWindow(object):
         self.moveZMButton.setFlat(False)
         self.moveZMButton.setObjectName("moveZMButton")
         self.moveZPButton = QtWidgets.QPushButton(self.motionTab)
+<<<<<<< HEAD
         self.moveZPButton.setGeometry(QtCore.QRect(380, 270, 101, 81))
+=======
+        self.moveZPButton.setGeometry(QtCore.QRect(340, 270, 70, 70))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.moveZPButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -6087,7 +6412,11 @@ class Ui_MainWindow(object):
         self.XYLabel.setStyleSheet("color: rgb(255, 255, 255);")
         self.XYLabel.setObjectName("XYLabel")
         self.ZLabel = QtWidgets.QLabel(self.motionTab)
+<<<<<<< HEAD
         self.ZLabel.setGeometry(QtCore.QRect(330, 80, 31, 21))
+=======
+        self.ZLabel.setGeometry(QtCore.QRect(290, 80, 31, 21))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(20)
@@ -6097,7 +6426,11 @@ class Ui_MainWindow(object):
         self.ZLabel.setStyleSheet("color: rgb(255, 255, 255);")
         self.ZLabel.setObjectName("ZLabel")
         self.retractButton = QtWidgets.QPushButton(self.motionTab)
+<<<<<<< HEAD
         self.retractButton.setGeometry(QtCore.QRect(610, 260, 111, 91))
+=======
+        self.retractButton.setGeometry(QtCore.QRect(550, 270, 70, 70))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.retractButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -6129,7 +6462,11 @@ class Ui_MainWindow(object):
 "}")
         self.retractButton.setText("")
         icon30 = QtGui.QIcon()
+<<<<<<< HEAD
         icon30.addPixmap(QtGui.QPixmap("templates/img/remove.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon30.addPixmap(QtGui.QPixmap(".\\templates/img/remove.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.retractButton.setIcon(icon30)
         self.retractButton.setIconSize(QtCore.QSize(40, 40))
         self.retractButton.setCheckable(False)
@@ -6138,7 +6475,11 @@ class Ui_MainWindow(object):
         self.retractButton.setFlat(False)
         self.retractButton.setObjectName("retractButton")
         self.extruderButton = QtWidgets.QPushButton(self.motionTab)
+<<<<<<< HEAD
         self.extruderButton.setGeometry(QtCore.QRect(610, 180, 111, 81))
+=======
+        self.extruderButton.setGeometry(QtCore.QRect(550, 200, 70, 70))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.extruderButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -6169,7 +6510,11 @@ class Ui_MainWindow(object):
 "}")
         self.extruderButton.setText("")
         icon31 = QtGui.QIcon()
+<<<<<<< HEAD
         icon31.addPixmap(QtGui.QPixmap("templates/img/add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon31.addPixmap(QtGui.QPixmap(".\\templates/img/add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.extruderButton.setIcon(icon31)
         self.extruderButton.setIconSize(QtCore.QSize(40, 40))
         self.extruderButton.setCheckable(False)
@@ -6178,7 +6523,11 @@ class Ui_MainWindow(object):
         self.extruderButton.setFlat(False)
         self.extruderButton.setObjectName("extruderButton")
         self.ELabel = QtWidgets.QLabel(self.motionTab)
+<<<<<<< HEAD
         self.ELabel.setGeometry(QtCore.QRect(570, 80, 31, 21))
+=======
+        self.ELabel.setGeometry(QtCore.QRect(510, 80, 31, 21))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(20)
@@ -6188,7 +6537,11 @@ class Ui_MainWindow(object):
         self.ELabel.setStyleSheet("color: rgb(255, 255, 255);")
         self.ELabel.setObjectName("ELabel")
         self.moveByLabel = QtWidgets.QLabel(self.motionTab)
+<<<<<<< HEAD
         self.moveByLabel.setGeometry(QtCore.QRect(70, 10, 121, 41))
+=======
+        self.moveByLabel.setGeometry(QtCore.QRect(80, 10, 111, 21))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(20)
@@ -6198,7 +6551,11 @@ class Ui_MainWindow(object):
         self.moveByLabel.setStyleSheet("color: rgb(255, 255, 255);")
         self.moveByLabel.setObjectName("moveByLabel")
         self.toolToggleMotionButton = QtWidgets.QPushButton(self.motionTab)
+<<<<<<< HEAD
         self.toolToggleMotionButton.setGeometry(QtCore.QRect(610, 90, 111, 91))
+=======
+        self.toolToggleMotionButton.setGeometry(QtCore.QRect(550, 130, 70, 70))
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.toolToggleMotionButton.setMinimumSize(QtCore.QSize(0, 0))
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
@@ -6228,7 +6585,11 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         icon32 = QtGui.QIcon()
+<<<<<<< HEAD
         icon32.addPixmap(QtGui.QPixmap("templates/img/NozzleSelect.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon32.addPixmap(QtGui.QPixmap(".\\templates/img/NozzleSelect.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.toolToggleMotionButton.setIcon(icon32)
         self.toolToggleMotionButton.setIconSize(QtCore.QSize(30, 30))
         self.toolToggleMotionButton.setCheckable(True)
@@ -6257,8 +6618,13 @@ class Ui_MainWindow(object):
         self.ELabel.raise_()
         self.toolToggleMotionButton.raise_()
         icon33 = QtGui.QIcon()
+<<<<<<< HEAD
         icon33.addPixmap(QtGui.QPixmap("templates/img/Motion.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         icon33.addPixmap(QtGui.QPixmap("templates/img/Motion_Selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+=======
+        icon33.addPixmap(QtGui.QPixmap(".\\templates/img/Motion.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon33.addPixmap(QtGui.QPixmap(".\\templates/img/Motion_Selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.controlTabWidget.addTab(self.motionTab, icon33, "")
         self.filamentTab = QtWidgets.QWidget()
         self.filamentTab.setObjectName("filamentTab")
@@ -6407,7 +6773,11 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         icon34 = QtGui.QIcon()
+<<<<<<< HEAD
         icon34.addPixmap(QtGui.QPixmap("templates/img/changeFilament.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon34.addPixmap(QtGui.QPixmap(".\\templates/img/changeFilament.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.changeFilamentButton.setIcon(icon34)
         self.changeFilamentButton.setIconSize(QtCore.QSize(60, 60))
         self.changeFilamentButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
@@ -6445,7 +6815,11 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         icon35 = QtGui.QIcon()
+<<<<<<< HEAD
         icon35.addPixmap(QtGui.QPixmap("templates/img/filamentSensorOn.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon35.addPixmap(QtGui.QPixmap(".\\templates/img/filamentSensorOn.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.toggleFilamentSensorButton.setIcon(icon35)
         self.toggleFilamentSensorButton.setIconSize(QtCore.QSize(60, 60))
         self.toggleFilamentSensorButton.setCheckable(False)
@@ -6458,11 +6832,19 @@ class Ui_MainWindow(object):
         self.changeFilamentButton.raise_()
         self.toggleFilamentSensorButton.raise_()
         icon36 = QtGui.QIcon()
+<<<<<<< HEAD
         icon36.addPixmap(QtGui.QPixmap("templates/img/Spool.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         icon36.addPixmap(QtGui.QPixmap("templates/img/Spool_Selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         icon36.addPixmap(QtGui.QPixmap("png/Spool_Selected.png"), QtGui.QIcon.Active, QtGui.QIcon.On)
         icon36.addPixmap(QtGui.QPixmap("png/Spool.png"), QtGui.QIcon.Selected, QtGui.QIcon.Off)
         icon36.addPixmap(QtGui.QPixmap("png/Spool_Selected.png"), QtGui.QIcon.Selected, QtGui.QIcon.On)
+=======
+        icon36.addPixmap(QtGui.QPixmap(".\\templates/img/Spool.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon36.addPixmap(QtGui.QPixmap(".\\templates/img/Spool_Selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon36.addPixmap(QtGui.QPixmap(".\\png/Spool_Selected.png"), QtGui.QIcon.Active, QtGui.QIcon.On)
+        icon36.addPixmap(QtGui.QPixmap(".\\png/Spool.png"), QtGui.QIcon.Selected, QtGui.QIcon.Off)
+        icon36.addPixmap(QtGui.QPixmap(".\\png/Spool_Selected.png"), QtGui.QIcon.Selected, QtGui.QIcon.On)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.controlTabWidget.addTab(self.filamentTab, icon36, "")
         self.controlBackButton = QtWidgets.QPushButton(self.controlPage)
         self.controlBackButton.setGeometry(QtCore.QRect(640, 380, 161, 101))
@@ -6642,7 +7024,11 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         icon37 = QtGui.QIcon()
+<<<<<<< HEAD
         icon37.addPixmap(QtGui.QPixmap("templates/img/load.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon37.addPixmap(QtGui.QPixmap(".\\templates/img/load.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.changeFilamentLoadButton.setIcon(icon37)
         self.changeFilamentLoadButton.setIconSize(QtCore.QSize(60, 60))
         self.changeFilamentLoadButton.setObjectName("changeFilamentLoadButton")
@@ -6713,7 +7099,11 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         icon38 = QtGui.QIcon()
+<<<<<<< HEAD
         icon38.addPixmap(QtGui.QPixmap("templates/img/unload.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+=======
+        icon38.addPixmap(QtGui.QPixmap(".\\templates/img/unload.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         self.changeFilamentUnloadButton.setIcon(icon38)
         self.changeFilamentUnloadButton.setIconSize(QtCore.QSize(60, 60))
         self.changeFilamentUnloadButton.setObjectName("changeFilamentUnloadButton")
@@ -6848,7 +7238,7 @@ class Ui_MainWindow(object):
         self.label_2.setFont(font)
         self.label_2.setStyleSheet("background-color: rgba(255, 255, 255, 0);")
         self.label_2.setText("")
-        self.label_2.setPixmap(QtGui.QPixmap("templates/img/changeFilament2.png"))
+        self.label_2.setPixmap(QtGui.QPixmap(".\\templates/img/changeFilament2.png"))
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
         self.stackedWidget.addWidget(self.changeFilamentProgressPage)
@@ -7029,8 +7419,13 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.mainApplication)
 
         self.retranslateUi(MainWindow)
+<<<<<<< HEAD
         self.stackedWidget.setCurrentIndex(32)
         self.controlTabWidget.setCurrentIndex(3)
+=======
+        self.stackedWidget.setCurrentIndex(14)
+        self.controlTabWidget.setCurrentIndex(2)
+>>>>>>> parent of 49f034c (Some Naming and version changes)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
