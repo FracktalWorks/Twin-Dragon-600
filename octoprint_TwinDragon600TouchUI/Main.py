@@ -605,15 +605,15 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             lambda: self.stackedWidget.setCurrentWidget(self.networkSettingsPage))
         self.deleteStaticIPSettingsButton.pressed.connect(self.deleteStaticIPSettings)
 
-        # # Display settings
-        # self.rotateDisplay.pressed.connect(self.showRotateDisplaySettingsPage)
-        # self.calibrateTouch.pressed.connect(self.touchCalibration)
-        # self.displaySettingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
-        #
-        # # Rotate Display Settings
-        # self.rotateDisplaySettingsDoneButton.pressed.connect(self.saveRotateDisplaySettings)
-        # self.rotateDisplaySettingsCancelButton.pressed.connect(
-        #     lambda: self.stackedWidget.setCurrentWidget(self.displaySettingsPage))
+        # Display settings
+        self.rotateDisplay.pressed.connect(self.showRotateDisplaySettingsPage)
+        self.calibrateTouch.pressed.connect(self.touchCalibration)
+        self.displaySettingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
+
+        # Rotate Display Settings
+        self.rotateDisplaySettingsDoneButton.pressed.connect(self.saveRotateDisplaySettings)
+        self.rotateDisplaySettingsCancelButton.pressed.connect(
+            lambda: self.stackedWidget.setCurrentWidget(self.displaySettingsPage))
 
         # QR Code
         self.QRCodeBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
@@ -1154,20 +1154,20 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         os.system('ts_calibrate')
 
 
-    # def showRotateDisplaySettingsPage(self):
-    #
-    #     txt = (subprocess.Popen("cat /boot/config.txt", stdout=subprocess.PIPE, shell=True).communicate()[0]).decode("utf-8")
-    #
-    #     reRot = r"dtoverlay\s*=\s*waveshare35a(\s*:\s*rotate\s*=\s*([0-9]{1,3})){0,1}"
-    #     mtRot = re.search(reRot, txt)
-    #     # print(mtRot.group(0))
-    #
-    #     if mtRot and len(mtRot.groups()) == 2 and str(mtRot.group(2)) == "270":
-    #         self.rotateDisplaySettingsComboBox.setCurrentIndex(1)
-    #     else:
-    #         self.rotateDisplaySettingsComboBox.setCurrentIndex(0)
-    #
-    #     self.stackedWidget.setCurrentWidget(self.rotateDisplaySettingsPage)
+    def showRotateDisplaySettingsPage(self):
+
+        txt = (subprocess.Popen("cat /boot/config.txt", stdout=subprocess.PIPE, shell=True).communicate()[0]).decode("utf-8")
+
+        reRot = r"dtoverlay\s*=\s*waveshare35a(\s*:\s*rotate\s*=\s*([0-9]{1,3})){0,1}"
+        mtRot = re.search(reRot, txt)
+        # print(mtRot.group(0))
+
+        if mtRot and len(mtRot.groups()) == 2 and str(mtRot.group(2)) == "270":
+            self.rotateDisplaySettingsComboBox.setCurrentIndex(1)
+        else:
+            self.rotateDisplaySettingsComboBox.setCurrentIndex(0)
+
+        self.stackedWidget.setCurrentWidget(self.rotateDisplaySettingsPage)
 
     # def saveRotateDisplaySettings(self):
     #     txt1 = (subprocess.Popen("cat /boot/config.txt", stdout=subprocess.PIPE, shell=True).communicate()[0]).decode("utf-8")
@@ -1208,29 +1208,29 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
     #     self.askAndReboot()
     #     self.stackedWidget.setCurrentWidget(self.displaySettingsPage)
 
-    # def saveRotateDisplaySettings(self):
-    #     txt1 = (subprocess.Popen("cat /boot/config.txt", stdout=subprocess.PIPE, shell=True).communicate()[0]).decode("utf-8")
-    #
-    #     try:
-    #         if self.rotateDisplaySettingsComboBox.currentIndex() == 1:
-    #             os.system('sudo cp -f config/config.txt /boot/config.txt')
-    #         else:
-    #             os.system('sudo cp -f config/config_rot.txt /boot/config.txt')
-    #     except:
-    #         if dialog.WarningOk(self, "Failed to change rotation settings", overlay=True):
-    #             return
-    #     try:
-    #         if self.rotateDisplaySettingsComboBox.currentIndex() == 1:
-    #             os.system('sudo cp -f config/99-calibration.conf /usr/share/X11/xorg.conf.d/99-calibration.conf')
-    #         else:
-    #             os.system('sudo cp -f config/99-calibration_rot.conf /usr/share/X11/xorg.conf.d/99-calibration.conf')
-    #     except:
-    #         if dialog.WarningOk(self, "Failed to change touch settings", overlay=True):
-    #             return
-    #
-    #     self.askAndReboot()
-    #     self.stackedWidget.setCurrentWidget(self.displaySettingsPage)
-    #
+    def saveRotateDisplaySettings(self):
+        txt1 = (subprocess.Popen("cat /boot/config.txt", stdout=subprocess.PIPE, shell=True).communicate()[0]).decode("utf-8")
+
+        try:
+            if self.rotateDisplaySettingsComboBox.currentIndex() == 1:
+                os.system('sudo cp -f config/config.txt /boot/config.txt')
+            else:
+                os.system('sudo cp -f config/config_rot.txt /boot/config.txt')
+        except:
+            if dialog.WarningOk(self, "Failed to change rotation settings", overlay=True):
+                return
+        try:
+            if self.rotateDisplaySettingsComboBox.currentIndex() == 1:
+                os.system('sudo cp -f config/99-calibration.conf /usr/share/X11/xorg.conf.d/99-calibration.conf')
+            else:
+                os.system('sudo cp -f config/99-calibration_rot.conf /usr/share/X11/xorg.conf.d/99-calibration.conf')
+        except:
+            if dialog.WarningOk(self, "Failed to change touch settings", overlay=True):
+                return
+
+        self.askAndReboot()
+        self.stackedWidget.setCurrentWidget(self.displaySettingsPage)
+
 
     ''' +++++++++++++++++++++++++++++++++Change Filament+++++++++++++++++++++++++++++++ '''
 
