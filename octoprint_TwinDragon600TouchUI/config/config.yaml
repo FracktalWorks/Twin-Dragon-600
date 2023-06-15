@@ -9,6 +9,8 @@ accessControl:
 api:
   allowCrossOrigin: true
   key: B508534ED20348F090B4D0AD637D3660
+appearance:
+  name: Twin Dragon 600
 plugins:
   Julia2018PrintRestore:
     _config_version: 2
@@ -29,6 +31,12 @@ plugins:
     upnpUuid: e3b59d31-7778-4758-80ee-12ba9a463e4e
   errortracking:
     unique_id: 754e62f6-5624-4fed-a4e5-be911ab81a3a
+  firmwareupdater:
+    _config_version: 3
+    _selected_profile: 0
+    profiles:
+    - _id: 0
+      _name: Default
   gcodeviewer:
     _config_version: 1
   klipper:

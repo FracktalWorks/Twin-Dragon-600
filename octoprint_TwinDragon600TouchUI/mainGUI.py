@@ -1500,8 +1500,148 @@ class Ui_MainWindow(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}")
-        self.staticIPSettingsDoneButton.setIconSize(QtCore.QSize(40, 40))
-        self.staticIPSettingsDoneButton.setObjectName("staticIPSettingsDoneButton")
+        self.wifiSettingsDoneButton.setIconSize(QtCore.QSize(40, 40))
+        self.wifiSettingsDoneButton.setObjectName("wifiSettingsDoneButton")
+        self.wifiSettingsCancelButton = QtWidgets.QPushButton(self.wifiSettingsPage)
+        self.wifiSettingsCancelButton.setGeometry(QtCore.QRect(400, 360, 401, 121))
+        font = QtGui.QFont()
+        font.setFamily("Gotham")
+        font.setPointSize(13)
+        self.wifiSettingsCancelButton.setFont(font)
+        self.wifiSettingsCancelButton.setStyleSheet("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}")
+        self.wifiSettingsCancelButton.setIconSize(QtCore.QSize(40, 40))
+        self.wifiSettingsCancelButton.setObjectName("wifiSettingsCancelButton")
+        self.wifiSettingsSSIDKeyboardButton = QtWidgets.QPushButton(self.wifiSettingsPage)
+        self.wifiSettingsSSIDKeyboardButton.setGeometry(QtCore.QRect(700, 70, 101, 51))
+        font = QtGui.QFont()
+        font.setFamily("Gotham")
+        font.setPointSize(19)
+        self.wifiSettingsSSIDKeyboardButton.setFont(font)
+        self.wifiSettingsSSIDKeyboardButton.setStyleSheet("QPushButton {\n"
+"     border: 1px solid rgb(0, 0, 0);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}")
+        self.wifiSettingsSSIDKeyboardButton.setIconSize(QtCore.QSize(40, 40))
+        self.wifiSettingsSSIDKeyboardButton.setObjectName("wifiSettingsSSIDKeyboardButton")
+        self.hiddenCheckBox = QtWidgets.QCheckBox(self.wifiSettingsPage)
+        self.hiddenCheckBox.setGeometry(QtCore.QRect(0, 130, 161, 41))
+        font = QtGui.QFont()
+        font.setFamily("Gotham")
+        font.setPointSize(14)
+        self.hiddenCheckBox.setFont(font)
+        self.hiddenCheckBox.setStyleSheet("QCheckBox {\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QCheckBox::indicator {\n"
+"    width: 25px;\n"
+"    height: 25px;\n"
+"}\n"
+"\n"
+"QCheckBox::indicator:checked {\n"
+"    image: url(./templates/img/check-box.png);\n"
+"}\n"
+"QCheckBox::indicator:unchecked {\n"
+"    image: url(./templates/img/blank-check-box.png);\n"
+"}\n"
+"\n"
+"\n"
+"\n"
+"")
+        self.hiddenCheckBox.setIconSize(QtCore.QSize(40, 40))
+        self.hiddenCheckBox.setChecked(False)
+        self.hiddenCheckBox.setObjectName("hiddenCheckBox")
+        self.wifiSettingsComboBox.raise_()
+        self.ssidlabel.raise_()
+        self.passwordlabel.raise_()
+        self.wifiSettingsSSIDKeyboardButton.raise_()
+        self.wifiSettingsCancelButton.raise_()
+        self.wifiSettingsDoneButton.raise_()
+        self.hiddenCheckBox.raise_()
+        self.stackedWidget.addWidget(self.wifiSettingsPage)
+        self.staticIPSettingsPage = QtWidgets.QWidget()
+        self.staticIPSettingsPage.setObjectName("staticIPSettingsPage")
+        self.deleteStaticIPSettingsButton = QtWidgets.QPushButton(self.staticIPSettingsPage)
+        self.deleteStaticIPSettingsButton.setEnabled(True)
+        self.deleteStaticIPSettingsButton.setGeometry(QtCore.QRect(660, 10, 131, 71))
+        font = QtGui.QFont()
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(18)
+        font.setBold(True)
+        font.setWeight(75)
+        self.deleteStaticIPSettingsButton.setFont(font)
+        self.deleteStaticIPSettingsButton.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.deleteStaticIPSettingsButton.setAutoFillBackground(False)
+        self.deleteStaticIPSettingsButton.setStyleSheet("QPushButton {\n"
+"     border: 1px solid rgb(0, 0, 0);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}")
+        self.deleteStaticIPSettingsButton.setText("")
+        icon9 = QtGui.QIcon()
+        icon9.addPixmap(QtGui.QPixmap(".\\../../../GitHub/JuliaProSingle2022TouchUI/octoprint_JuliaProSingle2022TouchUI/templates/img/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.deleteStaticIPSettingsButton.setIcon(icon9)
+        self.deleteStaticIPSettingsButton.setIconSize(QtCore.QSize(40, 40))
+        self.deleteStaticIPSettingsButton.setObjectName("deleteStaticIPSettingsButton")
         self.ethStaticSettings = QtWidgets.QWidget(self.staticIPSettingsPage)
         self.ethStaticSettings.setGeometry(QtCore.QRect(-10, 120, 801, 211))
         font = QtGui.QFont()
@@ -3106,7 +3246,7 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         icon15 = QtGui.QIcon()
-        icon15.addPixmap(QtGui.QPixmap("templates/img/3d-printing.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon15.addPixmap(QtGui.QPixmap(".\\../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/3d-printing.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.testPrintsButton.setIcon(icon15)
         self.testPrintsButton.setIconSize(QtCore.QSize(70, 70))
         self.testPrintsButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
@@ -3182,17 +3322,68 @@ class Ui_MainWindow(object):
         self.tool0TargetTemperature_27.setGeometry(QtCore.QRect(10, 220, 41, 21))
         font = QtGui.QFont()
         font.setFamily("Gotham")
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setUnderline(False)
-        font.setWeight(50)
-        font.setStrikeOut(False)
-        self.tool0TargetTemperature_27.setFont(font)
-        self.tool0TargetTemperature_27.setStyleSheet("\n"
-"   color:  black;\n"
-"background-color: rgba(255, 255, 255, 0);")
-        self.tool0TargetTemperature_27.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.tool0TargetTemperature_27.setObjectName("tool0TargetTemperature_27")
+        font.setPointSize(13)
+        self.testPrintsBackButton.setFont(font)
+        self.testPrintsBackButton.setStyleSheet("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}")
+        self.testPrintsBackButton.setText("")
+        icon16 = QtGui.QIcon()
+        icon16.addPixmap(QtGui.QPixmap(".\\../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/arrows-4.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.testPrintsBackButton.setIcon(icon16)
+        self.testPrintsBackButton.setIconSize(QtCore.QSize(40, 40))
+        self.testPrintsBackButton.setObjectName("testPrintsBackButton")
+        self.testPrintsNextButton = QtWidgets.QPushButton(self.testPrintsPage1)
+        self.testPrintsNextButton.setGeometry(QtCore.QRect(0, 410, 401, 71))
+        font = QtGui.QFont()
+        font.setFamily("Gotham")
+        font.setPointSize(13)
+        self.testPrintsNextButton.setFont(font)
+        self.testPrintsNextButton.setStyleSheet("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}")
+        self.testPrintsNextButton.setIconSize(QtCore.QSize(40, 40))
+        self.testPrintsNextButton.setObjectName("testPrintsNextButton")
         self.testPrintsTool0SizeComboBox = QtWidgets.QComboBox(self.testPrintsPage1)
         self.testPrintsTool0SizeComboBox.setGeometry(QtCore.QRect(90, 200, 171, 51))
         font = QtGui.QFont()
@@ -3426,14 +3617,15 @@ class Ui_MainWindow(object):
         font.setUnderline(False)
         font.setWeight(50)
         font.setStrikeOut(False)
-        self.tool0TargetTemperature_28.setFont(font)
-        self.tool0TargetTemperature_28.setStyleSheet("\n"
-"   color:  black;\n"
-"background-color: rgba(255, 255, 255, 0);")
-        self.tool0TargetTemperature_28.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
-        self.tool0TargetTemperature_28.setObjectName("tool0TargetTemperature_28")
-        self.tool1Label_12 = QtWidgets.QLabel(self.testPrintsPage1)
-        self.tool1Label_12.setGeometry(QtCore.QRect(530, 200, 50, 50))
+        self.tool0Label_2.setFont(font)
+        self.tool0Label_2.setStyleSheet("\n"
+"   color:  white;")
+        self.tool0Label_2.setText("")
+        self.tool0Label_2.setPixmap(QtGui.QPixmap(".\\../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/Nozzle.png"))
+        self.tool0Label_2.setScaledContents(True)
+        self.tool0Label_2.setObjectName("tool0Label_2")
+        self.tool0Label_3 = QtWidgets.QLabel(self.testPrintsPage1)
+        self.tool0Label_3.setGeometry(QtCore.QRect(110, 60, 50, 50))
         font = QtGui.QFont()
         font.setFamily("Gotham Medium")
         font.setPointSize(14)
@@ -3444,24 +3636,27 @@ class Ui_MainWindow(object):
         self.tool1Label_12.setFont(font)
         self.tool1Label_12.setStyleSheet("\n"
 "   color:  white;")
-        self.tool1Label_12.setText("")
-        self.tool1Label_12.setPixmap(QtGui.QPixmap("templates/img/Nozzle.png"))
-        self.tool1Label_12.setScaledContents(True)
-        self.tool1Label_12.setObjectName("tool1Label_12")
-        self.calibrateLabel_59 = QtWidgets.QLabel(self.testPrintsPage1)
-        self.calibrateLabel_59.setGeometry(QtCore.QRect(80, 260, 711, 96))
+        self.tool0Label_3.setText("")
+        self.tool0Label_3.setPixmap(QtGui.QPixmap(".\\../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/exclamation-mark.png"))
+        self.tool0Label_3.setScaledContents(True)
+        self.tool0Label_3.setObjectName("tool0Label_3")
+        self.tool0Label_5 = QtWidgets.QLabel(self.testPrintsPage1)
+        self.tool0Label_5.setGeometry(QtCore.QRect(110, 260, 50, 50))
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(10)
         font.setBold(False)
         font.setWeight(50)
-        self.calibrateLabel_59.setFont(font)
-        self.calibrateLabel_59.setStyleSheet("color: rgb(255, 255, 255);")
-        self.calibrateLabel_59.setScaledContents(False)
-        self.calibrateLabel_59.setWordWrap(True)
-        self.calibrateLabel_59.setObjectName("calibrateLabel_59")
-        self.testPrintsNextButton = QtWidgets.QPushButton(self.testPrintsPage1)
-        self.testPrintsNextButton.setGeometry(QtCore.QRect(0, 350, 391, 131))
+        font.setStrikeOut(False)
+        self.tool0Label_5.setFont(font)
+        self.tool0Label_5.setStyleSheet("\n"
+"   color:  white;")
+        self.tool0Label_5.setText("")
+        self.tool0Label_5.setPixmap(QtGui.QPixmap(".\\../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/exclamation-mark.png"))
+        self.tool0Label_5.setScaledContents(True)
+        self.tool0Label_5.setObjectName("tool0Label_5")
+        self.tool0TargetTemperature_5 = QtWidgets.QLabel(self.testPrintsPage1)
+        self.tool0TargetTemperature_5.setGeometry(QtCore.QRect(130, 200, 31, 21))
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(13)
@@ -3581,10 +3776,27 @@ class Ui_MainWindow(object):
         self.tool0Label_30.setFont(font)
         self.tool0Label_30.setStyleSheet("\n"
 "   color:  white;")
-        self.tool0Label_30.setText("")
-        self.tool0Label_30.setPixmap(QtGui.QPixmap("templates/img/exclamation-mark.png"))
-        self.tool0Label_30.setScaledContents(True)
-        self.tool0Label_30.setObjectName("tool0Label_30")
+        self.tool1Label_2.setText("")
+        self.tool1Label_2.setPixmap(QtGui.QPixmap(".\\../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/Nozzle.png"))
+        self.tool1Label_2.setScaledContents(True)
+        self.tool1Label_2.setObjectName("tool1Label_2")
+        self.calibrateLabel_2.raise_()
+        self.calibrateLabel_3.raise_()
+        self.calibrateLabel_4.raise_()
+        self.calibrateLabel_8.raise_()
+        self.testPrintsBackButton.raise_()
+        self.testPrintsNextButton.raise_()
+        self.testPrintsTool0SizeComboBox.raise_()
+        self.testPrintsTool1SizeComboBox.raise_()
+        self.tool0Label_2.raise_()
+        self.tool0Label_3.raise_()
+        self.tool0Label_5.raise_()
+        self.tool0TargetTemperature_5.raise_()
+        self.tool1Label_2.raise_()
+        self.tool0TargetTemperature_6.raise_()
+        self.stackedWidget.addWidget(self.testPrintsPage1)
+        self.testPrintsPage2 = QtWidgets.QWidget()
+        self.testPrintsPage2.setObjectName("testPrintsPage2")
         self.bedLevelPrintButton = QtWidgets.QPushButton(self.testPrintsPage2)
         self.bedLevelPrintButton.setGeometry(QtCore.QRect(-1, 147, 811, 70))
         self.bedLevelPrintButton.setMinimumSize(QtCore.QSize(0, 70))
@@ -3777,6 +3989,22 @@ class Ui_MainWindow(object):
         self.testPrintsCancelButton.setDefault(False)
         self.testPrintsCancelButton.setFlat(False)
         self.testPrintsCancelButton.setObjectName("testPrintsCancelButton")
+        self.tool0Label_4 = QtWidgets.QLabel(self.testPrintsPage2)
+        self.tool0Label_4.setGeometry(QtCore.QRect(100, 20, 50, 50))
+        font = QtGui.QFont()
+        font.setFamily("Gotham Medium")
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        font.setStrikeOut(False)
+        self.tool0Label_4.setFont(font)
+        self.tool0Label_4.setStyleSheet("\n"
+"   color:  white;")
+        self.tool0Label_4.setText("")
+        self.tool0Label_4.setPixmap(QtGui.QPixmap(".\\../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/exclamation-mark.png"))
+        self.tool0Label_4.setScaledContents(True)
+        self.tool0Label_4.setObjectName("tool0Label_4")
         self.stackedWidget.addWidget(self.testPrintsPage2)
         self.toolOffsetXYPage = QtWidgets.QWidget()
         self.toolOffsetXYPage.setObjectName("toolOffsetXYPage")
@@ -3952,10 +4180,10 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         self.toolOffsetXSetButton.setText("")
-        icon16 = QtGui.QIcon()
-        icon16.addPixmap(QtGui.QPixmap("templates/img/verification-mark.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.toolOffsetXSetButton.setIcon(icon16)
-        self.toolOffsetXSetButton.setIconSize(QtCore.QSize(70, 70))
+        icon17 = QtGui.QIcon()
+        icon17.addPixmap(QtGui.QPixmap(".\\templates/img/verification-mark.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.toolOffsetXSetButton.setIcon(icon17)
+        self.toolOffsetXSetButton.setIconSize(QtCore.QSize(50, 50))
         self.toolOffsetXSetButton.setObjectName("toolOffsetXSetButton")
         self.toolOffsetYSetButton = QtWidgets.QPushButton(self.toolOffsetXYPage)
         self.toolOffsetYSetButton.setGeometry(QtCore.QRect(510, 220, 91, 119))
@@ -4653,10 +4881,10 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         self.moveZMT1CaliberateButton.setText("")
-        icon17 = QtGui.QIcon()
-        icon17.addPixmap(QtGui.QPixmap("templates/img/arrows.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.moveZMT1CaliberateButton.setIcon(icon17)
-        self.moveZMT1CaliberateButton.setIconSize(QtCore.QSize(150, 150))
+        icon18 = QtGui.QIcon()
+        icon18.addPixmap(QtGui.QPixmap(".\\templates/img/arrows.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.moveZMT1CaliberateButton.setIcon(icon18)
+        self.moveZMT1CaliberateButton.setIconSize(QtCore.QSize(40, 40))
         self.moveZMT1CaliberateButton.setCheckable(False)
         self.moveZMT1CaliberateButton.setAutoDefault(False)
         self.moveZMT1CaliberateButton.setDefault(False)
@@ -4694,10 +4922,10 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         self.moveZPT1CaliberateButton.setText("")
-        icon18 = QtGui.QIcon()
-        icon18.addPixmap(QtGui.QPixmap("templates/img/arrows-5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.moveZPT1CaliberateButton.setIcon(icon18)
-        self.moveZPT1CaliberateButton.setIconSize(QtCore.QSize(150, 150))
+        icon19 = QtGui.QIcon()
+        icon19.addPixmap(QtGui.QPixmap(".\\templates/img/arrows-5.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.moveZPT1CaliberateButton.setIcon(icon19)
+        self.moveZPT1CaliberateButton.setIconSize(QtCore.QSize(40, 40))
         self.moveZPT1CaliberateButton.setCheckable(False)
         self.moveZPT1CaliberateButton.setAutoDefault(False)
         self.moveZPT1CaliberateButton.setDefault(False)
@@ -4914,10 +5142,10 @@ class Ui_MainWindow(object):
 "QPushButton:default {\n"
 "    border-color: navy; /* make the default button prominent */\n"
 "}")
-        icon19 = QtGui.QIcon()
-        icon19.addPixmap(QtGui.QPixmap("templates/img/usb.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.fromUsbButton.setIcon(icon19)
-        self.fromUsbButton.setIconSize(QtCore.QSize(70, 70))
+        icon20 = QtGui.QIcon()
+        icon20.addPixmap(QtGui.QPixmap(".\\templates/img/usb.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.fromUsbButton.setIcon(icon20)
+        self.fromUsbButton.setIconSize(QtCore.QSize(40, 40))
         self.fromUsbButton.setObjectName("fromUsbButton")
         self.printFromLabel = QtWidgets.QLabel(self.printLocationPage)
         self.printFromLabel.setGeometry(QtCore.QRect(30, 80, 231, 31))
@@ -4989,10 +5217,10 @@ class Ui_MainWindow(object):
 "QPushButton:default {\n"
 "    border-color: navy; /* make the default button prominent */\n"
 "}")
-        icon20 = QtGui.QIcon()
-        icon20.addPixmap(QtGui.QPixmap("templates/img/folder.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.fromLocalButton.setIcon(icon20)
-        self.fromLocalButton.setIconSize(QtCore.QSize(70, 70))
+        icon21 = QtGui.QIcon()
+        icon21.addPixmap(QtGui.QPixmap(".\\templates/img/folder.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.fromLocalButton.setIcon(icon21)
+        self.fromLocalButton.setIconSize(QtCore.QSize(40, 40))
         self.fromLocalButton.setObjectName("fromLocalButton")
         self.stackedWidget.addWidget(self.printLocationPage)
         self.fileListLocalPage = QtWidgets.QWidget()
@@ -5234,8 +5462,10 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         self.localStorageDeleteButton.setText("")
-        self.localStorageDeleteButton.setIcon(icon9)
-        self.localStorageDeleteButton.setIconSize(QtCore.QSize(70, 70))
+        icon22 = QtGui.QIcon()
+        icon22.addPixmap(QtGui.QPixmap(".\\templates/img/delete.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.localStorageDeleteButton.setIcon(icon22)
+        self.localStorageDeleteButton.setIconSize(QtCore.QSize(50, 50))
         self.localStorageDeleteButton.setCheckable(False)
         self.localStorageDeleteButton.setAutoDefault(False)
         self.localStorageDeleteButton.setDefault(False)
@@ -5274,10 +5504,10 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         self.USBStorageSaveButton.setText("")
-        icon21 = QtGui.QIcon()
-        icon21.addPixmap(QtGui.QPixmap("templates/img/icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.USBStorageSaveButton.setIcon(icon21)
-        self.USBStorageSaveButton.setIconSize(QtCore.QSize(70, 70))
+        icon23 = QtGui.QIcon()
+        icon23.addPixmap(QtGui.QPixmap(".\\templates/img/icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.USBStorageSaveButton.setIcon(icon23)
+        self.USBStorageSaveButton.setIconSize(QtCore.QSize(50, 50))
         self.USBStorageSaveButton.setCheckable(False)
         self.USBStorageSaveButton.setAutoDefault(False)
         self.USBStorageSaveButton.setDefault(False)
@@ -5698,7 +5928,7 @@ class Ui_MainWindow(object):
         self.printPreviewSelected.setFont(font)
         self.printPreviewSelected.setStyleSheet("background-color: rgba(255, 255, 255, 0);")
         self.printPreviewSelected.setText("")
-        self.printPreviewSelected.setPixmap(QtGui.QPixmap(".templates/img/thumbnail.png"))
+        self.printPreviewSelected.setPixmap(QtGui.QPixmap(".\\../../JuliaMiniTouchUI/octoprint_JuliaMiniTouchUI/templates/img/thumbnail.png"))
         self.printPreviewSelected.setScaledContents(True)
         self.printPreviewSelected.setObjectName("printPreviewSelected")
         self.stackedWidget.addWidget(self.printSelectedLocalPage)
@@ -6111,10 +6341,11 @@ class Ui_MainWindow(object):
         self.moveZMBabyStep.raise_()
         self.moveZPBabyStep.raise_()
         self.flowRateLabelControlPage_5.raise_()
-        icon22 = QtGui.QIcon()
-        icon22.addPixmap(QtGui.QPixmap("templates/img/wrench.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon22.addPixmap(QtGui.QPixmap("templates/img/wrench_selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        self.controlTabWidget.addTab(self.feedRateTab, icon22, "")
+        self.line_7.raise_()
+        icon24 = QtGui.QIcon()
+        icon24.addPixmap(QtGui.QPixmap(".\\templates/img/wrench.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon24.addPixmap(QtGui.QPixmap(".\\templates/img/wrench_selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.controlTabWidget.addTab(self.feedRateTab, icon24, "")
         self.temperatureTab = QtWidgets.QWidget()
         self.temperatureTab.setObjectName("temperatureTab")
         self.toolLabel = QtWidgets.QLabel(self.temperatureTab)
@@ -6167,10 +6398,10 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         self.cooldownButton.setText("")
-        icon23 = QtGui.QIcon()
-        icon23.addPixmap(QtGui.QPixmap("templates/img/snowflake.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.cooldownButton.setIcon(icon23)
-        self.cooldownButton.setIconSize(QtCore.QSize(50, 50))
+        icon25 = QtGui.QIcon()
+        icon25.addPixmap(QtGui.QPixmap(".\\templates/img/snowflake.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.cooldownButton.setIcon(icon25)
+        self.cooldownButton.setIconSize(QtCore.QSize(40, 40))
         self.cooldownButton.setObjectName("cooldownButton")
         self.fanOffButton = QtWidgets.QPushButton(self.temperatureTab)
         self.fanOffButton.setGeometry(QtCore.QRect(510, 0, 221, 81))
@@ -6203,10 +6434,10 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         self.fanOffButton.setText("")
-        icon24 = QtGui.QIcon()
-        icon24.addPixmap(QtGui.QPixmap("templates/img/fan-black-silhouette-off.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.fanOffButton.setIcon(icon24)
-        self.fanOffButton.setIconSize(QtCore.QSize(50, 50))
+        icon26 = QtGui.QIcon()
+        icon26.addPixmap(QtGui.QPixmap(".\\templates/img/fan-black-silhouette-off.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.fanOffButton.setIcon(icon26)
+        self.fanOffButton.setIconSize(QtCore.QSize(40, 40))
         self.fanOffButton.setCheckable(False)
         self.fanOffButton.setAutoDefault(False)
         self.fanOffButton.setDefault(False)
@@ -6242,10 +6473,10 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         self.fanOnButton.setText("")
-        icon25 = QtGui.QIcon()
-        icon25.addPixmap(QtGui.QPixmap("templates/img/fan-black-silhouette.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.fanOnButton.setIcon(icon25)
-        self.fanOnButton.setIconSize(QtCore.QSize(50, 50))
+        icon27 = QtGui.QIcon()
+        icon27.addPixmap(QtGui.QPixmap(".\\templates/img/fan-black-silhouette.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.fanOnButton.setIcon(icon27)
+        self.fanOnButton.setIconSize(QtCore.QSize(40, 40))
         self.fanOnButton.setCheckable(False)
         self.fanOnButton.setAutoDefault(False)
         self.fanOnButton.setDefault(False)
@@ -6489,11 +6720,11 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         self.toolToggleTemperatureButton.setText("")
-        icon26 = QtGui.QIcon()
-        icon26.addPixmap(QtGui.QPixmap("templates/img/NozzleSelect_0.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon26.addPixmap(QtGui.QPixmap("templates/img/NozzleSelect_1.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        self.toolToggleTemperatureButton.setIcon(icon26)
-        self.toolToggleTemperatureButton.setIconSize(QtCore.QSize(100, 100))
+        icon28 = QtGui.QIcon()
+        icon28.addPixmap(QtGui.QPixmap(".\\../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/NozzleSelect_0.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon28.addPixmap(QtGui.QPixmap(".\\../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/NozzleSelect_1.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.toolToggleTemperatureButton.setIcon(icon28)
+        self.toolToggleTemperatureButton.setIconSize(QtCore.QSize(90, 90))
         self.toolToggleTemperatureButton.setCheckable(True)
         self.toolToggleTemperatureButton.setChecked(False)
         self.toolToggleTemperatureButton.setAutoDefault(False)
@@ -6606,12 +6837,12 @@ class Ui_MainWindow(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}")
-        self.bed100PreheatButton.setIconSize(QtCore.QSize(50, 50))
-        self.bed100PreheatButton.setCheckable(False)
-        self.bed100PreheatButton.setAutoDefault(False)
-        self.bed100PreheatButton.setDefault(False)
-        self.bed100PreheatButton.setFlat(False)
-        self.bed100PreheatButton.setObjectName("bed100PreheatButton")
+        self.setToolTempButton.setText("")
+        icon29 = QtGui.QIcon()
+        icon29.addPixmap(QtGui.QPixmap(".\\../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/verification-mark.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.setToolTempButton.setIcon(icon29)
+        self.setToolTempButton.setIconSize(QtCore.QSize(50, 50))
+        self.setToolTempButton.setObjectName("setToolTempButton")
         self.bed60PreheatButton = QtWidgets.QPushButton(self.temperatureTab)
         self.bed60PreheatButton.setGeometry(QtCore.QRect(420, 190, 101, 61))
         self.bed60PreheatButton.setMinimumSize(QtCore.QSize(0, 0))
@@ -6650,6 +6881,60 @@ class Ui_MainWindow(object):
         self.bed60PreheatButton.setDefault(False)
         self.bed60PreheatButton.setFlat(False)
         self.bed60PreheatButton.setObjectName("bed60PreheatButton")
+        self.bed100PreheatButton = QtWidgets.QPushButton(self.temperatureTab)
+        self.bed100PreheatButton.setGeometry(QtCore.QRect(640, 180, 121, 71))
+        self.bed100PreheatButton.setMinimumSize(QtCore.QSize(0, 0))
+        font = QtGui.QFont()
+        font.setFamily("Gotham")
+        font.setPointSize(15)
+        self.bed100PreheatButton.setFont(font)
+        self.bed100PreheatButton.setStyleSheet("QPushButton {\n"
+"     border: 1px solid rgb(87, 87, 87);\n"
+"\n"
+"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+"    border-bottom-right-radius: 15px;\n"
+"border-bottom-left-radius: 15px;\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+"}\n"
+"\n"
+"QPushButton:flat {\n"
+"    border: none; /* no border for a flat push button */\n"
+"}\n"
+"\n"
+"QPushButton:default {\n"
+"    border-color: navy; /* make the default button prominent */\n"
+"}\n"
+"\n"
+"QPushButton:focus {\n"
+"    outline: none;\n"
+"}")
+        self.bed100PreheatButton.setIconSize(QtCore.QSize(40, 40))
+        self.bed100PreheatButton.setCheckable(False)
+        self.bed100PreheatButton.setAutoDefault(False)
+        self.bed100PreheatButton.setDefault(False)
+        self.bed100PreheatButton.setFlat(False)
+        self.bed100PreheatButton.setObjectName("bed100PreheatButton")
+        self.bedLabel_4 = QtWidgets.QLabel(self.temperatureTab)
+        self.bedLabel_4.setGeometry(QtCore.QRect(409, 140, 101, 91))
+        font = QtGui.QFont()
+        font.setFamily("Gotham Medium")
+        font.setPointSize(14)
+        font.setBold(False)
+        font.setUnderline(False)
+        font.setWeight(50)
+        font.setStrikeOut(False)
+        self.bedLabel_4.setFont(font)
+        self.bedLabel_4.setStyleSheet("\n"
+"   color:  white;\n"
+"background-color: rgba(255, 255, 255, 0);")
+        self.bedLabel_4.setText("")
+        self.bedLabel_4.setPixmap(QtGui.QPixmap(".\\../../../GitHub/VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/bed.png"))
+        self.bedLabel_4.setScaledContents(True)
+        self.bedLabel_4.setObjectName("bedLabel_4")
         self.toolLabel.raise_()
         self.bedLabel_2.raise_()
         self.cooldownButton.raise_()
@@ -6663,11 +6948,11 @@ class Ui_MainWindow(object):
         self.tool180PreheatButton.raise_()
         self.tool250PreheatButton.raise_()
         self.bed100PreheatButton.raise_()
-        self.bed60PreheatButton.raise_()
-        icon27 = QtGui.QIcon()
-        icon27.addPixmap(QtGui.QPixmap("templates/img/thermometer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon27.addPixmap(QtGui.QPixmap("templates/img/thermometer_Selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        self.controlTabWidget.addTab(self.temperatureTab, icon27, "")
+        self.bedLabel_4.raise_()
+        icon30 = QtGui.QIcon()
+        icon30.addPixmap(QtGui.QPixmap(".\\templates/img/thermometer.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon30.addPixmap(QtGui.QPixmap(".\\templates/img/thermometer_Selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.controlTabWidget.addTab(self.temperatureTab, icon30, "")
         self.motionTab = QtWidgets.QWidget()
         self.motionTab.setObjectName("motionTab")
         self.step1Button = QtWidgets.QPushButton(self.motionTab)
@@ -6894,9 +7179,9 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         self.moveXPButton.setText("")
-        icon28 = QtGui.QIcon()
-        icon28.addPixmap(QtGui.QPixmap("templates/img/arrows-2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.moveXPButton.setIcon(icon28)
+        icon31 = QtGui.QIcon()
+        icon31.addPixmap(QtGui.QPixmap(".\\templates/img/arrows-2.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.moveXPButton.setIcon(icon31)
         self.moveXPButton.setIconSize(QtCore.QSize(40, 40))
         self.moveXPButton.setCheckable(False)
         self.moveXPButton.setAutoDefault(False)
@@ -6972,9 +7257,9 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         self.homeXYButton.setText("")
-        icon29 = QtGui.QIcon()
-        icon29.addPixmap(QtGui.QPixmap("templates/img/home-icon-silhouette.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.homeXYButton.setIcon(icon29)
+        icon32 = QtGui.QIcon()
+        icon32.addPixmap(QtGui.QPixmap(".\\templates/img/home-icon-silhouette.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.homeXYButton.setIcon(icon32)
         self.homeXYButton.setIconSize(QtCore.QSize(40, 40))
         self.homeXYButton.setCheckable(False)
         self.homeXYButton.setAutoDefault(False)
@@ -7048,9 +7333,9 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         self.motorOffButton.setText("")
-        icon30 = QtGui.QIcon()
-        icon30.addPixmap(QtGui.QPixmap("templates/img/motor.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.motorOffButton.setIcon(icon30)
+        icon33 = QtGui.QIcon()
+        icon33.addPixmap(QtGui.QPixmap(".\\templates/img/motor.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.motorOffButton.setIcon(icon33)
         self.motorOffButton.setIconSize(QtCore.QSize(40, 40))
         self.motorOffButton.setCheckable(False)
         self.motorOffButton.setAutoDefault(False)
@@ -7187,9 +7472,9 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         self.retractButton.setText("")
-        icon31 = QtGui.QIcon()
-        icon31.addPixmap(QtGui.QPixmap("templates/img/remove.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.retractButton.setIcon(icon31)
+        icon34 = QtGui.QIcon()
+        icon34.addPixmap(QtGui.QPixmap(".\\templates/img/remove.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.retractButton.setIcon(icon34)
         self.retractButton.setIconSize(QtCore.QSize(40, 40))
         self.retractButton.setCheckable(False)
         self.retractButton.setAutoDefault(False)
@@ -7227,9 +7512,9 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         self.extruderButton.setText("")
-        icon32 = QtGui.QIcon()
-        icon32.addPixmap(QtGui.QPixmap("templates/img/add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.extruderButton.setIcon(icon32)
+        icon35 = QtGui.QIcon()
+        icon35.addPixmap(QtGui.QPixmap(".\\templates/img/add.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.extruderButton.setIcon(icon35)
         self.extruderButton.setIconSize(QtCore.QSize(40, 40))
         self.extruderButton.setCheckable(False)
         self.extruderButton.setAutoDefault(False)
@@ -7286,10 +7571,10 @@ class Ui_MainWindow(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}")
-        icon33 = QtGui.QIcon()
-        icon33.addPixmap(QtGui.QPixmap("templates/img/NozzleSelect.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.toolToggleMotionButton.setIcon(icon33)
-        self.toolToggleMotionButton.setIconSize(QtCore.QSize(40, 40))
+        icon36 = QtGui.QIcon()
+        icon36.addPixmap(QtGui.QPixmap(".\\templates/img/NozzleSelect.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.toolToggleMotionButton.setIcon(icon36)
+        self.toolToggleMotionButton.setIconSize(QtCore.QSize(30, 30))
         self.toolToggleMotionButton.setCheckable(True)
         self.toolToggleMotionButton.setChecked(False)
         self.toolToggleMotionButton.setAutoDefault(False)
@@ -7315,10 +7600,10 @@ class Ui_MainWindow(object):
         self.extruderButton.raise_()
         self.ELabel.raise_()
         self.toolToggleMotionButton.raise_()
-        icon34 = QtGui.QIcon()
-        icon34.addPixmap(QtGui.QPixmap("templates/img/Motion.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon34.addPixmap(QtGui.QPixmap("templates/img/Motion_Selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        self.controlTabWidget.addTab(self.motionTab, icon34, "")
+        icon37 = QtGui.QIcon()
+        icon37.addPixmap(QtGui.QPixmap(".\\templates/img/Motion.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon37.addPixmap(QtGui.QPixmap(".\\templates/img/Motion_Selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.controlTabWidget.addTab(self.motionTab, icon37, "")
         self.filamentTab = QtWidgets.QWidget()
         self.filamentTab.setObjectName("filamentTab")
         self.setFlowRateButton = QtWidgets.QPushButton(self.filamentTab)
@@ -7465,10 +7750,10 @@ class Ui_MainWindow(object):
 "QToolButton :focus {\n"
 "    outline: none;\n"
 "}")
-        icon35 = QtGui.QIcon()
-        icon35.addPixmap(QtGui.QPixmap("templates/img/changeFilament.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.changeFilamentButton.setIcon(icon35)
-        self.changeFilamentButton.setIconSize(QtCore.QSize(70, 70))
+        icon38 = QtGui.QIcon()
+        icon38.addPixmap(QtGui.QPixmap(".\\templates/img/changeFilament.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.changeFilamentButton.setIcon(icon38)
+        self.changeFilamentButton.setIconSize(QtCore.QSize(60, 60))
         self.changeFilamentButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.changeFilamentButton.setObjectName("changeFilamentButton")
         self.toggleFilamentSensorButton = QtWidgets.QToolButton(self.filamentTab)
@@ -7503,10 +7788,10 @@ class Ui_MainWindow(object):
 "QToolButton :focus {\n"
 "    outline: none;\n"
 "}")
-        icon36 = QtGui.QIcon()
-        icon36.addPixmap(QtGui.QPixmap("templates/img/filamentSensorOn.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.toggleFilamentSensorButton.setIcon(icon36)
-        self.toggleFilamentSensorButton.setIconSize(QtCore.QSize(70, 70))
+        icon39 = QtGui.QIcon()
+        icon39.addPixmap(QtGui.QPixmap(".\\templates/img/filamentSensorOn.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.toggleFilamentSensorButton.setIcon(icon39)
+        self.toggleFilamentSensorButton.setIconSize(QtCore.QSize(60, 60))
         self.toggleFilamentSensorButton.setCheckable(False)
         self.toggleFilamentSensorButton.setChecked(False)
         self.toggleFilamentSensorButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
@@ -7516,13 +7801,13 @@ class Ui_MainWindow(object):
         self.flowRateLabelControlPage.raise_()
         self.changeFilamentButton.raise_()
         self.toggleFilamentSensorButton.raise_()
-        icon37 = QtGui.QIcon()
-        icon37.addPixmap(QtGui.QPixmap("templates/img/Spool.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon37.addPixmap(QtGui.QPixmap("templates/img/Spool_Selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        icon37.addPixmap(QtGui.QPixmap("png/Spool_Selected.png"), QtGui.QIcon.Active, QtGui.QIcon.On)
-        icon37.addPixmap(QtGui.QPixmap("png/Spool.png"), QtGui.QIcon.Selected, QtGui.QIcon.Off)
-        icon37.addPixmap(QtGui.QPixmap("png/Spool_Selected.png"), QtGui.QIcon.Selected, QtGui.QIcon.On)
-        self.controlTabWidget.addTab(self.filamentTab, icon37, "")
+        icon40 = QtGui.QIcon()
+        icon40.addPixmap(QtGui.QPixmap(".\\templates/img/Spool.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon40.addPixmap(QtGui.QPixmap(".\\templates/img/Spool_Selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon40.addPixmap(QtGui.QPixmap(".\\png/Spool_Selected.png"), QtGui.QIcon.Active, QtGui.QIcon.On)
+        icon40.addPixmap(QtGui.QPixmap(".\\png/Spool.png"), QtGui.QIcon.Selected, QtGui.QIcon.Off)
+        icon40.addPixmap(QtGui.QPixmap(".\\png/Spool_Selected.png"), QtGui.QIcon.Selected, QtGui.QIcon.On)
+        self.controlTabWidget.addTab(self.filamentTab, icon40, "")
         self.controlBackButton = QtWidgets.QPushButton(self.controlPage)
         self.controlBackButton.setGeometry(QtCore.QRect(640, 381, 161, 101))
         self.controlBackButton.setMinimumSize(QtCore.QSize(0, 0))
@@ -7700,10 +7985,10 @@ class Ui_MainWindow(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}")
-        icon38 = QtGui.QIcon()
-        icon38.addPixmap(QtGui.QPixmap("templates/img/load.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.changeFilamentLoadButton.setIcon(icon38)
-        self.changeFilamentLoadButton.setIconSize(QtCore.QSize(70, 70))
+        icon41 = QtGui.QIcon()
+        icon41.addPixmap(QtGui.QPixmap(".\\templates/img/load.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.changeFilamentLoadButton.setIcon(icon41)
+        self.changeFilamentLoadButton.setIconSize(QtCore.QSize(60, 60))
         self.changeFilamentLoadButton.setObjectName("changeFilamentLoadButton")
         self.toolToggleChangeFilamentButton = QtWidgets.QPushButton(self.changeFilamentPage)
         self.toolToggleChangeFilamentButton.setGeometry(QtCore.QRect(0, 180, 801, 101))
@@ -7734,8 +8019,11 @@ class Ui_MainWindow(object):
 "    outline: none;\n"
 "}")
         self.toolToggleChangeFilamentButton.setText("")
-        self.toolToggleChangeFilamentButton.setIcon(icon26)
-        self.toolToggleChangeFilamentButton.setIconSize(QtCore.QSize(150, 100))
+        icon42 = QtGui.QIcon()
+        icon42.addPixmap(QtGui.QPixmap(".\\templates/img/NozzleSelect_0.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon42.addPixmap(QtGui.QPixmap(".\\templates/img/NozzleSelect_1.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        self.toolToggleChangeFilamentButton.setIcon(icon42)
+        self.toolToggleChangeFilamentButton.setIconSize(QtCore.QSize(120, 50))
         self.toolToggleChangeFilamentButton.setCheckable(True)
         self.toolToggleChangeFilamentButton.setChecked(False)
         self.toolToggleChangeFilamentButton.setAutoDefault(False)
@@ -7771,10 +8059,10 @@ class Ui_MainWindow(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}")
-        icon39 = QtGui.QIcon()
-        icon39.addPixmap(QtGui.QPixmap("templates/img/unload.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.changeFilamentUnloadButton.setIcon(icon39)
-        self.changeFilamentUnloadButton.setIconSize(QtCore.QSize(70, 70))
+        icon43 = QtGui.QIcon()
+        icon43.addPixmap(QtGui.QPixmap(".\\templates/img/unload.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.changeFilamentUnloadButton.setIcon(icon43)
+        self.changeFilamentUnloadButton.setIconSize(QtCore.QSize(60, 60))
         self.changeFilamentUnloadButton.setObjectName("changeFilamentUnloadButton")
         self.changeFilamentBackButton = QtWidgets.QPushButton(self.changeFilamentPage)
         self.changeFilamentBackButton.setGeometry(QtCore.QRect(0, 389, 801, 91))
