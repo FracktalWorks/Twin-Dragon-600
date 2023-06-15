@@ -2167,7 +2167,7 @@ class Ui_MainWindow(object):
         self.displaySettingsBackButton.setFlat(False)
         self.displaySettingsBackButton.setObjectName("displaySettingsBackButton")
         self.calibrateTouch = QtWidgets.QPushButton(self.displaySettingsPage)
-        self.calibrateTouch.setGeometry(QtCore.QRect(-10, 100, 811, 100))
+        self.calibrateTouch.setGeometry(QtCore.QRect(-10, 10, 811, 100))
         self.calibrateTouch.setMinimumSize(QtCore.QSize(0, 70))
         font = QtGui.QFont()
         font.setFamily("Gotham")
@@ -2198,38 +2198,6 @@ class Ui_MainWindow(object):
 "}")
         self.calibrateTouch.setIconSize(QtCore.QSize(40, 40))
         self.calibrateTouch.setObjectName("calibrateTouch")
-        self.rotateDisplay = QtWidgets.QPushButton(self.displaySettingsPage)
-        self.rotateDisplay.setGeometry(QtCore.QRect(0, 0, 801, 100))
-        self.rotateDisplay.setMinimumSize(QtCore.QSize(0, 70))
-        font = QtGui.QFont()
-        font.setFamily("Gotham")
-        font.setPointSize(16)
-        self.rotateDisplay.setFont(font)
-        self.rotateDisplay.setStyleSheet("QPushButton {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"\n"
-"\n"
-"}\n"
-"\n"
-"QPushButton:pressed {\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"}\n"
-"\n"
-"QPushButton:flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QPushButton:default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QPushButton:focus {\n"
-"    outline: none;\n"
-"}")
-        self.rotateDisplay.setIconSize(QtCore.QSize(40, 40))
-        self.rotateDisplay.setObjectName("rotateDisplay")
         self.stackedWidget.addWidget(self.displaySettingsPage)
         self.rotateDisplaySettingsPage = QtWidgets.QWidget()
         self.rotateDisplaySettingsPage.setObjectName("rotateDisplaySettingsPage")
@@ -5334,7 +5302,7 @@ class Ui_MainWindow(object):
 "}")
         self.USBStorageScrollUp.setText("")
         self.USBStorageScrollUp.setIcon(icon17)
-        self.USBStorageScrollUp.setIconSize(QtCore.QSize(70, 40))
+        self.USBStorageScrollUp.setIconSize(QtCore.QSize(70, 70))
         self.USBStorageScrollUp.setCheckable(False)
         self.USBStorageScrollUp.setAutoRepeat(True)
         self.USBStorageScrollUp.setAutoExclusive(False)
@@ -7456,7 +7424,7 @@ class Ui_MainWindow(object):
 "background-color: rgba(255, 255, 255, 0);")
         self.flowRateLabelControlPage.setObjectName("flowRateLabelControlPage")
         self.changeFilamentButton = QtWidgets.QToolButton(self.filamentTab)
-        self.changeFilamentButton.setGeometry(QtCore.QRect(0, 0, 401, 131))
+        self.changeFilamentButton.setGeometry(QtCore.QRect(0, 10, 801, 131))
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(16)
@@ -7490,58 +7458,17 @@ class Ui_MainWindow(object):
         self.changeFilamentButton.setIconSize(QtCore.QSize(70, 70))
         self.changeFilamentButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
         self.changeFilamentButton.setObjectName("changeFilamentButton")
-        self.toggleFilamentSensorButton = QtWidgets.QToolButton(self.filamentTab)
-        self.toggleFilamentSensorButton.setEnabled(True)
-        self.toggleFilamentSensorButton.setGeometry(QtCore.QRect(399, 0, 401, 131))
-        font = QtGui.QFont()
-        font.setFamily("Gotham")
-        font.setPointSize(16)
-        self.toggleFilamentSensorButton.setFont(font)
-        self.toggleFilamentSensorButton.setStyleSheet("QToolButton  {\n"
-"     border: 1px solid rgb(87, 87, 87);\n"
-"    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
-"\n"
-"\n"
-"}\n"
-"\n"
-"QToolButton :pressed {\n"
-"    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
-"                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
-"    /* #dadbde #f6f7fa */\n"
-"}\n"
-"\n"
-"\n"
-"QToolButton :flat {\n"
-"    border: none; /* no border for a flat push button */\n"
-"}\n"
-"\n"
-"QToolButton :default {\n"
-"    border-color: navy; /* make the default button prominent */\n"
-"}\n"
-"\n"
-"QToolButton :focus {\n"
-"    outline: none;\n"
-"}")
-        icon36 = QtGui.QIcon()
-        icon36.addPixmap(QtGui.QPixmap("templates/img/filamentSensorOn.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.toggleFilamentSensorButton.setIcon(icon36)
-        self.toggleFilamentSensorButton.setIconSize(QtCore.QSize(70, 70))
-        self.toggleFilamentSensorButton.setCheckable(False)
-        self.toggleFilamentSensorButton.setChecked(False)
-        self.toggleFilamentSensorButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextUnderIcon)
-        self.toggleFilamentSensorButton.setObjectName("toggleFilamentSensorButton")
         self.flowRateSpinBox.raise_()
         self.setFlowRateButton.raise_()
         self.flowRateLabelControlPage.raise_()
         self.changeFilamentButton.raise_()
-        self.toggleFilamentSensorButton.raise_()
-        icon37 = QtGui.QIcon()
-        icon37.addPixmap(QtGui.QPixmap("templates/img/Spool.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon37.addPixmap(QtGui.QPixmap("templates/img/Spool_Selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        icon37.addPixmap(QtGui.QPixmap("png/Spool_Selected.png"), QtGui.QIcon.Active, QtGui.QIcon.On)
-        icon37.addPixmap(QtGui.QPixmap("png/Spool.png"), QtGui.QIcon.Selected, QtGui.QIcon.Off)
-        icon37.addPixmap(QtGui.QPixmap("png/Spool_Selected.png"), QtGui.QIcon.Selected, QtGui.QIcon.On)
-        self.controlTabWidget.addTab(self.filamentTab, icon37, "")
+        icon36 = QtGui.QIcon()
+        icon36.addPixmap(QtGui.QPixmap("templates/img/Spool.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon36.addPixmap(QtGui.QPixmap("templates/img/Spool_Selected.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon36.addPixmap(QtGui.QPixmap("png/Spool_Selected.png"), QtGui.QIcon.Active, QtGui.QIcon.On)
+        icon36.addPixmap(QtGui.QPixmap("png/Spool.png"), QtGui.QIcon.Selected, QtGui.QIcon.Off)
+        icon36.addPixmap(QtGui.QPixmap("png/Spool_Selected.png"), QtGui.QIcon.Selected, QtGui.QIcon.On)
+        self.controlTabWidget.addTab(self.filamentTab, icon36, "")
         self.controlBackButton = QtWidgets.QPushButton(self.controlPage)
         self.controlBackButton.setGeometry(QtCore.QRect(640, 381, 161, 101))
         self.controlBackButton.setMinimumSize(QtCore.QSize(0, 0))
@@ -7719,9 +7646,9 @@ class Ui_MainWindow(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}")
-        icon38 = QtGui.QIcon()
-        icon38.addPixmap(QtGui.QPixmap("templates/img/load.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.changeFilamentLoadButton.setIcon(icon38)
+        icon37 = QtGui.QIcon()
+        icon37.addPixmap(QtGui.QPixmap("templates/img/load.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.changeFilamentLoadButton.setIcon(icon37)
         self.changeFilamentLoadButton.setIconSize(QtCore.QSize(70, 70))
         self.changeFilamentLoadButton.setObjectName("changeFilamentLoadButton")
         self.toolToggleChangeFilamentButton = QtWidgets.QPushButton(self.changeFilamentPage)
@@ -7790,9 +7717,9 @@ class Ui_MainWindow(object):
 "QPushButton:focus {\n"
 "    outline: none;\n"
 "}")
-        icon39 = QtGui.QIcon()
-        icon39.addPixmap(QtGui.QPixmap("templates/img/unload.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.changeFilamentUnloadButton.setIcon(icon39)
+        icon38 = QtGui.QIcon()
+        icon38.addPixmap(QtGui.QPixmap("templates/img/unload.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.changeFilamentUnloadButton.setIcon(icon38)
         self.changeFilamentUnloadButton.setIconSize(QtCore.QSize(70, 70))
         self.changeFilamentUnloadButton.setObjectName("changeFilamentUnloadButton")
         self.changeFilamentBackButton = QtWidgets.QPushButton(self.changeFilamentPage)
@@ -8233,7 +8160,6 @@ class Ui_MainWindow(object):
         self.configureWifiButton.setText(_translate("MainWindow", "Configure WiFi"))
         self.configureStaticIPButton.setText(_translate("MainWindow", "Configure Static IP"))
         self.calibrateTouch.setText(_translate("MainWindow", "Calibrate Touch"))
-        self.rotateDisplay.setText(_translate("MainWindow", "Rotate Display"))
         self.rotateDisplaySettingsDoneButton.setText(_translate("MainWindow", "Done"))
         self.rotateDisplaySettingsCancelButton.setText(_translate("MainWindow", "Cancel"))
         self.rotateDisplaySettingsComboBox.setItemText(0, _translate("MainWindow", "Normal"))
@@ -8354,7 +8280,6 @@ class Ui_MainWindow(object):
         self.flowRateSpinBox.setSuffix(_translate("MainWindow", "%"))
         self.flowRateLabelControlPage.setText(_translate("MainWindow", "Flow Rate :"))
         self.changeFilamentButton.setText(_translate("MainWindow", "Change Filament"))
-        self.toggleFilamentSensorButton.setText(_translate("MainWindow", "Filament/Door Sensor"))
         self.selectFilamentlabel.setText(_translate("MainWindow", "Select Filament :"))
         self.changeFilamentLoadButton.setText(_translate("MainWindow", "Load"))
         self.changeFilamentUnloadButton.setText(_translate("MainWindow", "Unload"))
