@@ -14071,7 +14071,7 @@ background-color: rgba(255, 255, 255, 0);</string>
      <widget class="QLabel" name="feedFilamentlabel_6">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>10</x>
         <y>160</y>
         <width>761</width>
         <height>161</height>
@@ -14120,7 +14120,7 @@ background-color: rgba(255, 255, 255, 0);</string>
 background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="text">
-       <string>Click &quot;Retract&quot; untill filament is removed</string>
+       <string>Click &quot;Done&quot; when filament is retracted</string>
       </property>
      </widget>
      <widget class="QPushButton" name="unloadDoneButton">

@@ -1548,12 +1548,12 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
                     self.changeFilamentProgress.setMaximum(temperature['tool0Actual'])
                     self.changeFilamentHeatingFlag = False
                     if self.loadFlag:
-                        #self.changeFilamentLoadFunction()
-                        self.stackedWidget.setCurrentWidget(self.changeFilamentExtrudePage)
+                        self.changeFilamentLoadFunction()
+                        #self.stackedWidget.setCurrentWidget(self.changeFilamentExtrudePage)
                     else:
-                        self.stackedWidget.setCurrentWidget(self.changeFilamentRetractPage)
+                        #self.stackedWidget.setCurrentWidget(self.changeFilamentRetractPage)
                         octopiclient.extrude(5)     # extrudes some amount of filament to prevent plugging
-                        #self.changeFilamentRetractFunction()
+                        self.changeFilamentRetractFunction()
 
                 self.changeFilamentProgress.setValue(temperature['tool0Actual'])
             elif self.activeExtruder == 1:
