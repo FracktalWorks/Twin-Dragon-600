@@ -176,7 +176,7 @@ QStatusBar::item {
 background-color: rgb(40, 40, 40);</string>
     </property>
     <property name="currentIndex">
-     <number>17</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="loadingPage">
      <widget class="QLabel" name="LoadingLabel">
@@ -201,26 +201,77 @@ background-color: rgb(40, 40, 40);</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>templates/img/splash.png</pixmap>
+       <pixmap>templates/img/Splash BG.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="loadingGif">
+     <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>260</y>
-        <width>50</width>
-        <height>50</height>
+        <x>40</x>
+        <y>20</y>
+        <width>711</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>templates/img/Fracktal Logo.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="fileName_2">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>310</y>
+        <width>101</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Gotham</family>
-        <pointsize>16</pointsize>
+        <family>Gotham Medium</family>
+        <pointsize>12</pointsize>
        </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::NoContextMenu</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Loading ...</string>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="loadingGif">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>90</y>
+        <width>666</width>
+        <height>480</height>
+       </rect>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::NoContextMenu</enum>
       </property>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255,0);</string>
@@ -231,10 +282,11 @@ background-color: rgb(40, 40, 40);</string>
       <property name="scaledContents">
        <bool>true</bool>
       </property>
-      <property name="alignment">
-       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-      </property>
      </widget>
+     <zorder>LoadingLabel</zorder>
+     <zorder>loadingGif</zorder>
+     <zorder>label_4</zorder>
+     <zorder>fileName_2</zorder>
     </widget>
     <widget class="QWidget" name="homePage">
      <widget class="QPushButton" name="playPauseButton">
@@ -1941,7 +1993,7 @@ QScrollBar::down-arrow:vertical {
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>719</width>
+         <width>778</width>
          <height>900</height>
         </rect>
        </property>
@@ -6090,7 +6142,7 @@ QPushButton:focus {
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>templates/img/arrows-4.png</normaloff>./templates/img/arrows-4.png</iconset>
+        <normaloff>templates/img/arrows-4.png</normaloff>templates/img/arrows-4.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -14005,7 +14057,7 @@ QPushButton:focus {
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>./templates/img/arrows-4.png</normaloff>./templates/img/arrows-4.png</iconset>
+        <normaloff>templates/img/arrows-4.png</normaloff>templates/img/arrows-4.png</iconset>
       </property>
       <property name="iconSize">
        <size>

@@ -303,7 +303,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
 
         self.menuCartButton.setDisabled(True)
 
-        self.movie = QtGui.QMovie("templates/img/loading.gif")
+        self.movie = QtGui.QMovie("templates/img/loading-90.gif")
         self.loadingGif.setMovie(self.movie)
         self.movie.start()
 
