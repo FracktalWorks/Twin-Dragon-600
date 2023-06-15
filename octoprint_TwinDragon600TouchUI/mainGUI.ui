@@ -176,7 +176,7 @@ QStatusBar::item {
 background-color: rgb(40, 40, 40);</string>
     </property>
     <property name="currentIndex">
-     <number>17</number>
+     <number>6</number>
     </property>
     <widget class="QWidget" name="loadingPage">
      <widget class="QLabel" name="LoadingLabel">
@@ -6090,7 +6090,7 @@ QPushButton:focus {
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>templates/img/arrows-4.png</normaloff>./templates/img/arrows-4.png</iconset>
+        <normaloff>../../VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/arrows-4.png</normaloff>../../VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/arrows-4.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -9966,7 +9966,7 @@ background-color: rgba(255, 255, 255, 0);</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>.templates/img/thumbnail.png</pixmap>
+       <pixmap>../../JuliaMiniTouchUI/octoprint_JuliaMiniTouchUI/templates/img/thumbnail.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -14005,7 +14005,7 @@ QPushButton:focus {
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>./templates/img/arrows-4.png</normaloff>./templates/img/arrows-4.png</iconset>
+        <normaloff>../../VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/arrows-4.png</normaloff>../../VolterraIDEXTouchUI/octoprint_VolterraIDEXTouchUI/templates/img/arrows-4.png</iconset>
       </property>
       <property name="iconSize">
        <size>
