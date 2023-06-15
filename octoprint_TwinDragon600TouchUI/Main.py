@@ -380,7 +380,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             self.setIPStatus()
         else:
             self.stackedWidget.setCurrentWidget(self.homePage)
-        self.isFilamentSensorInstalled()
+        # self.isFilamentSensorInstalled()
         self.onServerConnected()
 
     def setActions(self):
@@ -400,7 +400,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.QtSocket.update_log_result_signal.connect(self.softwareUpdateResult)
         self.QtSocket.update_failed_signal.connect(self.updateFailed)
         self.QtSocket.connected_signal.connect(self.onServerConnected)
-        self.QtSocket.filament_sensor_triggered_signal.connect(self.filamentSensorHandler)
+        # self.QtSocket.filament_sensor_triggered_signal.connect(self.filamentSensorHandler)
         self.QtSocket.firmware_updater_signal.connect(self.firmwareUpdateHandler)
         #self.QtSocket.z_home_offset_signal.connect(self.getZHomeOffset)  Deprecated, uses probe offset to set initial height instead
         self.QtSocket.active_extruder_signal.connect(self.setActiveExtruder)
@@ -605,15 +605,15 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             lambda: self.stackedWidget.setCurrentWidget(self.networkSettingsPage))
         self.deleteStaticIPSettingsButton.pressed.connect(self.deleteStaticIPSettings)
 
-        # Display settings
-        self.rotateDisplay.pressed.connect(self.showRotateDisplaySettingsPage)
-        self.calibrateTouch.pressed.connect(self.touchCalibration)
-        self.displaySettingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
-
-        # Rotate Display Settings
-        self.rotateDisplaySettingsDoneButton.pressed.connect(self.saveRotateDisplaySettings)
-        self.rotateDisplaySettingsCancelButton.pressed.connect(
-            lambda: self.stackedWidget.setCurrentWidget(self.displaySettingsPage))
+        # # Display settings
+        # self.rotateDisplay.pressed.connect(self.showRotateDisplaySettingsPage)
+        # self.calibrateTouch.pressed.connect(self.touchCalibration)
+        # self.displaySettingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
+        #
+        # # Rotate Display Settings
+        # self.rotateDisplaySettingsDoneButton.pressed.connect(self.saveRotateDisplaySettings)
+        # self.rotateDisplaySettingsCancelButton.pressed.connect(
+        #     lambda: self.stackedWidget.setCurrentWidget(self.displaySettingsPage))
 
         # QR Code
         self.QRCodeBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
@@ -626,7 +626,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.firmwareUpdateBackButton.pressed.connect(self.firmwareUpdateBack)
 
         # Filament sensor toggle
-        self.toggleFilamentSensorButton.clicked.connect(self.toggleFilamentSensor)
+        # self.toggleFilamentSensorButton.clicked.connect(self.toggleFilamentSensor)
 
         # # Lock settings
         # self.pgLock_pin.textChanged.connect(self.Lock_onPinInputChanged)
@@ -696,7 +696,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
                 dialog.WarningOk(response["status"])
 
     def onServerConnected(self):
-        self.isFilamentSensorInstalled()
+        # self.isFilamentSensorInstalled()
         # if not self.__timelapse_enabled:
         #     return
         # if self.__timelapse_started:
@@ -711,80 +711,80 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             print ("error on Server Connected")
             pass
 
-    ''' +++++++++++++++++++++++++Filament Sensor++++++++++++++++++++++++++++++++++++++ '''
-
-    def isFilamentSensorInstalled(self):
-        success = False
-        try:
-            headers = {'X-Api-Key': apiKey}
-            req = requests.get('http://{}/plugin/Julia2018FilamentSensor/status'.format(ip), headers=headers)
-            success = req.status_code == requests.codes.ok
-        except:
-            pass
-        self.toggleFilamentSensorButton.setEnabled(success)
-        return success
-
-    def toggleFilamentSensor(self):
-        headers = {'X-Api-Key': apiKey}
-        # payload = {'sensor_enabled': self.toggleFilamentSensorButton.isChecked()}
-        requests.get('http://{}/plugin/Julia2018FilamentSensor/toggle'.format(ip), headers=headers)   # , data=payload)
-
-    def filamentSensorHandler(self, data):
-        sensor_enabled = False
-        # print(data)
-
-        if 'sensor_enabled' in data:
-            sensor_enabled = data["sensor_enabled"] == 1
-
-        icon = 'filamentSensorOn' if sensor_enabled else 'filamentSensorOff'
-        self.toggleFilamentSensorButton.setIcon(QtGui.QIcon(_fromUtf8("templates/img/" + icon)))
-
-        if not sensor_enabled:
-            return
-
-        triggered_extruder0 = False
-        triggered_extruder1 = False
-        triggered_door = False
-        pause_print = False
-
-        if 'filament' in data:
-            triggered_extruder0 = data["filament"] == 0
-        elif 'extruder0' in data:
-            triggered_extruder0 = data["extruder0"] == 0
-
-        if 'filament2' in data:
-            triggered_extruder1 = data["filament2"] == 0
-        elif 'extruder0' in data:
-            triggered_extruder1 = data["extruder1"] == 0
-
-        if 'door' in data:
-            triggered_door = data["door"] == 0
-        if 'pause_print' in data:
-            pause_print = data["pause_print"]
-
-        if triggered_extruder0 and self.stackedWidget.currentWidget() not in [self.changeFilamentPage, self.changeFilamentProgressPage,
-                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,self.changeFilamentUnloadPage]:
-            if dialog.WarningOk(self, "Filament outage in Extruder 0"):
-                pass
-
-        if triggered_extruder1 and self.stackedWidget.currentWidget() not in [self.changeFilamentPage, self.changeFilamentProgressPage,
-                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,self.changeFilamentUnloadPage]:
-            if dialog.WarningOk(self, "Filament outage in Extruder 1"):
-                pass
-
-        if triggered_door:
-            if self.printerStatusText == "Printing":
-                no_pause_pages = [self.controlPage, self.changeFilamentPage, self.changeFilamentProgressPage,
-                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,]
-                if not pause_print or self.stackedWidget.currentWidget() in no_pause_pages:
-                    if dialog.WarningOk(self, "Door opened"):
-                        return
-                octopiclient.pausePrint()
-                if dialog.WarningOk(self, "Door opened. Print paused.", overlay=True):
-                    return
-            else:
-                if dialog.WarningOk(self, "Door opened"):
-                    return
+    # ''' +++++++++++++++++++++++++Filament Sensor++++++++++++++++++++++++++++++++++++++ '''
+    #
+    # def isFilamentSensorInstalled(self):
+    #     success = False
+    #     try:
+    #         headers = {'X-Api-Key': apiKey}
+    #         req = requests.get('http://{}/plugin/Julia2018FilamentSensor/status'.format(ip), headers=headers)
+    #         success = req.status_code == requests.codes.ok
+    #     except:
+    #         pass
+    #     self.toggleFilamentSensorButton.setEnabled(success)
+    #     return success
+    #
+    # def toggleFilamentSensor(self):
+    #     headers = {'X-Api-Key': apiKey}
+    #     # payload = {'sensor_enabled': self.toggleFilamentSensorButton.isChecked()}
+    #     requests.get('http://{}/plugin/Julia2018FilamentSensor/toggle'.format(ip), headers=headers)   # , data=payload)
+    #
+    # def filamentSensorHandler(self, data):
+    #     sensor_enabled = False
+    #     # print(data)
+    #
+    #     if 'sensor_enabled' in data:
+    #         sensor_enabled = data["sensor_enabled"] == 1
+    #
+    #     icon = 'filamentSensorOn' if sensor_enabled else 'filamentSensorOff'
+    #     self.toggleFilamentSensorButton.setIcon(QtGui.QIcon(_fromUtf8("templates/img/" + icon)))
+    #
+    #     if not sensor_enabled:
+    #         return
+    #
+    #     triggered_extruder0 = False
+    #     triggered_extruder1 = False
+    #     triggered_door = False
+    #     pause_print = False
+    #
+    #     if 'filament' in data:
+    #         triggered_extruder0 = data["filament"] == 0
+    #     elif 'extruder0' in data:
+    #         triggered_extruder0 = data["extruder0"] == 0
+    #
+    #     if 'filament2' in data:
+    #         triggered_extruder1 = data["filament2"] == 0
+    #     elif 'extruder0' in data:
+    #         triggered_extruder1 = data["extruder1"] == 0
+    #
+    #     if 'door' in data:
+    #         triggered_door = data["door"] == 0
+    #     if 'pause_print' in data:
+    #         pause_print = data["pause_print"]
+    #
+    #     if triggered_extruder0 and self.stackedWidget.currentWidget() not in [self.changeFilamentPage, self.changeFilamentProgressPage,
+    #                               self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,self.changeFilamentUnloadPage]:
+    #         if dialog.WarningOk(self, "Filament outage in Extruder 0"):
+    #             pass
+    #
+    #     if triggered_extruder1 and self.stackedWidget.currentWidget() not in [self.changeFilamentPage, self.changeFilamentProgressPage,
+    #                               self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,self.changeFilamentUnloadPage]:
+    #         if dialog.WarningOk(self, "Filament outage in Extruder 1"):
+    #             pass
+    #
+    #     if triggered_door:
+    #         if self.printerStatusText == "Printing":
+    #             no_pause_pages = [self.controlPage, self.changeFilamentPage, self.changeFilamentProgressPage,
+    #                               self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,]
+    #             if not pause_print or self.stackedWidget.currentWidget() in no_pause_pages:
+    #                 if dialog.WarningOk(self, "Door opened"):
+    #                     return
+    #             octopiclient.pausePrint()
+    #             if dialog.WarningOk(self, "Door opened. Print paused.", overlay=True):
+    #                 return
+    #         else:
+    #             if dialog.WarningOk(self, "Door opened"):
+    #                 return
 
     ''' +++++++++++++++++++++++++++ Firmware Update+++++++++++++++++++++++++++++++++++ '''
 
@@ -1154,20 +1154,20 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         os.system('ts_calibrate')
 
 
-    def showRotateDisplaySettingsPage(self):
-
-        txt = (subprocess.Popen("cat /boot/config.txt", stdout=subprocess.PIPE, shell=True).communicate()[0]).decode("utf-8")
-
-        reRot = r"dtoverlay\s*=\s*waveshare35a(\s*:\s*rotate\s*=\s*([0-9]{1,3})){0,1}"
-        mtRot = re.search(reRot, txt)
-        # print(mtRot.group(0))
-
-        if mtRot and len(mtRot.groups()) == 2 and str(mtRot.group(2)) == "270":
-            self.rotateDisplaySettingsComboBox.setCurrentIndex(1)
-        else:
-            self.rotateDisplaySettingsComboBox.setCurrentIndex(0)
-
-        self.stackedWidget.setCurrentWidget(self.rotateDisplaySettingsPage)
+    # def showRotateDisplaySettingsPage(self):
+    #
+    #     txt = (subprocess.Popen("cat /boot/config.txt", stdout=subprocess.PIPE, shell=True).communicate()[0]).decode("utf-8")
+    #
+    #     reRot = r"dtoverlay\s*=\s*waveshare35a(\s*:\s*rotate\s*=\s*([0-9]{1,3})){0,1}"
+    #     mtRot = re.search(reRot, txt)
+    #     # print(mtRot.group(0))
+    #
+    #     if mtRot and len(mtRot.groups()) == 2 and str(mtRot.group(2)) == "270":
+    #         self.rotateDisplaySettingsComboBox.setCurrentIndex(1)
+    #     else:
+    #         self.rotateDisplaySettingsComboBox.setCurrentIndex(0)
+    #
+    #     self.stackedWidget.setCurrentWidget(self.rotateDisplaySettingsPage)
 
     # def saveRotateDisplaySettings(self):
     #     txt1 = (subprocess.Popen("cat /boot/config.txt", stdout=subprocess.PIPE, shell=True).communicate()[0]).decode("utf-8")
@@ -1208,28 +1208,28 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
     #     self.askAndReboot()
     #     self.stackedWidget.setCurrentWidget(self.displaySettingsPage)
 
-    def saveRotateDisplaySettings(self):
-        txt1 = (subprocess.Popen("cat /boot/config.txt", stdout=subprocess.PIPE, shell=True).communicate()[0]).decode("utf-8")
-
-        try:
-            if self.rotateDisplaySettingsComboBox.currentIndex() == 1:
-                os.system('sudo cp -f config/config.txt /boot/config.txt')
-            else:
-                os.system('sudo cp -f config/config_rot.txt /boot/config.txt')
-        except:
-            if dialog.WarningOk(self, "Failed to change rotation settings", overlay=True):
-                return
-        try:
-            if self.rotateDisplaySettingsComboBox.currentIndex() == 1:
-                os.system('sudo cp -f config/99-calibration.conf /usr/share/X11/xorg.conf.d/99-calibration.conf')
-            else:
-                os.system('sudo cp -f config/99-calibration_rot.conf /usr/share/X11/xorg.conf.d/99-calibration.conf')
-        except:
-            if dialog.WarningOk(self, "Failed to change touch settings", overlay=True):
-                return
-
-        self.askAndReboot()
-        self.stackedWidget.setCurrentWidget(self.displaySettingsPage)
+    # def saveRotateDisplaySettings(self):
+    #     txt1 = (subprocess.Popen("cat /boot/config.txt", stdout=subprocess.PIPE, shell=True).communicate()[0]).decode("utf-8")
+    #
+    #     try:
+    #         if self.rotateDisplaySettingsComboBox.currentIndex() == 1:
+    #             os.system('sudo cp -f config/config.txt /boot/config.txt')
+    #         else:
+    #             os.system('sudo cp -f config/config_rot.txt /boot/config.txt')
+    #     except:
+    #         if dialog.WarningOk(self, "Failed to change rotation settings", overlay=True):
+    #             return
+    #     try:
+    #         if self.rotateDisplaySettingsComboBox.currentIndex() == 1:
+    #             os.system('sudo cp -f config/99-calibration.conf /usr/share/X11/xorg.conf.d/99-calibration.conf')
+    #         else:
+    #             os.system('sudo cp -f config/99-calibration_rot.conf /usr/share/X11/xorg.conf.d/99-calibration.conf')
+    #     except:
+    #         if dialog.WarningOk(self, "Failed to change touch settings", overlay=True):
+    #             return
+    #
+    #     self.askAndReboot()
+    #     self.stackedWidget.setCurrentWidget(self.displaySettingsPage)
 
 
     ''' +++++++++++++++++++++++++++++++++Change Filament+++++++++++++++++++++++++++++++ '''
