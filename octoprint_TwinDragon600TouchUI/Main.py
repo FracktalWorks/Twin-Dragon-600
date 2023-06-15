@@ -608,7 +608,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         # # Display settings
         # self.rotateDisplay.pressed.connect(self.showRotateDisplaySettingsPage)
         # self.calibrateTouch.pressed.connect(self.touchCalibration)
-        # self.displaySettingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
+        self.displaySettingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
         #
         # # Rotate Display Settings
         # self.rotateDisplaySettingsDoneButton.pressed.connect(self.saveRotateDisplaySettings)
@@ -626,7 +626,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.firmwareUpdateBackButton.pressed.connect(self.firmwareUpdateBack)
 
         # Filament sensor toggle
-        self.toggleFilamentSensorButton.clicked.connect(self.toggleFilamentSensor)
+        # self.toggleFilamentSensorButton.clicked.connect(self.toggleFilamentSensor)
 
         # # Lock settings
         # self.pgLock_pin.textChanged.connect(self.Lock_onPinInputChanged)
@@ -721,7 +721,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             success = req.status_code == requests.codes.ok
         except:
             pass
-        self.toggleFilamentSensorButton.setEnabled(success)
+        # self.toggleFilamentSensorButton.setEnabled(success)
         return success
 
     def toggleFilamentSensor(self):
