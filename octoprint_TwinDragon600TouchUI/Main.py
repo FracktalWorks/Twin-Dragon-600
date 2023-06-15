@@ -1280,8 +1280,8 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         '''
         self.stackedWidget.setCurrentWidget(self.changeFilamentExtrudePage)
         octopiclient.gcode("G91")
-        octopiclient.gcode("G1 E1000 F4000")
-        octopiclient.gcode("G1 E500 F2000")
+        octopiclient.gcode("G1 E1500 F4000")
+        octopiclient.gcode("G1 E600 F2000")
         octopiclient.gcode("G90")
         while self.stackedWidget.currentWidget() == self.changeFilamentExtrudePage:
             octopiclient.gcode("G91")
@@ -1295,8 +1295,8 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         '''
         self.stackedWidget.setCurrentWidget(self.changeFilamentRetractPage)
         octopiclient.gcode("G91")
-        octopiclient.gcode("G1 E-500 F1000")
-        octopiclient.gcode("G1 E-1000 F4000")
+        octopiclient.gcode("G1 E-600 F1000")
+        octopiclient.gcode("G1 E-1500 F4000")
         octopiclient.gcode("G90")
         while self.stackedWidget.currentWidget() == self.changeFilamentRetractPage:
             octopiclient.gcode("G91")
