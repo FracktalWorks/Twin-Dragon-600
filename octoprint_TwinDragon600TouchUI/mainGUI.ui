@@ -159,8 +159,8 @@ QStatusBar::item {
     </property>
     <property name="font">
      <font>
-      <family>MS Shell Dlg 2</family>
-      <pointsize>20</pointsize>
+      <family>Gotham</family>
+      <pointsize>16</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
@@ -176,7 +176,7 @@ QStatusBar::item {
 background-color: rgb(40, 40, 40);</string>
     </property>
     <property name="currentIndex">
-     <number>32</number>
+     <number>17</number>
     </property>
     <widget class="QWidget" name="loadingPage">
      <widget class="QLabel" name="LoadingLabel">
@@ -190,7 +190,8 @@ background-color: rgb(40, 40, 40);</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -217,7 +218,8 @@ background-color: rgb(40, 40, 40);</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -252,8 +254,8 @@ background-color: rgb(40, 40, 40);</string>
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -291,8 +293,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>30</width>
-        <height>30</height>
+        <width>50</width>
+        <height>50</height>
        </size>
       </property>
       <property name="checkable">
@@ -328,8 +330,8 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>Roboto</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -365,8 +367,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>25</width>
-        <height>25</height>
+        <width>50</width>
+        <height>50</height>
        </size>
       </property>
      </widget>
@@ -381,7 +383,8 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="orientation">
@@ -392,15 +395,15 @@ QPushButton:focus {
       <property name="geometry">
        <rect>
         <x>32</x>
-        <y>128</y>
+        <y>148</y>
         <width>51</width>
         <height>51</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Medium</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
         <underline>false</underline>
@@ -425,7 +428,7 @@ QPushButton:focus {
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>230</y>
+        <y>247</y>
         <width>61</width>
         <height>31</height>
        </rect>
@@ -433,7 +436,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -449,7 +452,7 @@ QPushButton:focus {
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>270</y>
+        <y>280</y>
         <width>141</width>
         <height>31</height>
        </rect>
@@ -457,7 +460,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -473,7 +476,7 @@ QPushButton:focus {
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>230</y>
+        <y>247</y>
         <width>281</width>
         <height>31</height>
        </rect>
@@ -481,7 +484,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -502,7 +505,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="geometry">
        <rect>
         <x>160</x>
-        <y>270</y>
+        <y>280</y>
         <width>211</width>
         <height>31</height>
        </rect>
@@ -510,7 +513,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -525,7 +528,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>310</y>
+        <y>320</y>
         <width>151</width>
         <height>21</height>
        </rect>
@@ -533,7 +536,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -549,14 +552,15 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="geometry">
        <rect>
         <x>395</x>
-        <y>90</y>
+        <y>110</y>
         <width>21</width>
         <height>121</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -594,15 +598,15 @@ QProgressBar {
       <property name="geometry">
        <rect>
         <x>320</x>
-        <y>120</y>
+        <y>140</y>
         <width>61</width>
         <height>61</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Medium</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
         <underline>false</underline>
@@ -628,7 +632,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>70</y>
+        <y>90</y>
         <width>61</width>
         <height>31</height>
        </rect>
@@ -636,7 +640,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
         <underline>false</underline>
@@ -659,14 +663,15 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="geometry">
        <rect>
         <x>105</x>
-        <y>90</y>
+        <y>110</y>
         <width>21</width>
         <height>121</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -704,7 +709,7 @@ QProgressBar {
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>190</y>
+        <y>210</y>
         <width>61</width>
         <height>31</height>
        </rect>
@@ -712,7 +717,7 @@ QProgressBar {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
         <underline>false</underline>
@@ -735,7 +740,7 @@ background-color: rgba(0, 0, 0, 0);</string>
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>200</y>
+        <y>220</y>
         <width>41</width>
         <height>21</height>
        </rect>
@@ -743,7 +748,7 @@ background-color: rgba(0, 0, 0, 0);</string>
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
         <underline>false</underline>
@@ -766,7 +771,7 @@ background-color: rgba(0, 0, 0, 0);</string>
       <property name="geometry">
        <rect>
         <x>340</x>
-        <y>80</y>
+        <y>100</y>
         <width>41</width>
         <height>21</height>
        </rect>
@@ -774,7 +779,7 @@ background-color: rgba(0, 0, 0, 0);</string>
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
         <underline>false</underline>
@@ -810,8 +815,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -849,8 +854,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>40</width>
-        <height>40</height>
+        <width>50</width>
+        <height>50</height>
        </size>
       </property>
       <property name="checkable">
@@ -878,7 +883,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
@@ -923,7 +928,7 @@ QProgressBar {
       <property name="geometry">
        <rect>
         <x>150</x>
-        <y>300</y>
+        <y>310</y>
         <width>211</width>
         <height>41</height>
        </rect>
@@ -931,7 +936,7 @@ QProgressBar {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -948,16 +953,16 @@ background-color: rgba(255, 255, 255, 0);</string>
      <widget class="QLabel" name="printerStatus">
       <property name="geometry">
        <rect>
-        <x>38</x>
-        <y>-2</y>
-        <width>621</width>
-        <height>51</height>
+        <x>40</x>
+        <y>10</y>
+        <width>551</width>
+        <height>61</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
         <underline>false</underline>
@@ -998,8 +1003,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -1035,8 +1040,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>40</width>
-        <height>40</height>
+        <width>50</width>
+        <height>50</height>
        </size>
       </property>
       <property name="checkable">
@@ -1056,7 +1061,7 @@ QPushButton:focus {
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>6</y>
+        <y>20</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -1064,7 +1069,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
         <underline>false</underline>
@@ -1087,15 +1092,15 @@ QPushButton:focus {
       <property name="geometry">
        <rect>
         <x>420</x>
-        <y>80</y>
+        <y>100</y>
         <width>70</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Medium</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
         <underline>false</underline>
@@ -1115,7 +1120,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="geometry">
        <rect>
         <x>180</x>
-        <y>70</y>
+        <y>90</y>
         <width>61</width>
         <height>31</height>
        </rect>
@@ -1123,7 +1128,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
         <underline>false</underline>
@@ -1146,15 +1151,15 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="geometry">
        <rect>
         <x>180</x>
-        <y>128</y>
+        <y>148</y>
         <width>51</width>
         <height>51</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Medium</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
         <underline>false</underline>
@@ -1179,14 +1184,15 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="geometry">
        <rect>
         <x>250</x>
-        <y>90</y>
+        <y>110</y>
         <width>21</width>
         <height>121</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -1224,7 +1230,7 @@ QProgressBar {
       <property name="geometry">
        <rect>
         <x>170</x>
-        <y>180</y>
+        <y>200</y>
         <width>71</width>
         <height>51</height>
        </rect>
@@ -1232,7 +1238,7 @@ QProgressBar {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
         <underline>false</underline>
@@ -1257,13 +1263,13 @@ background-color: rgba(0, 0, 0, 0);</string>
         <x>0</x>
         <y>0</y>
         <width>801</width>
-        <height>51</height>
+        <height>81</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Medium</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -1284,14 +1290,15 @@ background-color: rgba(0, 0, 0, 0);</string>
       <property name="geometry">
        <rect>
         <x>489</x>
-        <y>89</y>
+        <y>80</y>
         <width>311</width>
         <height>291</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -1310,7 +1317,7 @@ background-color: rgba(0, 0, 0, 0);</string>
      <widget class="QLabel" name="ipStatus">
       <property name="geometry">
        <rect>
-        <x>540</x>
+        <x>560</x>
         <y>10</y>
         <width>231</width>
         <height>31</height>
@@ -1319,7 +1326,7 @@ background-color: rgba(0, 0, 0, 0);</string>
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
         <underline>false</underline>
@@ -1347,15 +1354,15 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="geometry">
        <rect>
         <x>280</x>
-        <y>80</y>
+        <y>100</y>
         <width>70</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Medium</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
         <underline>false</underline>
@@ -1375,15 +1382,15 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="geometry">
        <rect>
         <x>130</x>
-        <y>80</y>
+        <y>100</y>
         <width>70</width>
         <height>21</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Medium</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
         <underline>false</underline>
@@ -1403,14 +1410,15 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="geometry">
        <rect>
         <x>200</x>
-        <y>130</y>
+        <y>150</y>
         <width>20</width>
         <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -1426,14 +1434,15 @@ background-color: rgb(255, 255, 255,0);</string>
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>130</y>
+        <y>150</y>
         <width>20</width>
         <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -1498,8 +1507,8 @@ background-color: rgb(255, 255, 255,0);</string>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -1531,8 +1540,8 @@ QPushButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>80</width>
-        <height>80</height>
+        <width>150</width>
+        <height>150</height>
        </size>
       </property>
       <property name="checkable">
@@ -1556,8 +1565,8 @@ QPushButton:default {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -1590,8 +1599,8 @@ QToolButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>100</width>
-        <height>100</height>
+        <width>150</width>
+        <height>150</height>
        </size>
       </property>
       <property name="checkable">
@@ -1618,8 +1627,8 @@ QToolButton:default {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -1654,8 +1663,8 @@ QToolButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>100</width>
-        <height>100</height>
+        <width>150</width>
+        <height>150</height>
        </size>
       </property>
       <property name="checkable">
@@ -1682,8 +1691,8 @@ QToolButton:default {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -1716,8 +1725,8 @@ QToolButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>100</width>
-        <height>100</height>
+        <width>150</width>
+        <height>150</height>
        </size>
       </property>
       <property name="checkable">
@@ -1744,8 +1753,8 @@ QToolButton:default {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -1778,8 +1787,8 @@ QToolButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>100</width>
-        <height>100</height>
+        <width>150</width>
+        <height>150</height>
        </size>
       </property>
       <property name="checkable">
@@ -1809,8 +1818,8 @@ QToolButton:default {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -1843,8 +1852,8 @@ QToolButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>100</width>
-        <height>100</height>
+        <width>150</width>
+        <height>150</height>
        </size>
       </property>
       <property name="checkable">
@@ -1873,7 +1882,7 @@ QToolButton:default {
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -1932,7 +1941,7 @@ QScrollBar::down-arrow:vertical {
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>782</width>
+         <width>719</width>
          <height>900</height>
         </rect>
        </property>
@@ -1963,7 +1972,7 @@ QScrollBar::down-arrow:vertical {
           <property name="font">
            <font>
             <family>Gotham Light</family>
-            <pointsize>20</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -2025,7 +2034,7 @@ QPushButton:default {
           <property name="font">
            <font>
             <family>Gotham</family>
-            <pointsize>20</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -2075,7 +2084,7 @@ QPushButton:focus {
           <property name="font">
            <font>
             <family>Gotham</family>
-            <pointsize>20</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -2125,7 +2134,7 @@ QPushButton:focus {
           <property name="font">
            <font>
             <family>Gotham</family>
-            <pointsize>20</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -2175,7 +2184,7 @@ QPushButton:focus {
           <property name="font">
            <font>
             <family>Gotham</family>
-            <pointsize>20</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -2225,7 +2234,7 @@ QPushButton:focus {
           <property name="font">
            <font>
             <family>Gotham</family>
-            <pointsize>20</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -2275,7 +2284,7 @@ QPushButton:focus {
           <property name="font">
            <font>
             <family>Gotham</family>
-            <pointsize>20</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -2325,7 +2334,7 @@ QPushButton:focus {
           <property name="font">
            <font>
             <family>Gotham</family>
-            <pointsize>20</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -2375,7 +2384,7 @@ QPushButton:focus {
           <property name="font">
            <font>
             <family>Gotham</family>
-            <pointsize>20</pointsize>
+            <pointsize>16</pointsize>
            </font>
           </property>
           <property name="styleSheet">
@@ -2470,8 +2479,8 @@ QPushButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -2536,6 +2545,605 @@ QPushButton:default {
      <zorder>QRCodeLabel</zorder>
      <zorder>QRCodeBackButton</zorder>
     </widget>
+    <widget class="QWidget" name="staticIPSettingsPage">
+     <widget class="QComboBox" name="staticIPComboBox">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>10</y>
+        <width>301</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::NoContextMenu</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QScrollBar:vertical {
+     border: 1px solid black;
+border-radius: 5px;
+    background-color: rgb(40,40,40);
+     width: 60px;
+     margin: 67px 0 67px 0;
+ }
+
+/* Sets up the color and height of handle */
+QScrollBar::handle:vertical {
+border-radius: 5px;
+background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+min-height: 7px;
+}
+
+
+QScrollBar::add-line:vertical {
+     border: 1px solid black;
+background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+     height:65px;
+border-radius: 5px;
+     subcontrol-position: bottom;
+     subcontrol-origin: margin;
+ }
+
+ QScrollBar::sub-line:vertical {
+     border: 1px solid black;
+background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+     height: 65px;
+border-radius: 5px;
+     subcontrol-position: top;
+     subcontrol-origin: margin;
+ }
+
+QScrollBar::up-arrow:vertical {
+ image: url(./templates/img/arrows.png);
+    width: 40px;
+    height: 40px;
+ padding: 5px;
+ }
+QScrollBar::down-arrow:vertical {
+ image: url(./templates/img/arrows-5.png);
+    width: 40px;
+    height: 40px;
+ padding: 5px;
+ }
+
+/* need this to get rid of crosshatching on scrollbar background */
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+background: none;
+}
+
+QComboBox {
+border: 1px solid black;
+    padding: 0px 18px 0px 3px;
+    min-width: 6em;
+
+}
+
+QComboBox::item {
+	color: rgb(0, 0, 0);
+}
+
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+background: white;
+}
+
+/* QComboBox gets the &quot;on&quot; state when the popup is open */
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+background: white;
+}
+
+
+QComboBox::drop-down {
+border-left: 1px solid black;
+border-right: 1px solid black;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+    width: 60px;
+     height: 70px;
+
+}
+
+QComboBox::down-arrow {
+
+image: url(./templates/img/arrows-5.png);
+width: 30px;
+height: 30px;
+
+}
+
+
+QComboBox QAbstractItemView {
+    selection-background-color: rgb(40, 40, 40);
+    background: white;
+}</string>
+      </property>
+      <property name="editable">
+       <bool>false</bool>
+      </property>
+      <property name="maxVisibleItems">
+       <number>8</number>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="staticIPINterfaceLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>171</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::NoContextMenu</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Interface</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="staticIPSettingsDoneButton">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>360</y>
+        <width>401</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::NoContextMenu</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+     border: 1px solid rgb(87, 87, 87);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>Done</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QWidget" name="ethStaticSettings" native="true">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>120</y>
+        <width>801</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <widget class="QPushButton" name="staticIPGatewayKeyboardButton">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>80</y>
+         <width>111</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+     border: 1px solid rgb(0, 0, 0);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLabel" name="staticIPGatewayLabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>110</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>16</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Gateway</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="staticIPKeyboardButton">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>10</y>
+         <width>111</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+     border: 1px solid rgb(0, 0, 0);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLabel" name="staticIPLabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>151</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>16</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>IP Address</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="staticIPNameServerKeyboardButton">
+       <property name="geometry">
+        <rect>
+         <x>690</x>
+         <y>150</y>
+         <width>111</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+     border: 1px solid rgb(0, 0, 0);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+       </property>
+       <property name="text">
+        <string>...</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QLabel" name="staticIPNameServerLabel">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>160</y>
+         <width>181</width>
+         <height>30</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>16</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::NoContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Name Servers</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="staticIPSettingsCancelButton">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>360</y>
+        <width>411</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::NoContextMenu</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+     border: 1px solid rgb(87, 87, 87);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>Cancel</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="deleteStaticIPSettingsButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>0</y>
+        <width>171</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>MS Shell Dlg 2</family>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::NoContextMenu</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+     border: 1px solid rgb(0, 0, 0);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>templates/img/delete.png</normaloff>templates/img/delete.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+    </widget>
     <widget class="QWidget" name="wifiSettingsPage">
      <widget class="QComboBox" name="wifiSettingsComboBox">
       <property name="geometry">
@@ -2549,7 +3157,7 @@ QPushButton:default {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -2678,7 +3286,7 @@ QComboBox QAbstractItemView {
       <property name="font">
        <font>
         <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -2695,14 +3303,14 @@ QComboBox QAbstractItemView {
        <rect>
         <x>10</x>
         <y>180</y>
-        <width>461</width>
+        <width>791</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -2726,7 +3334,7 @@ QComboBox QAbstractItemView {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -2776,7 +3384,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -2826,7 +3434,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -2876,7 +3484,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -2921,333 +3529,6 @@ QCheckBox::indicator:unchecked {
      <zorder>wifiSettingsDoneButton</zorder>
      <zorder>hiddenCheckBox</zorder>
     </widget>
-    <widget class="QWidget" name="ethSettingsPage">
-     <widget class="QPushButton" name="ethSettingsDoneButton">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>360</y>
-        <width>401</width>
-        <height>121</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Gotham</family>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-     border: 1px solid rgb(87, 87, 87);
-	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
-
-
-}
-
-QPushButton:pressed {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
-}
-
-QPushButton:flat {
-    border: none; /* no border for a flat push button */
-}
-
-QPushButton:default {
-    border-color: navy; /* make the default button prominent */
-}
-
-QPushButton:focus {
-	outline: none;
-}</string>
-      </property>
-      <property name="text">
-       <string>Done</string>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>40</width>
-        <height>40</height>
-       </size>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="ethSettingsCancelButton">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>360</y>
-        <width>401</width>
-        <height>121</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Gotham</family>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-     border: 1px solid rgb(87, 87, 87);
-	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
-
-
-}
-
-QPushButton:pressed {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
-}
-
-QPushButton:flat {
-    border: none; /* no border for a flat push button */
-}
-
-QPushButton:default {
-    border-color: navy; /* make the default button prominent */
-}
-
-QPushButton:focus {
-	outline: none;
-}</string>
-      </property>
-      <property name="text">
-       <string>Cancel</string>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>40</width>
-        <height>40</height>
-       </size>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="ethStaticCheckBox">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>161</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Gotham</family>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QCheckBox {
-	color: rgb(255, 255, 255);
-}
-
-QCheckBox::indicator {
-    width: 25px;
-    height: 25px;
-}
-
-QCheckBox::indicator:checked {
-    image: url(./templates/img/check-box.png);
-}
-QCheckBox::indicator:unchecked {
-    image: url(./templates/img/blank-check-box.png);
-}
-
-
-
-</string>
-      </property>
-      <property name="text">
-       <string>Static IP</string>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>40</width>
-        <height>40</height>
-       </size>
-      </property>
-      <property name="checked">
-       <bool>false</bool>
-      </property>
-     </widget>
-     <widget class="QWidget" name="ethStaticSettings" native="true">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>80</y>
-        <width>771</width>
-        <height>151</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <widget class="QLabel" name="ethStaticIpLabel">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>141</width>
-         <height>51</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>MS Shell Dlg 2</family>
-         <pointsize>20</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="text">
-        <string>IP Address</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="ethStaticGatewayLabel">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>70</y>
-         <width>181</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>MS Shell Dlg 2</family>
-         <pointsize>20</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="text">
-        <string>Gateway</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="ethStaticGatewayKeyboardButton">
-       <property name="geometry">
-        <rect>
-         <x>669</x>
-         <y>70</y>
-         <width>91</width>
-         <height>51</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>MS Shell Dlg 2</family>
-         <pointsize>20</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton {
-     border: 1px solid rgb(0, 0, 0);
-	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
-
-
-}
-
-QPushButton:pressed {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
-}
-
-QPushButton:flat {
-    border: none; /* no border for a flat push button */
-}
-
-QPushButton:default {
-    border-color: navy; /* make the default button prominent */
-}
-
-QPushButton:focus {
-	outline: none;
-}</string>
-       </property>
-       <property name="text">
-        <string>...</string>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>40</width>
-         <height>40</height>
-        </size>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="ethStaticIpKeyboardButton">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="geometry">
-        <rect>
-         <x>669</x>
-         <y>10</y>
-         <width>91</width>
-         <height>51</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>MS Shell Dlg 2</family>
-         <pointsize>20</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="autoFillBackground">
-        <bool>false</bool>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton {
-     border: 1px solid rgb(0, 0, 0);
-	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
-
-
-}
-
-QPushButton:pressed {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
-}
-
-QPushButton:flat {
-    border: none; /* no border for a flat push button */
-}
-
-QPushButton:default {
-    border-color: navy; /* make the default button prominent */
-}
-
-QPushButton:focus {
-	outline: none;
-}</string>
-       </property>
-       <property name="text">
-        <string>...</string>
-       </property>
-       <property name="iconSize">
-        <size>
-         <width>40</width>
-         <height>40</height>
-        </size>
-       </property>
-      </widget>
-     </widget>
-    </widget>
     <widget class="QWidget" name="networkSettingsPage">
      <widget class="QPushButton" name="networkInfoButton">
       <property name="geometry">
@@ -3266,8 +3547,8 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -3322,8 +3603,8 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -3361,7 +3642,7 @@ QPushButton:focus {
        </size>
       </property>
      </widget>
-     <widget class="QPushButton" name="configureEthButton">
+     <widget class="QPushButton" name="configureStaticIPButton">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -3378,8 +3659,8 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -3408,7 +3689,7 @@ QPushButton:focus {
 }</string>
       </property>
       <property name="text">
-       <string>Configure Ethernet</string>
+       <string>Configure Static IP</string>
       </property>
       <property name="iconSize">
        <size>
@@ -3434,8 +3715,8 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -3505,7 +3786,7 @@ QPushButton:default {
       <property name="font">
        <font>
         <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -3573,7 +3854,7 @@ QPushButton:default {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -3629,7 +3910,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -3680,8 +3961,8 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -3730,8 +4011,8 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -3780,8 +4061,8 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -3919,8 +4200,8 @@ QComboBox QAbstractItemView {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -3945,8 +4226,8 @@ QComboBox QAbstractItemView {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>26</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -3970,8 +4251,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>26</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -3995,8 +4276,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>26</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -4020,8 +4301,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>26</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -4045,8 +4326,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>26</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -4070,8 +4351,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>26</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -4101,8 +4382,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -4163,8 +4444,8 @@ QPushButton:default {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>26</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -4188,8 +4469,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>26</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -4213,8 +4494,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>26</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -4238,8 +4519,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>26</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -4263,8 +4544,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>26</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -4288,8 +4569,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>26</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -4329,7 +4610,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="font">
        <font>
         <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -4418,7 +4699,7 @@ QListView::item:selected:focus {
       <property name="font">
        <font>
         <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -4451,8 +4732,8 @@ QPushButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -4486,7 +4767,7 @@ QPushButton:default {
       <property name="font">
        <font>
         <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -4519,8 +4800,8 @@ QPushButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>40</width>
-        <height>40</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -4550,7 +4831,7 @@ QPushButton:default {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -4613,7 +4894,7 @@ background: none;
        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Gotham'; font-size:20pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Gotham'; font-size:16pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Software Update Starting, Please Wait....&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
@@ -4753,8 +5034,8 @@ QPushButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -4784,7 +5065,7 @@ QPushButton:default {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -4814,7 +5095,7 @@ QPushButton:default {
       <property name="font">
        <font>
         <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -4847,8 +5128,8 @@ QPushButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -4869,14 +5150,14 @@ QPushButton:default {
        <rect>
         <x>0</x>
         <y>200</y>
-        <width>681</width>
+        <width>361</width>
         <height>141</height>
        </rect>
       </property>
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -4913,8 +5194,8 @@ QToolButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>60</width>
-        <height>60</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="toolButtonStyle">
@@ -4933,7 +5214,7 @@ QToolButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -4992,7 +5273,7 @@ QToolButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -5051,7 +5332,7 @@ QToolButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -5098,6 +5379,1182 @@ QToolButton:focus {
        <enum>Qt::ToolButtonTextUnderIcon</enum>
       </property>
      </widget>
+     <widget class="QToolButton" name="testPrintsButton">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>200</y>
+        <width>331</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QToolButton {
+     border: 1px solid rgb(87, 87, 87);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QToolButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QToolButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QToolButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QToolButton:focus {
+	outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>Test Prints</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>templates/img/3d-printing.png</normaloff>templates/img/3d-printing.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextUnderIcon</enum>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="testPrintsPage1">
+     <widget class="QLabel" name="calibrateLabel_36">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>469</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>18</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Calibration and Test Prints :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="calibrateLabel_57">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>60</y>
+        <width>721</width>
+        <height>96</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Ensure PLA material of different colors are loaded into both nozzles before continuing </string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="tool0Label_27">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>50</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham Medium</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+   color:  white;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>templates/img/exclamation-mark.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="calibrateLabel_58">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>465</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Select Installed Nozzles Diameter's:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="tool0Label_28">
+      <property name="geometry">
+       <rect>
+        <x>31</x>
+        <y>208</y>
+        <width>50</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham Medium</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+   color:  white;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>templates/img/Nozzle.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="tool0TargetTemperature_27">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>220</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+   color:  black;
+background-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="testPrintsTool0SizeComboBox">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>200</y>
+        <width>171</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QScrollBar:vertical {
+     border: 1px solid black;
+border-radius: 5px;
+    background-color: rgb(40,40,40);
+     width: 60px;
+     margin: 67px 0 67px 0;
+ }
+
+/* Sets up the color and height of handle */
+QScrollBar::handle:vertical {
+border-radius: 5px;
+background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+min-height: 7px;
+}
+
+
+QScrollBar::add-line:vertical {
+     border: 1px solid black;
+background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+     height:65px;
+border-radius: 5px;
+     subcontrol-position: bottom;
+     subcontrol-origin: margin;
+ }
+
+ QScrollBar::sub-line:vertical {
+     border: 1px solid black;
+background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+     height: 65px;
+border-radius: 5px;
+     subcontrol-position: top;
+     subcontrol-origin: margin;
+ }
+
+QScrollBar::up-arrow:vertical {
+ image: url(./templates/img/arrows.png);
+    width: 40px;
+    height: 40px;
+ padding: 5px;
+ }
+QScrollBar::down-arrow:vertical {
+ image: url(./templates/img/arrows-5.png);
+    width: 40px;
+    height: 40px;
+ padding: 5px;
+ }
+
+/* need this to get rid of crosshatching on scrollbar background */
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+background: none;
+}
+
+QComboBox {
+border: 1px solid black;
+    padding: 0px 18px 0px 3px;
+    min-width: 6em;
+
+}
+
+QComboBox::item {
+	color: rgb(0, 0, 0);
+}
+
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+background: white;
+}
+
+/* QComboBox gets the &quot;on&quot; state when the popup is open */
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+background: white;
+}
+
+
+QComboBox::drop-down {
+border-left: 1px solid black;
+border-right: 1px solid black;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+    width: 60px;
+     height: 50px;
+
+}
+
+QComboBox::down-arrow {
+
+image: url(./templates/img/arrows-5.png);
+width: 30px;
+height: 30px;
+
+}
+
+
+QComboBox QAbstractItemView {
+    selection-background-color: rgb(40, 40, 40);
+    background: white;
+}</string>
+      </property>
+      <property name="editable">
+       <bool>false</bool>
+      </property>
+      <property name="maxVisibleItems">
+       <number>8</number>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+      <item>
+       <property name="text">
+        <string>0.6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0.4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0.8</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="testPrintsTool1SizeComboBox_6">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>200</y>
+        <width>171</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"> QScrollBar:vertical {
+     border: 1px solid black;
+border-radius: 5px;
+    background-color: rgb(40,40,40);
+     width: 60px;
+     margin: 67px 0 67px 0;
+ }
+
+/* Sets up the color and height of handle */
+QScrollBar::handle:vertical {
+border-radius: 5px;
+background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+min-height: 7px;
+}
+
+
+QScrollBar::add-line:vertical {
+     border: 1px solid black;
+background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+     height:65px;
+border-radius: 5px;
+     subcontrol-position: bottom;
+     subcontrol-origin: margin;
+ }
+
+ QScrollBar::sub-line:vertical {
+     border: 1px solid black;
+background: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+     height: 65px;
+border-radius: 5px;
+     subcontrol-position: top;
+     subcontrol-origin: margin;
+ }
+
+QScrollBar::up-arrow:vertical {
+ image: url(./templates/img/arrows.png);
+    width: 40px;
+    height: 40px;
+ padding: 5px;
+ }
+QScrollBar::down-arrow:vertical {
+ image: url(./templates/img/arrows-5.png);
+    width: 40px;
+    height: 40px;
+ padding: 5px;
+ }
+
+/* need this to get rid of crosshatching on scrollbar background */
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+background: none;
+}
+
+QComboBox {
+border: 1px solid black;
+    padding: 0px 18px 0px 3px;
+    min-width: 6em;
+
+}
+
+QComboBox::item {
+	color: rgb(0, 0, 0);
+}
+
+QComboBox:editable {
+    background: white;
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+background: white;
+}
+
+/* QComboBox gets the &quot;on&quot; state when the popup is open */
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+background: white;
+}
+
+
+QComboBox::drop-down {
+border-left: 1px solid black;
+border-right: 1px solid black;
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+    width: 60px;
+     height: 50px;
+
+}
+
+QComboBox::down-arrow {
+
+image: url(./templates/img/arrows-5.png);
+width: 30px;
+height: 30px;
+
+}
+
+
+QComboBox QAbstractItemView {
+    selection-background-color: rgb(40, 40, 40);
+    background: white;
+}</string>
+      </property>
+      <property name="editable">
+       <bool>false</bool>
+      </property>
+      <property name="maxVisibleItems">
+       <number>8</number>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>30</width>
+        <height>30</height>
+       </size>
+      </property>
+      <item>
+       <property name="text">
+        <string>0.6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0.4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>0.8</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="tool0TargetTemperature_28">
+      <property name="geometry">
+       <rect>
+        <x>510</x>
+        <y>213</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+   color:  black;
+background-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="tool1Label_12">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>200</y>
+        <width>50</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham Medium</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+   color:  white;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>templates/img/Nozzle.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="calibrateLabel_59">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>260</y>
+        <width>711</width>
+        <height>96</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Ensure Tool 1 nozzle diameter is greater or equal to the nozzle diameter of Tool 0</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="testPrintsNextButton">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>350</y>
+        <width>391</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+     border: 1px solid rgb(87, 87, 87);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>Next</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="testPrintsBackButton">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>350</y>
+        <width>411</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+     border: 1px solid rgb(87, 87, 87);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>templates/img/arrows-4.png</normaloff>./templates/img/arrows-4.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="tool0Label_29">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>290</y>
+        <width>50</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham Medium</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+   color:  white;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>templates/img/exclamation-mark.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <zorder>tool1Label_12</zorder>
+     <zorder>calibrateLabel_36</zorder>
+     <zorder>calibrateLabel_57</zorder>
+     <zorder>tool0Label_27</zorder>
+     <zorder>calibrateLabel_58</zorder>
+     <zorder>tool0Label_28</zorder>
+     <zorder>tool0TargetTemperature_27</zorder>
+     <zorder>testPrintsTool0SizeComboBox</zorder>
+     <zorder>testPrintsTool1SizeComboBox_6</zorder>
+     <zorder>tool0TargetTemperature_28</zorder>
+     <zorder>calibrateLabel_59</zorder>
+     <zorder>testPrintsNextButton</zorder>
+     <zorder>testPrintsBackButton</zorder>
+     <zorder>tool0Label_29</zorder>
+    </widget>
+    <widget class="QWidget" name="testPrintsPage2">
+     <widget class="QLabel" name="calibrateLabel_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>-10</y>
+        <width>731</width>
+        <height>96</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Ensure PLA material of different colors are loaded into both nozzles before continuing </string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="tool0Label_30">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>50</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham Medium</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+   color:  white;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap>templates/img/exclamation-mark.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bedLevelPrintButton">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>147</y>
+        <width>811</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+     border: 1px solid rgb(87, 87, 87);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>Bed Leveling Print</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="singleNozzlePrintButton">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>279</y>
+        <width>801</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+     border: 1px solid rgb(87, 87, 87);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>Single Nozzle Test Print</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="dualNozzlePrintButton">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>342</y>
+        <width>801</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+     border: 1px solid rgb(87, 87, 87);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>Dual Nozzle Test Print</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="movementTestPrintButton">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>216</y>
+        <width>801</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+     border: 1px solid rgb(87, 87, 87);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>Movement Stress Test</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="dualCaliberationPrintButton">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>79</y>
+        <width>801</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>70</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+     border: 1px solid rgb(87, 87, 87);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>Dual Calibration Print</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>40</width>
+        <height>40</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="testPrintsCancelButton">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>409</y>
+        <width>801</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham Light</family>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+     border: 1px solid rgb(87, 87, 87);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}</string>
+      </property>
+      <property name="text">
+       <string>Cancel</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="toolOffsetXYPage">
      <widget class="QLabel" name="bedLabel_3">
@@ -5111,8 +6568,8 @@ QToolButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -5127,16 +6584,16 @@ QToolButton:focus {
      <widget class="QLabel" name="tollOffsetXLabel">
       <property name="geometry">
        <rect>
-        <x>170</x>
-        <y>99</y>
-        <width>70</width>
-        <height>21</height>
+        <x>160</x>
+        <y>121</y>
+        <width>121</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -5145,7 +6602,7 @@ QToolButton:focus {
        <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>X:</string>
+       <string>X offset: </string>
       </property>
      </widget>
      <widget class="QPushButton" name="toolOffsetXYBackButton">
@@ -5165,8 +6622,8 @@ QToolButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -5203,8 +6660,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -5223,16 +6680,16 @@ QPushButton:focus {
      <widget class="QLabel" name="toolOffsetLabel">
       <property name="geometry">
        <rect>
-        <x>5</x>
-        <y>5</y>
-        <width>281</width>
+        <x>30</x>
+        <y>30</y>
+        <width>521</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -5241,22 +6698,22 @@ QPushButton:focus {
        <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>Tool Offset X/Y :</string>
+       <string>X/Y offset distance for extruder E1:</string>
       </property>
      </widget>
      <widget class="QDoubleSpinBox" name="toolOffsetXDoubleSpinBox">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>49</y>
+        <x>291</x>
+        <y>79</y>
         <width>221</width>
         <height>121</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -5353,16 +6810,16 @@ QDoubleSpinBox::down-button:pressed {
      <widget class="QPushButton" name="toolOffsetXSetButton">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>50</y>
+        <x>510</x>
+        <y>80</y>
         <width>91</width>
         <height>119</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -5399,24 +6856,24 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
      </widget>
      <widget class="QPushButton" name="toolOffsetYSetButton">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>211</y>
+        <x>510</x>
+        <y>220</y>
         <width>91</width>
         <height>119</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -5453,24 +6910,24 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
      </widget>
      <widget class="QDoubleSpinBox" name="toolOffsetYDoubleSpinBox">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>210</y>
+        <x>291</x>
+        <y>219</y>
         <width>221</width>
         <height>121</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -5564,16 +7021,16 @@ QDoubleSpinBox::down-button:pressed {
      <widget class="QLabel" name="toolOffsetYLabel">
       <property name="geometry">
        <rect>
-        <x>170</x>
-        <y>260</y>
-        <width>70</width>
-        <height>21</height>
+        <x>160</x>
+        <y>258</y>
+        <width>121</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -5582,7 +7039,7 @@ QDoubleSpinBox::down-button:pressed {
        <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>Y:</string>
+       <string>Y offset: </string>
       </property>
      </widget>
     </widget>
@@ -5598,8 +7055,8 @@ QDoubleSpinBox::down-button:pressed {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -5636,8 +7093,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
      </widget>
@@ -5652,8 +7109,8 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -5750,16 +7207,16 @@ QDoubleSpinBox::down-button:pressed {
      <widget class="QLabel" name="tollOffsetXLabel_2">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>190</y>
-        <width>70</width>
-        <height>21</height>
+        <x>120</x>
+        <y>180</y>
+        <width>131</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -5768,22 +7225,22 @@ QDoubleSpinBox::down-button:pressed {
        <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>Z:</string>
+       <string>Z offset:</string>
       </property>
      </widget>
      <widget class="QLabel" name="toolOffsetLabel_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>30</y>
-        <width>231</width>
-        <height>31</height>
+        <x>20</x>
+        <y>70</y>
+        <width>461</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -5792,7 +7249,7 @@ QDoubleSpinBox::down-button:pressed {
        <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>Tool Offset Z :</string>
+       <string>Z offset distance for extruder E1:</string>
       </property>
      </widget>
      <widget class="QPushButton" name="toolOffsetZBackButton">
@@ -5812,8 +7269,8 @@ QDoubleSpinBox::down-button:pressed {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -5850,8 +7307,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -5881,7 +7338,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -5931,7 +7388,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -5981,7 +7438,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -6010,7 +7467,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -6060,7 +7517,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -6110,7 +7567,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -6139,7 +7596,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -6189,7 +7646,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -6239,7 +7696,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -6268,7 +7725,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -6318,7 +7775,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -6368,7 +7825,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -6397,7 +7854,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -6447,7 +7904,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -6497,7 +7954,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -6506,7 +7963,7 @@ QPushButton:focus {
        <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>Move the bed up or down to the Second Nozzle , testing height using paper </string>
+       <string>Move the bed up or down to the Second Nozzle, testing height using paper </string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -6530,7 +7987,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -6568,8 +8025,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>40</width>
-        <height>40</height>
+        <width>150</width>
+        <height>150</height>
        </size>
       </property>
       <property name="checkable">
@@ -6603,7 +8060,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -6641,8 +8098,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>40</width>
-        <height>40</height>
+        <width>150</width>
+        <height>150</height>
        </size>
       </property>
       <property name="checkable">
@@ -6672,7 +8129,9 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
@@ -6775,7 +8234,9 @@ QDoubleSpinBox::down-button:pressed {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
@@ -6812,8 +8273,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
      </widget>
@@ -6828,8 +8289,8 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -6861,8 +8322,10 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
@@ -6899,8 +8362,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -6927,7 +8390,10 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
        </font>
       </property>
       <property name="styleSheet">
@@ -6962,7 +8428,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -6996,15 +8462,15 @@ QPushButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>40</width>
-        <height>40</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
      </widget>
      <widget class="QLabel" name="printFromLabel">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>30</x>
         <y>80</y>
         <width>231</width>
         <height>31</height>
@@ -7013,7 +8479,7 @@ QPushButton:default {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -7043,7 +8509,7 @@ QPushButton:default {
       <property name="font">
        <font>
         <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -7076,8 +8542,8 @@ QPushButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -7105,7 +8571,7 @@ QPushButton:default {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -7139,8 +8605,8 @@ QPushButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>40</width>
-        <height>40</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
      </widget>
@@ -7278,8 +8744,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -7350,8 +8816,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -7422,8 +8888,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>40</width>
-        <height>40</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -7500,8 +8966,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>40</width>
-        <height>40</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -7577,8 +9043,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -7650,8 +9116,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -7722,7 +9188,7 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>40</width>
+        <width>70</width>
         <height>40</height>
        </size>
       </property>
@@ -7800,8 +9266,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -7872,8 +9338,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -7944,8 +9410,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>40</width>
-        <height>40</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -8064,7 +9530,7 @@ QListView::item:selected:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
         <underline>false</underline>
@@ -8102,8 +9568,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -8135,8 +9601,8 @@ QPushButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -8170,7 +9636,7 @@ QPushButton:default {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -8201,8 +9667,8 @@ QToolButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>40</width>
-        <height>40</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -8215,7 +9681,7 @@ QToolButton:default {
      <widget class="QLabel" name="fileSizeSelected">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>180</x>
         <y>130</y>
         <width>161</width>
         <height>21</height>
@@ -8223,8 +9689,8 @@ QToolButton:default {
       </property>
       <property name="font">
        <font>
-        <family>Gotham Medium</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -8243,7 +9709,7 @@ background-color: rgba(255, 255, 255, 0);</string>
      <widget class="QLabel" name="fileDateSelected">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>180</x>
         <y>160</y>
         <width>201</width>
         <height>21</height>
@@ -8251,8 +9717,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Medium</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -8271,7 +9737,7 @@ background-color: rgba(255, 255, 255, 0);</string>
      <widget class="QLabel" name="filePrintTimeSelected">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>180</x>
         <y>210</y>
         <width>141</width>
         <height>21</height>
@@ -8279,8 +9745,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Medium</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -8299,7 +9765,7 @@ background-color: rgba(255, 255, 255, 0);</string>
      <widget class="QLabel" name="filamentVolumeSelected">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>180</x>
         <y>260</y>
         <width>161</width>
         <height>21</height>
@@ -8307,8 +9773,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Medium</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -8335,8 +9801,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -8359,8 +9825,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -8383,8 +9849,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -8411,8 +9877,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -8428,16 +9894,16 @@ background-color: rgba(255, 255, 255, 0);</string>
      <widget class="QLabel" name="filamentLengthFileSelected">
       <property name="geometry">
        <rect>
-        <x>170</x>
+        <x>180</x>
         <y>290</y>
         <width>161</width>
-        <height>21</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Medium</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -8459,13 +9925,13 @@ background-color: rgba(255, 255, 255, 0);</string>
         <x>10</x>
         <y>290</y>
         <width>121</width>
-        <height>21</height>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
@@ -8489,7 +9955,8 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -8499,7 +9966,7 @@ background-color: rgba(255, 255, 255, 0);</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>../../JuliaMiniTouchUI/octoprint_JuliaMiniTouchUI/templates/img/thumbnail.png</pixmap>
+       <pixmap>.templates/img/thumbnail.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -8525,7 +9992,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -8556,8 +10023,8 @@ QToolButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>40</width>
-        <height>40</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -8584,8 +10051,8 @@ QToolButton:default {
       </property>
       <property name="font">
        <font>
-        <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -8617,8 +10084,8 @@ QPushButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -8645,8 +10112,8 @@ QPushButton:default {
       </property>
       <property name="font">
        <font>
-        <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -8677,7 +10144,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -8708,8 +10175,8 @@ QToolButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>40</width>
-        <height>40</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -8730,7 +10197,8 @@ QToolButton:default {
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -8777,8 +10245,8 @@ QToolButton:default {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="layoutDirection">
@@ -8805,7 +10273,9 @@ QTabBar::tab {
     border-top-color: #C2C7CB; /* same as the pane color */
     width: 134px;
      height: 100px;
-	padding-left: 25px;
+	padding-left:50px;
+padding-right:-25px;
+
 
 }
 
@@ -8846,8 +10316,8 @@ QTabBar:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>45</width>
-        <height>44</height>
+        <width>60</width>
+        <height>60</height>
        </size>
       </property>
       <property name="elideMode">
@@ -8857,6 +10327,9 @@ QTabBar:focus {
        <bool>false</bool>
       </property>
       <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <property name="movable">
        <bool>false</bool>
       </property>
       <widget class="QWidget" name="feedRateTab">
@@ -8878,7 +10351,7 @@ QTabBar:focus {
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>10</y>
+          <y>70</y>
           <width>181</width>
           <height>31</height>
          </rect>
@@ -8902,8 +10375,8 @@ background-color: rgba(255, 255, 255, 0);</string>
        <widget class="QSpinBox" name="feedRateSpinBox">
         <property name="geometry">
          <rect>
-          <x>140</x>
-          <y>10</y>
+          <x>202</x>
+          <y>18</y>
           <width>241</width>
           <height>121</height>
          </rect>
@@ -9005,9 +10478,9 @@ QSpinBox::down-button:pressed {
        <widget class="QPushButton" name="setFeedRateButton">
         <property name="geometry">
          <rect>
-          <x>378</x>
-          <y>12</y>
-          <width>91</width>
+          <x>440</x>
+          <y>20</y>
+          <width>131</width>
           <height>117</height>
          </rect>
         </property>
@@ -9052,16 +10525,16 @@ QPushButton:focus {
         </property>
         <property name="iconSize">
          <size>
-          <width>50</width>
-          <height>50</height>
+          <width>70</width>
+          <height>70</height>
          </size>
         </property>
        </widget>
        <widget class="QPushButton" name="moveZMBabyStep">
         <property name="geometry">
          <rect>
-          <x>390</x>
-          <y>190</y>
+          <x>400</x>
+          <y>210</y>
           <width>261</width>
           <height>141</height>
          </rect>
@@ -9113,8 +10586,8 @@ QPushButton:focus {
         </property>
         <property name="iconSize">
          <size>
-          <width>40</width>
-          <height>40</height>
+          <width>70</width>
+          <height>70</height>
          </size>
         </property>
         <property name="checkable">
@@ -9133,8 +10606,8 @@ QPushButton:focus {
        <widget class="QPushButton" name="moveZPBabyStep">
         <property name="geometry">
          <rect>
-          <x>120</x>
-          <y>190</y>
+          <x>130</x>
+          <y>210</y>
           <width>271</width>
           <height>141</height>
          </rect>
@@ -9186,8 +10659,8 @@ QPushButton:focus {
         </property>
         <property name="iconSize">
          <size>
-          <width>40</width>
-          <height>40</height>
+          <width>70</width>
+          <height>70</height>
          </size>
         </property>
         <property name="checkable">
@@ -9207,7 +10680,7 @@ QPushButton:focus {
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>135</y>
+          <y>160</y>
           <width>421</width>
           <height>31</height>
          </rect>
@@ -9247,8 +10720,8 @@ background-color: rgba(255, 255, 255, 0);</string>
        <widget class="QLabel" name="toolLabel">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>110</y>
+          <x>60</x>
+          <y>160</y>
           <width>70</width>
           <height>21</height>
          </rect>
@@ -9271,8 +10744,8 @@ background-color: rgba(255, 255, 255, 0);</string>
        <widget class="QLabel" name="bedLabel_2">
         <property name="geometry">
          <rect>
-          <x>390</x>
-          <y>110</y>
+          <x>440</x>
+          <y>150</y>
           <width>101</width>
           <height>31</height>
          </rect>
@@ -9295,9 +10768,9 @@ background-color: rgba(255, 255, 255, 0);</string>
        <widget class="QPushButton" name="cooldownButton">
         <property name="geometry">
          <rect>
-          <x>230</x>
+          <x>60</x>
           <y>0</y>
-          <width>121</width>
+          <width>231</width>
           <height>81</height>
          </rect>
         </property>
@@ -9346,17 +10819,17 @@ QPushButton:focus {
         </property>
         <property name="iconSize">
          <size>
-          <width>40</width>
-          <height>40</height>
+          <width>50</width>
+          <height>50</height>
          </size>
         </property>
        </widget>
        <widget class="QPushButton" name="fanOffButton">
         <property name="geometry">
          <rect>
-          <x>460</x>
+          <x>510</x>
           <y>0</y>
-          <width>111</width>
+          <width>221</width>
           <height>81</height>
          </rect>
         </property>
@@ -9406,8 +10879,8 @@ QPushButton:focus {
         </property>
         <property name="iconSize">
          <size>
-          <width>40</width>
-          <height>40</height>
+          <width>50</width>
+          <height>50</height>
          </size>
         </property>
         <property name="checkable">
@@ -9426,9 +10899,9 @@ QPushButton:focus {
        <widget class="QPushButton" name="fanOnButton">
         <property name="geometry">
          <rect>
-          <x>350</x>
+          <x>290</x>
           <y>0</y>
-          <width>111</width>
+          <width>221</width>
           <height>81</height>
          </rect>
         </property>
@@ -9477,8 +10950,8 @@ QPushButton:focus {
         </property>
         <property name="iconSize">
          <size>
-          <width>40</width>
-          <height>40</height>
+          <width>50</width>
+          <height>50</height>
          </size>
         </property>
         <property name="checkable">
@@ -9497,8 +10970,8 @@ QPushButton:focus {
        <widget class="QSpinBox" name="toolTempSpinBox">
         <property name="geometry">
          <rect>
-          <x>90</x>
-          <y>200</y>
+          <x>150</x>
+          <y>198</y>
           <width>161</width>
           <height>131</height>
          </rect>
@@ -9596,8 +11069,8 @@ QSpinBox::down-button:pressed {
        <widget class="QSpinBox" name="bedTempSpinBox">
         <property name="geometry">
          <rect>
-          <x>370</x>
-          <y>170</y>
+          <x>531</x>
+          <y>180</y>
           <width>181</width>
           <height>131</height>
          </rect>
@@ -9693,8 +11166,8 @@ QSpinBox::down-button:pressed {
        <widget class="QPushButton" name="setToolTempButton">
         <property name="geometry">
          <rect>
-          <x>250</x>
-          <y>200</y>
+          <x>309</x>
+          <y>199</y>
           <width>71</width>
           <height>130</height>
          </rect>
@@ -9747,8 +11220,8 @@ QPushButton:focus {
        <widget class="QPushButton" name="setBedTempButton">
         <property name="geometry">
          <rect>
-          <x>550</x>
-          <y>170</y>
+          <x>710</x>
+          <y>180</y>
           <width>71</width>
           <height>131</height>
          </rect>
@@ -9802,8 +11275,8 @@ QPushButton:focus {
        <widget class="QPushButton" name="toolToggleTemperatureButton">
         <property name="geometry">
          <rect>
-          <x>185</x>
-          <y>130</y>
+          <x>244</x>
+          <y>129</y>
           <width>136</width>
           <height>71</height>
          </rect>
@@ -9855,14 +11328,292 @@ QPushButton:focus {
         </property>
         <property name="iconSize">
          <size>
-          <width>90</width>
-          <height>90</height>
+          <width>100</width>
+          <height>100</height>
          </size>
         </property>
         <property name="checkable">
          <bool>true</bool>
         </property>
         <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="tool180PreheatButton">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>200</y>
+          <width>101</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Gotham</family>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+     border: 1px solid rgb(87, 87, 87);
+
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+	border-top-right-radius: 15px;
+border-top-left-radius: 15px;
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+        </property>
+        <property name="text">
+         <string>180°C</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="tool250PreheatButton">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>260</y>
+          <width>101</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Gotham</family>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+     border: 1px solid rgb(87, 87, 87);
+
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+	border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+        </property>
+        <property name="text">
+         <string>250°C</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="bed100PreheatButton">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>250</y>
+          <width>101</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Gotham</family>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+     border: 1px solid rgb(87, 87, 87);
+
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+	border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+        </property>
+        <property name="text">
+         <string>100°C</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="bed60PreheatButton">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>190</y>
+          <width>101</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Gotham</family>
+          <pointsize>15</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+     border: 1px solid rgb(87, 87, 87);
+
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+	border-top-right-radius: 15px;
+border-top-left-radius: 15px;
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+        </property>
+        <property name="text">
+         <string>60°C</string>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="checkable">
          <bool>false</bool>
         </property>
         <property name="autoDefault">
@@ -9885,6 +11636,10 @@ QPushButton:focus {
        <zorder>bedTempSpinBox</zorder>
        <zorder>toolTempSpinBox</zorder>
        <zorder>toolToggleTemperatureButton</zorder>
+       <zorder>tool180PreheatButton</zorder>
+       <zorder>tool250PreheatButton</zorder>
+       <zorder>bed100PreheatButton</zorder>
+       <zorder>bed60PreheatButton</zorder>
       </widget>
       <widget class="QWidget" name="motionTab">
        <attribute name="icon">
@@ -9898,9 +11653,9 @@ QPushButton:focus {
        <widget class="QPushButton" name="step1Button">
         <property name="geometry">
          <rect>
-          <x>200</x>
+          <x>180</x>
           <y>0</y>
-          <width>111</width>
+          <width>121</width>
           <height>61</height>
          </rect>
         </property>
@@ -9968,9 +11723,9 @@ QPushButton:focus {
        <widget class="QPushButton" name="step10Button">
         <property name="geometry">
          <rect>
-          <x>309</x>
+          <x>300</x>
           <y>0</y>
-          <width>111</width>
+          <width>131</width>
           <height>61</height>
          </rect>
         </property>
@@ -10038,9 +11793,9 @@ QPushButton:focus {
        <widget class="QPushButton" name="step100Button">
         <property name="geometry">
          <rect>
-          <x>420</x>
+          <x>430</x>
           <y>0</y>
-          <width>131</width>
+          <width>151</width>
           <height>61</height>
          </rect>
         </property>
@@ -10329,7 +12084,7 @@ QPushButton:focus {
        <widget class="QPushButton" name="moveXMButton">
         <property name="geometry">
          <rect>
-          <x>29</x>
+          <x>30</x>
           <y>180</y>
           <width>91</width>
           <height>91</height>
@@ -10544,9 +12299,9 @@ QPushButton:focus {
        <widget class="QPushButton" name="motorOffButton">
         <property name="geometry">
          <rect>
-          <x>550</x>
+          <x>580</x>
           <y>0</y>
-          <width>91</width>
+          <width>121</width>
           <height>61</height>
          </rect>
         </property>
@@ -10763,8 +12518,8 @@ QPushButton:focus {
          <rect>
           <x>10</x>
           <y>80</y>
-          <width>70</width>
-          <height>21</height>
+          <width>81</width>
+          <height>31</height>
          </rect>
         </property>
         <property name="font">
@@ -10786,9 +12541,9 @@ QPushButton:focus {
         <property name="geometry">
          <rect>
           <x>330</x>
-          <y>80</y>
+          <y>70</y>
           <width>31</width>
-          <height>21</height>
+          <height>41</height>
          </rect>
         </property>
         <property name="font">
@@ -10955,9 +12710,9 @@ QPushButton:focus {
         <property name="geometry">
          <rect>
           <x>570</x>
-          <y>80</y>
+          <y>70</y>
           <width>31</width>
-          <height>21</height>
+          <height>41</height>
          </rect>
         </property>
         <property name="font">
@@ -10978,7 +12733,7 @@ QPushButton:focus {
        <widget class="QLabel" name="moveByLabel">
         <property name="geometry">
          <rect>
-          <x>70</x>
+          <x>50</x>
           <y>10</y>
           <width>121</width>
           <height>41</height>
@@ -11054,8 +12809,8 @@ QPushButton:focus {
         </property>
         <property name="iconSize">
          <size>
-          <width>30</width>
-          <height>30</height>
+          <width>40</width>
+          <height>40</height>
          </size>
         </property>
         <property name="checkable">
@@ -11109,8 +12864,8 @@ QPushButton:focus {
        <widget class="QPushButton" name="setFlowRateButton">
         <property name="geometry">
          <rect>
-          <x>460</x>
-          <y>150</y>
+          <x>540</x>
+          <y>190</y>
           <width>91</width>
           <height>132</height>
          </rect>
@@ -11118,7 +12873,7 @@ QPushButton:focus {
         <property name="font">
          <font>
           <family>Gotham</family>
-          <pointsize>13</pointsize>
+          <pointsize>16</pointsize>
          </font>
         </property>
         <property name="styleSheet">
@@ -11156,16 +12911,16 @@ QPushButton:focus {
         </property>
         <property name="iconSize">
          <size>
-          <width>50</width>
-          <height>50</height>
+          <width>70</width>
+          <height>70</height>
          </size>
         </property>
        </widget>
        <widget class="QSpinBox" name="flowRateSpinBox">
         <property name="geometry">
          <rect>
-          <x>220</x>
-          <y>148</y>
+          <x>300</x>
+          <y>188</y>
           <width>241</width>
           <height>136</height>
          </rect>
@@ -11173,7 +12928,7 @@ QPushButton:focus {
         <property name="font">
          <font>
           <family>Gotham</family>
-          <pointsize>24</pointsize>
+          <pointsize>16</pointsize>
          </font>
         </property>
         <property name="styleSheet">
@@ -11264,16 +13019,16 @@ QSpinBox::down-button:pressed {
        <widget class="QLabel" name="flowRateLabelControlPage">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>130</y>
+          <x>120</x>
+          <y>240</y>
           <width>181</width>
           <height>31</height>
          </rect>
         </property>
         <property name="font">
          <font>
-          <family>Gotham Light</family>
-          <pointsize>20</pointsize>
+          <family>Gotham</family>
+          <pointsize>16</pointsize>
           <weight>50</weight>
           <bold>false</bold>
          </font>
@@ -11292,13 +13047,13 @@ background-color: rgba(255, 255, 255, 0);</string>
           <x>0</x>
           <y>0</y>
           <width>401</width>
-          <height>111</height>
+          <height>131</height>
          </rect>
         </property>
         <property name="font">
          <font>
           <family>Gotham</family>
-          <pointsize>12</pointsize>
+          <pointsize>16</pointsize>
          </font>
         </property>
         <property name="styleSheet">
@@ -11335,8 +13090,8 @@ QToolButton :focus {
         </property>
         <property name="iconSize">
          <size>
-          <width>60</width>
-          <height>60</height>
+          <width>70</width>
+          <height>70</height>
          </size>
         </property>
         <property name="toolButtonStyle">
@@ -11352,13 +13107,13 @@ QToolButton :focus {
           <x>399</x>
           <y>0</y>
           <width>401</width>
-          <height>111</height>
+          <height>131</height>
          </rect>
         </property>
         <property name="font">
          <font>
           <family>Gotham</family>
-          <pointsize>12</pointsize>
+          <pointsize>16</pointsize>
          </font>
         </property>
         <property name="styleSheet">
@@ -11397,8 +13152,8 @@ QToolButton :focus {
         </property>
         <property name="iconSize">
          <size>
-          <width>60</width>
-          <height>60</height>
+          <width>70</width>
+          <height>70</height>
          </size>
         </property>
         <property name="checkable">
@@ -11422,7 +13177,7 @@ QToolButton :focus {
       <property name="geometry">
        <rect>
         <x>640</x>
-        <y>380</y>
+        <y>381</y>
         <width>161</width>
         <height>101</height>
        </rect>
@@ -11435,8 +13190,8 @@ QToolButton :focus {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="layoutDirection">
@@ -11473,8 +13228,8 @@ QPushButton:default {
       </property>
       <property name="iconSize">
        <size>
-        <width>40</width>
-        <height>40</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -11503,8 +13258,8 @@ QPushButton:default {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -11527,8 +13282,8 @@ QPushButton:default {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -11646,8 +13401,8 @@ height: 30px;
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -11684,8 +13439,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>60</width>
-        <height>60</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
      </widget>
@@ -11706,8 +13461,8 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -11743,8 +13498,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>120</width>
-        <height>50</height>
+        <width>150</width>
+        <height>100</height>
        </size>
       </property>
       <property name="checkable">
@@ -11774,8 +13529,8 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -11812,8 +13567,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>60</width>
-        <height>60</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
      </widget>
@@ -11834,8 +13589,8 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -11872,8 +13627,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
       <property name="checkable">
@@ -11902,8 +13657,8 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -11927,7 +13682,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <italic>false</italic>
         <bold>false</bold>
@@ -11980,8 +13735,8 @@ QProgressBar {
       </property>
       <property name="font">
        <font>
-        <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -12005,7 +13760,7 @@ QProgressBar {
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -12042,8 +13797,8 @@ QPushButton:focus {
       </property>
       <property name="iconSize">
        <size>
-        <width>50</width>
-        <height>50</height>
+        <width>70</width>
+        <height>70</height>
        </size>
       </property>
      </widget>
@@ -12058,7 +13813,8 @@ QPushButton:focus {
       </property>
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -12075,20 +13831,20 @@ QPushButton:focus {
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="changeFilamentExtrudePage">
-     <widget class="QLabel" name="feedFilamentlabel">
+    <widget class="QWidget" name="changeFilamentLoadPage">
+     <widget class="QLabel" name="feedFilamentlabel_60">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>50</y>
-        <width>461</width>
+        <x>10</x>
+        <y>40</y>
+        <width>801</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham Light</family>
+        <pointsize>14</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -12098,22 +13854,75 @@ QPushButton:focus {
 background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="text">
-       <string>Feed Filament into Extruder</string>
+       <string>Insert the Filament into filament side motor,</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="loadDoneButton">
+     <widget class="QLabel" name="feedFilamentlabel_61">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>691</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham Light</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Press &quot;DONE&quot; when the filament starts to get pulled</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="feedFilamentlabel_62">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>140</y>
+        <width>771</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham Light</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Incase filament cannot be pushed beyond a point, and is not being automatically pulled, check extruder for issues. </string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="loadedTillExtruderButton">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>360</y>
-        <width>801</width>
+        <width>381</width>
         <height>121</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -12151,19 +13960,19 @@ QPushButton:focus {
        </size>
       </property>
      </widget>
-     <widget class="QPushButton" name="ExtrudeButton">
+     <widget class="QPushButton" name="changeFilamentBackButton3">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>230</y>
-        <width>801</width>
-        <height>131</height>
+        <x>380</x>
+        <y>360</y>
+        <width>421</width>
+        <height>121</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>13</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -12192,7 +14001,113 @@ QPushButton:focus {
 }</string>
       </property>
       <property name="text">
-       <string>Extrude</string>
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>./templates/img/arrows-4.png</normaloff>./templates/img/arrows-4.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>70</width>
+        <height>70</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="feedFilamentlabel_64">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>801</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham Light</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>untill the filament gets pulls automatically.</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="changeFilamentExtrudePage">
+     <widget class="QLabel" name="feedFilamentlabel">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>461</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Feed Filament into Extruder</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="loadDoneButton">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>360</y>
+        <width>801</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+     border: 1px solid rgb(87, 87, 87);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+}
+
+QPushButton:flat {
+    border: none; /* no border for a flat push button */
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QPushButton:focus {
+	outline: none;
+}</string>
+      </property>
+      <property name="text">
+       <string>Done</string>
       </property>
       <property name="iconSize">
        <size>
@@ -12205,15 +14120,15 @@ QPushButton:focus {
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>120</y>
-        <width>561</width>
+        <y>100</y>
+        <width>831</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <family>MS Shell Dlg 2</family>
-        <pointsize>20</pointsize>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -12223,7 +14138,35 @@ QPushButton:focus {
 background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="text">
-       <string>Click &quot;Extrude&quot; untill filament starts extruding</string>
+       <string>Click &quot;Done&quot; when filament starts coming out of the nozzle</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="feedFilamentlabel_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>160</y>
+        <width>761</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham Light</family>
+        <pointsize>14</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Incase Filament is not getting extruded even after waiting for 1-2 minues, Check extruders at the filament chamber as well as on the carriage for issues.</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
@@ -12240,7 +14183,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="font">
        <font>
         <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -12265,7 +14208,7 @@ background-color: rgba(255, 255, 255, 0);</string>
       <property name="font">
        <font>
         <family>Gotham</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
        </font>
       </property>
       <property name="styleSheet">
@@ -12315,7 +14258,7 @@ QPushButton:focus {
       <property name="font">
        <font>
         <family>Gotham Light</family>
-        <pointsize>20</pointsize>
+        <pointsize>16</pointsize>
         <weight>50</weight>
         <bold>false</bold>
        </font>
@@ -12326,56 +14269,6 @@ background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="text">
        <string>Retract Filament From Extruder</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="retractFilamentButton">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>240</y>
-        <width>801</width>
-        <height>121</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Gotham</family>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">QPushButton {
-     border: 1px solid rgb(87, 87, 87);
-	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
-
-
-}
-
-QPushButton:pressed {
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
-}
-
-QPushButton:flat {
-    border: none; /* no border for a flat push button */
-}
-
-QPushButton:default {
-    border-color: navy; /* make the default button prominent */
-}
-
-QPushButton:focus {
-	outline: none;
-}</string>
-      </property>
-      <property name="text">
-       <string>Retract</string>
-      </property>
-      <property name="iconSize">
-       <size>
-        <width>40</width>
-        <height>40</height>
-       </size>
       </property>
      </widget>
     </widget>

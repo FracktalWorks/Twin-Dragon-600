@@ -107,10 +107,10 @@ filaments = [
 filaments = OrderedDict(filaments)
 
 #values before 2020 changes
-calibrationPosition = {'X1': 340, 'Y1': 42,
-                       'X2': 30, 'Y2': 42,
-                       'X3': 185, 'Y3': 352,
-                       'X4': 185, 'Y4': 42
+calibrationPosition = {'X1': 105, 'Y1': 3,
+                       'X2': 507, 'Y2': 3,
+                       'X3': 304, 'Y3': 267,
+                       'X4': 304, 'Y4': 127
                        }
 
 # calibrationPosition = {'X1': 336, 'Y1': 33,
@@ -277,26 +277,26 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         font.setPointSize(15)
 
         self.wifiPasswordLineEdit = ClickableLineEdit(self.wifiSettingsPage)
-        self.wifiPasswordLineEdit.setGeometry(QtCore.QRect(0, 170, 480, 60))
+        self.wifiPasswordLineEdit.setGeometry(QtCore.QRect(300, 170, 400, 60))
         self.wifiPasswordLineEdit.setFont(font)
         self.wifiPasswordLineEdit.setStyleSheet(styles.textedit)
         self.wifiPasswordLineEdit.setObjectName(_fromUtf8("wifiPasswordLineEdit"))
 
         font.setPointSize(11)
         self.staticIPLineEdit = ClickableLineEdit(self.ethStaticSettings)
-        self.staticIPLineEdit.setGeometry(QtCore.QRect(120, 20, 300, 30))
+        self.staticIPLineEdit.setGeometry(QtCore.QRect(200, 15, 450, 40))
         self.staticIPLineEdit.setFont(font)
         self.staticIPLineEdit.setStyleSheet(styles.textedit)
         self.staticIPLineEdit.setObjectName(_fromUtf8("staticIPLineEdit"))
 
         self.staticIPGatewayLineEdit = ClickableLineEdit(self.ethStaticSettings)
-        self.staticIPGatewayLineEdit.setGeometry(QtCore.QRect(120, 90, 300, 30))
+        self.staticIPGatewayLineEdit.setGeometry(QtCore.QRect(200, 85, 450, 40))
         self.staticIPGatewayLineEdit.setFont(font)
         self.staticIPGatewayLineEdit.setStyleSheet(styles.textedit)
         self.staticIPGatewayLineEdit.setObjectName(_fromUtf8("staticIPGatewayLineEdit"))
 
         self.staticIPNameServerLineEdit = ClickableLineEdit(self.ethStaticSettings)
-        self.staticIPNameServerLineEdit.setGeometry(QtCore.QRect(120, 160, 300, 30))
+        self.staticIPNameServerLineEdit.setGeometry(QtCore.QRect(200, 155, 450, 40))
         self.staticIPNameServerLineEdit.setFont(font)
         self.staticIPNameServerLineEdit.setStyleSheet(styles.textedit)
         self.staticIPNameServerLineEdit.setObjectName(_fromUtf8("staticIPNameServerLineEdit"))
@@ -445,13 +445,13 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.quickStep1NextButton.clicked.connect(self.quickStep2)
         self.quickStep2NextButton.clicked.connect(self.quickStep3)
         self.quickStep3NextButton.clicked.connect(self.quickStep4)
-        #self.quickStep4NextButton.clicked.connect(self.nozzleHeightStep1)
-        #self.nozzleHeightStep1NextButton.clicked.connect(self.nozzleHeightStep1)
+        self.quickStep4NextButton.clicked.connect(self.nozzleHeightStep1)
+        self.nozzleHeightStep1NextButton.clicked.connect(self.nozzleHeightStep1)
         self.quickStep1CancelButton.pressed.connect(self.cancelStep)
         self.quickStep2CancelButton.pressed.connect(self.cancelStep)
         self.quickStep3CancelButton.pressed.connect(self.cancelStep)
         self.quickStep4CancelButton.pressed.connect(self.cancelStep)
-        #self.nozzleHeightStep1CancelButton.pressed.connect(self.cancelStep)
+        self.nozzleHeightStep1CancelButton.pressed.connect(self.cancelStep)
         
         self.toolOffsetXSetButton.pressed.connect(self.setToolOffsetX)
         self.toolOffsetYSetButton.pressed.connect(self.setToolOffsetY)
@@ -461,8 +461,8 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.toolOffsetXYButton.pressed.connect(self.updateToolOffsetXY)
         self.toolOffsetZButton.pressed.connect(self.updateToolOffsetZ)
 
-        self.testPrintsButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.testPrintsPage1))
-        self.testPrintsNextButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.testPrintsPage2))
+        self.testPrintsButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.testPrintsPage1_6))
+        self.testPrintsNextButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.testPrintsPage2_6))
         self.testPrintsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.calibratePage))
         self.testPrintsCancelButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.calibratePage))
         self.dualCaliberationPrintButton.pressed.connect(
@@ -556,12 +556,14 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.toolToggleChangeFilamentButton.clicked.connect(self.selectToolChangeFilament)
         self.changeFilamentBackButton.pressed.connect(self.control)
         self.changeFilamentBackButton2.pressed.connect(self.changeFilamentCancel)
+        self.changeFilamentBackButton3.pressed.connect(self.changeFilamentCancel)
         self.changeFilamentUnloadButton.pressed.connect(self.unloadFilament)
         self.changeFilamentLoadButton.pressed.connect(self.loadFilament)
+        self.loadedTillExtruderButton.pressed.connect(self.changeFilamentExtrudePageFunction)
         self.loadDoneButton.pressed.connect(self.control)
         self.unloadDoneButton.pressed.connect(self.changeFilament)
-        #self.retractFilamentButton.pressed.connect(lambda: octopiclient.extrude(-20))
-        #self.ExtrudeButton.pressed.connect(lambda: octopiclient.extrude(20))
+        # self.retractFilamentButton.pressed.connect(lambda: octopiclient.extrude(-20))
+        # self.ExtrudeButton.pressed.connect(lambda: octopiclient.extrude(20))
 
         # Settings Page
         self.settingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.MenuPage))
@@ -761,19 +763,19 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             pause_print = data["pause_print"]
 
         if triggered_extruder0 and self.stackedWidget.currentWidget() not in [self.changeFilamentPage, self.changeFilamentProgressPage,
-                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage]:
+                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,self.changeFilamentUnloadPage]:
             if dialog.WarningOk(self, "Filament outage in Extruder 0"):
                 pass
 
         if triggered_extruder1 and self.stackedWidget.currentWidget() not in [self.changeFilamentPage, self.changeFilamentProgressPage,
-                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage]:
+                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,self.changeFilamentUnloadPage]:
             if dialog.WarningOk(self, "Filament outage in Extruder 1"):
                 pass
 
         if triggered_door:
             if self.printerStatusText == "Printing":
                 no_pause_pages = [self.controlPage, self.changeFilamentPage, self.changeFilamentProgressPage,
-                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage]
+                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,]
                 if not pause_print or self.stackedWidget.currentWidget() in no_pause_pages:
                     if dialog.WarningOk(self, "Door opened"):
                         return
@@ -1229,6 +1231,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.askAndReboot()
         self.stackedWidget.setCurrentWidget(self.displaySettingsPage)
 
+
     ''' +++++++++++++++++++++++++++++++++Change Filament+++++++++++++++++++++++++++++++ '''
 
     def unloadFilament(self):
@@ -1256,6 +1259,50 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         # this flag tells the updateTemperature function that runs every second to update the filament change progress bar as well, and to load or unload after heating done
         self.changeFilamentHeatingFlag = True
         self.loadFlag = True
+
+
+    @run_async
+    def changeFilamentLoadFunction(self):
+        '''
+        This function is called once the heating is done, which slowly moves the extruder so that it starts pulling filament
+        '''
+        self.stackedWidget.setCurrentWidget(self.changeFilamentLoadPage)
+        while self.stackedWidget.currentWidget() == self.changeFilamentLoadPage:
+            octopiclient.gcode("G91")
+            octopiclient.gcode("G1 E15 F1500")
+            octopiclient.gcode("G90")
+            time.sleep(1)
+
+    @run_async
+    def changeFilamentExtrudePageFunction(self):
+        '''
+        once filament is loaded, this function is called to extrude filament till the toolhead
+        '''
+        self.stackedWidget.setCurrentWidget(self.changeFilamentExtrudePage)
+        octopiclient.gcode("G91")
+        octopiclient.gcode("G1 E1000 F4000")
+        octopiclient.gcode("G1 E500 F2000")
+        octopiclient.gcode("G90")
+        while self.stackedWidget.currentWidget() == self.changeFilamentExtrudePage:
+            octopiclient.gcode("G91")
+            octopiclient.gcode("G1 E5 F400")
+            octopiclient.gcode("G90")
+            time.sleep(3)
+    @run_async
+    def changeFilamentRetractFunction(self):
+        '''
+        Remove the filament from the toolhead
+        '''
+        self.stackedWidget.setCurrentWidget(self.changeFilamentRetractPage)
+        octopiclient.gcode("G91")
+        octopiclient.gcode("G1 E-500 F1000")
+        octopiclient.gcode("G1 E-1000 F4000")
+        octopiclient.gcode("G90")
+        while self.stackedWidget.currentWidget() == self.changeFilamentRetractPage:
+            octopiclient.gcode("G91")
+            octopiclient.gcode("G1 E-20 F4000")
+            octopiclient.gcode("G90")
+            time.sleep(3)
 
     def changeFilament(self):
         self.stackedWidget.setCurrentWidget(self.changeFilamentPage)
@@ -1501,10 +1548,12 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
                     self.changeFilamentProgress.setMaximum(temperature['tool0Actual'])
                     self.changeFilamentHeatingFlag = False
                     if self.loadFlag:
+                        #self.changeFilamentLoadFunction()
                         self.stackedWidget.setCurrentWidget(self.changeFilamentExtrudePage)
                     else:
                         self.stackedWidget.setCurrentWidget(self.changeFilamentRetractPage)
                         octopiclient.extrude(5)     # extrudes some amount of filament to prevent plugging
+                        #self.changeFilamentRetractFunction()
 
                 self.changeFilamentProgress.setValue(temperature['tool0Actual'])
             elif self.activeExtruder == 1:
@@ -1516,10 +1565,12 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
                     self.changeFilamentProgress.setMaximum(temperature['tool1Actual'])
                     self.changeFilamentHeatingFlag = False
                     if self.loadFlag:
-                        self.stackedWidget.setCurrentWidget(self.changeFilamentExtrudePage)
+                        self.changeFilamentLoadFunction()
+                        #self.stackedWidget.setCurrentWidget(self.changeFilamentExtrudePage)
                     else:
-                        self.stackedWidget.setCurrentWidget(self.changeFilamentRetractPage)
+                        #self.stackedWidget.setCurrentWidget(self.changeFilamentRetractPage)
                         octopiclient.extrude(5)     # extrudes some amount of filament to prevent plugging
+                        self.changeFilamentRetractFunction()
 
                 self.changeFilamentProgress.setValue(temperature['tool1Actual'])
 
@@ -1897,22 +1948,22 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
     #     octopiclient.jog(z=15, absolute=True, speed=1500)
     #     octopiclient.gcode(command='M272 S')
 
-    #def nozzleHeightStep1(self):
-        #if self.toolZOffsetCaliberationPageCount == 0 :
-            #self.toolZOffsetLabel.setText("Move the bed up or down to the First Nozzle , testing height using paper")
-            #self.stackedWidget.setCurrentWidget(self.nozzleHeightStep1Page)
-            #octopiclient.jog(z=10, absolute=True, speed=1500)
-            #octopiclient.jog(x=calibrationPosition['X4'], y=calibrationPosition['Y4'], absolute=True, speed=2000)
-            #octopiclient.jog(z=1, absolute=True, speed=1500)
-            #self.toolZOffsetCaliberationPageCount = 1
-        #elif self.toolZOffsetCaliberationPageCount == 1:
-            #self.toolZOffsetLabel.setText("Move the bed up or down to the Second Nozzle , testing height using paper")
-            #octopiclient.gcode(command='G92 Z0')#set the current Z position to zero
-            #octopiclient.jog(z=1, absolute=True, speed=1500)
-            #octopiclient.gcode(command='T1')
-            #self.toolZOffsetCaliberationPageCount = 2
-        #else:
-            #self.doneStep()
+    def nozzleHeightStep1(self):
+        if self.toolZOffsetCaliberationPageCount == 0 :
+            self.toolZOffsetLabel.setText("Move the bed up or down to the First Nozzle , testing height using paper")
+            self.stackedWidget.setCurrentWidget(self.nozzleHeightStep1Page)
+            octopiclient.jog(z=10, absolute=True, speed=1500)
+            octopiclient.jog(x=calibrationPosition['X4'], y=calibrationPosition['Y4'], absolute=True, speed=2000)
+            octopiclient.jog(z=1, absolute=True, speed=1500)
+            self.toolZOffsetCaliberationPageCount = 1
+        elif self.toolZOffsetCaliberationPageCount == 1:
+            self.toolZOffsetLabel.setText("Move the bed up or down to the Second Nozzle , testing height using paper")
+            octopiclient.gcode(command='G92 Z0')#set the current Z position to zero
+            octopiclient.jog(z=1, absolute=True, speed=1500)
+            octopiclient.gcode(command='T1')
+            self.toolZOffsetCaliberationPageCount = 2
+        else:
+            self.doneStep()
 
     def doneStep(self):
         '''
@@ -1950,16 +2001,16 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
                 self.printFromPath('gcode/' + tool0Diameter + '_BedLeveling.gcode', True)
             elif gcode is 'dualCalibration':
                 self.printFromPath(
-                    'gcode/' + tool0Diameter + '_' + tool1Diameter + '_dual_extruder_calibration_TwinDragon600.gcode',
+                    'gcode/' + tool0Diameter + '_' + tool1Diameter + '_dual_extruder_calibration_Idex.gcode',
                     True)
             elif gcode is 'movementTest':
                 self.printFromPath('gcode/movementTest.gcode', True)
             elif gcode is 'dualTest':
                 self.printFromPath(
-                    'gcode/' + tool0Diameter + '_' + tool1Diameter + '_Fracktal_logo_TwinDragon600.gcode',
+                    'gcode/' + tool0Diameter + '_' + tool1Diameter + '_Fracktal_logo_Idex.gcode',
                     True)
             elif gcode is 'singleTest':
-                self.printFromPath('gcode/' + tool0Diameter + '_Fracktal_logo_TwinDragon600.gcode',True)
+                self.printFromPath('gcode/' + tool0Diameter + '_Fracktal_logo_Idex.gcode',True)
 
             else:
                 print("gcode not found")
