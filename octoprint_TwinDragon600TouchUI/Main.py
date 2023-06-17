@@ -1551,6 +1551,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         # updates the progress bar on the change filament screen
         if self.changeFilamentHeatingFlag:
             if self.activeExtruder == 0:
+                octopiclient.gcode(command='T0')
                 if temperature['tool0Target'] == 0:
                     self.changeFilamentProgress.setMaximum(300)
                 elif temperature['tool0Target'] - temperature['tool0Actual'] > 1:
@@ -1568,6 +1569,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
 
                 self.changeFilamentProgress.setValue(temperature['tool0Actual'])
             elif self.activeExtruder == 1:
+                octopiclient.gcode(command='T1')
                 if temperature['tool1Target'] == 0:
                     self.changeFilamentProgress.setMaximum(300)
                 elif temperature['tool1Target'] - temperature['tool1Actual'] > 1:
