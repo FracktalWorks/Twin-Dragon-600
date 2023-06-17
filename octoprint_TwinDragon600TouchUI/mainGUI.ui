@@ -176,7 +176,7 @@ QStatusBar::item {
 background-color: rgb(40, 40, 40);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>30</number>
     </property>
     <widget class="QWidget" name="loadingPage">
      <widget class="QLabel" name="LoadingLabel">
@@ -10308,7 +10308,7 @@ QTabBar:focus {
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>1</number>
       </property>
       <property name="iconSize">
        <size>
@@ -10966,9 +10966,9 @@ QPushButton:focus {
        <widget class="QSpinBox" name="toolTempSpinBox">
         <property name="geometry">
          <rect>
-          <x>150</x>
+          <x>151</x>
           <y>198</y>
-          <width>161</width>
+          <width>160</width>
           <height>131</height>
          </rect>
         </property>
@@ -11065,7 +11065,7 @@ QSpinBox::down-button:pressed {
        <widget class="QSpinBox" name="bedTempSpinBox">
         <property name="geometry">
          <rect>
-          <x>531</x>
+          <x>532</x>
           <y>180</y>
           <width>181</width>
           <height>131</height>

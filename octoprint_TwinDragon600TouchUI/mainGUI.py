@@ -6239,7 +6239,7 @@ class Ui_MainWindow(object):
         self.fanOnButton.setFlat(False)
         self.fanOnButton.setObjectName("fanOnButton")
         self.toolTempSpinBox = QtWidgets.QSpinBox(self.temperatureTab)
-        self.toolTempSpinBox.setGeometry(QtCore.QRect(150, 198, 161, 131))
+        self.toolTempSpinBox.setGeometry(QtCore.QRect(151, 198, 160, 131))
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -6310,7 +6310,7 @@ class Ui_MainWindow(object):
         self.toolTempSpinBox.setProperty("value", 0)
         self.toolTempSpinBox.setObjectName("toolTempSpinBox")
         self.bedTempSpinBox = QtWidgets.QSpinBox(self.temperatureTab)
-        self.bedTempSpinBox.setGeometry(QtCore.QRect(531, 180, 181, 131))
+        self.bedTempSpinBox.setGeometry(QtCore.QRect(532, 180, 181, 131))
         font = QtGui.QFont()
         font.setFamily("Gotham")
         font.setPointSize(20)
@@ -8097,8 +8097,8 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.mainApplication)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(0)
-        self.controlTabWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(30)
+        self.controlTabWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

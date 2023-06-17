@@ -548,8 +548,8 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.setFlowRateButton.pressed.connect(lambda: octopiclient.flowrate(self.flowRateSpinBox.value()))
         self.setFeedRateButton.pressed.connect(lambda: octopiclient.feedrate(self.feedRateSpinBox.value()))
 
-        self.moveZPBabyStep.pressed.connect(lambda: octopiclient.gcode(command='SET_GCODE_OFFSET Z_ADJUST=0.025 MOVE=1'))
-        self.moveZMBabyStep.pressed.connect(lambda: octopiclient.gcode(command='SET_GCODE_OFFSET Z_ADJUST=-0.025 MOVE=1'))
+        self.moveZPBabyStep.pressed.connect(lambda: octopiclient.gcode(command='M290 Z0.025'))
+        self.moveZMBabyStep.pressed.connect(lambda: octopiclient.gcode(command='M290 Z-0.025'))
 
         # ChangeFilament rutien
         self.changeFilamentButton.pressed.connect(self.changeFilament)
@@ -1280,8 +1280,12 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         '''
         self.stackedWidget.setCurrentWidget(self.changeFilamentExtrudePage)
         octopiclient.gcode("G91")
-        octopiclient.gcode("G1 E1500 F4000")
-        octopiclient.gcode("G1 E600 F2000")
+        octopiclient.gcode("G1 E300 F2000")
+        octopiclient.gcode("G1 E300 F2000")
+        octopiclient.gcode("G1 E300 F2000")
+        octopiclient.gcode("G1 E300 F2000")
+        octopiclient.gcode("G1 E300 F2000")
+        octopiclient.gcode("G1 E500 F1000")
         octopiclient.gcode("G90")
         while self.stackedWidget.currentWidget() == self.changeFilamentExtrudePage:
             octopiclient.gcode("G91")
@@ -1295,12 +1299,19 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         '''
         self.stackedWidget.setCurrentWidget(self.changeFilamentRetractPage)
         octopiclient.gcode("G91")
-        octopiclient.gcode("G1 E-600 F1000")
-        octopiclient.gcode("G1 E-1500 F4000")
+        octopiclient.gcode("G1 E20 F1000")
+        octopiclient.gcode("G1 E-20 F1000")
+        octopiclient.gcode("G1 E-150 F500")
+        octopiclient.gcode("G1 E-300 F2000")
+        octopiclient.gcode("G1 E-300 F2000")
+        octopiclient.gcode("G1 E-300 F2000")
+        octopiclient.gcode("G1 E-300 F2000")
+        octopiclient.gcode("G1 E-400 F2000")
+        octopiclient.gcode("G1 E-400 F2000")
         octopiclient.gcode("G90")
         while self.stackedWidget.currentWidget() == self.changeFilamentRetractPage:
             octopiclient.gcode("G91")
-            octopiclient.gcode("G1 E-20 F4000")
+            octopiclient.gcode("G1 E-20 F2000")
             octopiclient.gcode("G90")
             time.sleep(3)
 
