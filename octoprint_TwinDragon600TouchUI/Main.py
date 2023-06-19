@@ -523,7 +523,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.extruderButton.pressed.connect(lambda: octopiclient.extrude(self.step))
         self.retractButton.pressed.connect(lambda: octopiclient.extrude(-self.step))
         self.motorOffButton.pressed.connect(lambda: octopiclient.gcode(command='M18'))
-        self.fanOnButton.pressed.connect(lambda: octopiclient.gcode(command='M106'))
+        self.fanOnButton.pressed.connect(lambda: octopiclient.gcode(command='M106 S255'))
         self.fanOffButton.pressed.connect(lambda: octopiclient.gcode(command='M107'))
         self.cooldownButton.pressed.connect(self.coolDownAction)
         self.step100Button.pressed.connect(lambda: self.setStep(100))
@@ -1551,7 +1551,6 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         # updates the progress bar on the change filament screen
         if self.changeFilamentHeatingFlag:
             if self.activeExtruder == 0:
-                octopiclient.gcode(command='T0')
                 if temperature['tool0Target'] == 0:
                     self.changeFilamentProgress.setMaximum(300)
                 elif temperature['tool0Target'] - temperature['tool0Actual'] > 1:
@@ -1569,7 +1568,6 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
 
                 self.changeFilamentProgress.setValue(temperature['tool0Actual'])
             elif self.activeExtruder == 1:
-                octopiclient.gcode(command='T1')
                 if temperature['tool1Target'] == 0:
                     self.changeFilamentProgress.setMaximum(300)
                 elif temperature['tool1Target'] - temperature['tool1Actual'] > 1:
