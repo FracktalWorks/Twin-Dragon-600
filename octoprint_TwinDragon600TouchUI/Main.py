@@ -107,10 +107,10 @@ filaments = [
 filaments = OrderedDict(filaments)
 
 #values before 2020 changes
-calibrationPosition = {'X1': 340, 'Y1': 42,
-                       'X2': 30, 'Y2': 42,
-                       'X3': 185, 'Y3': 352,
-                       'X4': 185, 'Y4': 42
+calibrationPosition = {'X1': 105, 'Y1': 3,
+                       'X2': 507, 'Y2': 3,
+                       'X3': 304, 'Y3': 267,
+                       'X4': 304, 'Y4': 127
                        }
 
 # calibrationPosition = {'X1': 336, 'Y1': 33,
@@ -277,33 +277,33 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         font.setPointSize(15)
 
         self.wifiPasswordLineEdit = ClickableLineEdit(self.wifiSettingsPage)
-        self.wifiPasswordLineEdit.setGeometry(QtCore.QRect(0, 170, 480, 60))
+        self.wifiPasswordLineEdit.setGeometry(QtCore.QRect(300, 170, 400, 60))
         self.wifiPasswordLineEdit.setFont(font)
         self.wifiPasswordLineEdit.setStyleSheet(styles.textedit)
         self.wifiPasswordLineEdit.setObjectName(_fromUtf8("wifiPasswordLineEdit"))
 
         font.setPointSize(11)
         self.staticIPLineEdit = ClickableLineEdit(self.ethStaticSettings)
-        self.staticIPLineEdit.setGeometry(QtCore.QRect(120, 20, 300, 30))
+        self.staticIPLineEdit.setGeometry(QtCore.QRect(200, 15, 450, 40))
         self.staticIPLineEdit.setFont(font)
         self.staticIPLineEdit.setStyleSheet(styles.textedit)
         self.staticIPLineEdit.setObjectName(_fromUtf8("staticIPLineEdit"))
 
         self.staticIPGatewayLineEdit = ClickableLineEdit(self.ethStaticSettings)
-        self.staticIPGatewayLineEdit.setGeometry(QtCore.QRect(120, 90, 300, 30))
+        self.staticIPGatewayLineEdit.setGeometry(QtCore.QRect(200, 85, 450, 40))
         self.staticIPGatewayLineEdit.setFont(font)
         self.staticIPGatewayLineEdit.setStyleSheet(styles.textedit)
         self.staticIPGatewayLineEdit.setObjectName(_fromUtf8("staticIPGatewayLineEdit"))
 
         self.staticIPNameServerLineEdit = ClickableLineEdit(self.ethStaticSettings)
-        self.staticIPNameServerLineEdit.setGeometry(QtCore.QRect(120, 160, 300, 30))
+        self.staticIPNameServerLineEdit.setGeometry(QtCore.QRect(200, 155, 450, 40))
         self.staticIPNameServerLineEdit.setFont(font)
         self.staticIPNameServerLineEdit.setStyleSheet(styles.textedit)
         self.staticIPNameServerLineEdit.setObjectName(_fromUtf8("staticIPNameServerLineEdit"))
 
         self.menuCartButton.setDisabled(True)
 
-        self.movie = QtGui.QMovie("templates/img/loading.gif")
+        self.movie = QtGui.QMovie("templates/img/loading-90.gif")
         self.loadingGif.setMovie(self.movie)
         self.movie.start()
 
@@ -461,8 +461,8 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.toolOffsetXYButton.pressed.connect(self.updateToolOffsetXY)
         self.toolOffsetZButton.pressed.connect(self.updateToolOffsetZ)
 
-        self.testPrintsButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.testPrintsPage1))
-        self.testPrintsNextButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.testPrintsPage2))
+        self.testPrintsButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.testPrintsPage1_6))
+        self.testPrintsNextButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.testPrintsPage2_6))
         self.testPrintsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.calibratePage))
         self.testPrintsCancelButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.calibratePage))
         self.dualCaliberationPrintButton.pressed.connect(
@@ -548,20 +548,22 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.setFlowRateButton.pressed.connect(lambda: octopiclient.flowrate(self.flowRateSpinBox.value()))
         self.setFeedRateButton.pressed.connect(lambda: octopiclient.feedrate(self.feedRateSpinBox.value()))
 
-        self.moveZPBabyStep.pressed.connect(lambda: octopiclient.gcode(command='SET_GCODE_OFFSET Z_ADJUST=0.025 MOVE=1'))
-        self.moveZMBabyStep.pressed.connect(lambda: octopiclient.gcode(command='SET_GCODE_OFFSET Z_ADJUST=-0.025 MOVE=1'))
+        self.moveZPBabyStep.pressed.connect(lambda: octopiclient.gcode(command='M290 Z0.025'))
+        self.moveZMBabyStep.pressed.connect(lambda: octopiclient.gcode(command='M290 Z-0.025'))
 
         # ChangeFilament rutien
         self.changeFilamentButton.pressed.connect(self.changeFilament)
         self.toolToggleChangeFilamentButton.clicked.connect(self.selectToolChangeFilament)
         self.changeFilamentBackButton.pressed.connect(self.control)
         self.changeFilamentBackButton2.pressed.connect(self.changeFilamentCancel)
+        self.changeFilamentBackButton3.pressed.connect(self.changeFilamentCancel)
         self.changeFilamentUnloadButton.pressed.connect(self.unloadFilament)
         self.changeFilamentLoadButton.pressed.connect(self.loadFilament)
+        self.loadedTillExtruderButton.pressed.connect(self.changeFilamentExtrudePageFunction)
         self.loadDoneButton.pressed.connect(self.control)
         self.unloadDoneButton.pressed.connect(self.changeFilament)
-        #self.retractFilamentButton.pressed.connect(lambda: octopiclient.extrude(-20))
-        #self.ExtrudeButton.pressed.connect(lambda: octopiclient.extrude(20))
+        # self.retractFilamentButton.pressed.connect(lambda: octopiclient.extrude(-20))
+        # self.ExtrudeButton.pressed.connect(lambda: octopiclient.extrude(20))
 
         # Settings Page
         self.settingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.MenuPage))
@@ -603,15 +605,15 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             lambda: self.stackedWidget.setCurrentWidget(self.networkSettingsPage))
         self.deleteStaticIPSettingsButton.pressed.connect(self.deleteStaticIPSettings)
 
-        # Display settings
-        self.rotateDisplay.pressed.connect(self.showRotateDisplaySettingsPage)
-        self.calibrateTouch.pressed.connect(self.touchCalibration)
+        # # Display settings
+        # self.rotateDisplay.pressed.connect(self.showRotateDisplaySettingsPage)
+        # self.calibrateTouch.pressed.connect(self.touchCalibration)
         self.displaySettingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
-
-        # Rotate Display Settings
-        self.rotateDisplaySettingsDoneButton.pressed.connect(self.saveRotateDisplaySettings)
-        self.rotateDisplaySettingsCancelButton.pressed.connect(
-            lambda: self.stackedWidget.setCurrentWidget(self.displaySettingsPage))
+        #
+        # # Rotate Display Settings
+        # self.rotateDisplaySettingsDoneButton.pressed.connect(self.saveRotateDisplaySettings)
+        # self.rotateDisplaySettingsCancelButton.pressed.connect(
+        #     lambda: self.stackedWidget.setCurrentWidget(self.displaySettingsPage))
 
         # QR Code
         self.QRCodeBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
@@ -624,7 +626,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.firmwareUpdateBackButton.pressed.connect(self.firmwareUpdateBack)
 
         # Filament sensor toggle
-        self.toggleFilamentSensorButton.clicked.connect(self.toggleFilamentSensor)
+        # self.toggleFilamentSensorButton.clicked.connect(self.toggleFilamentSensor)
 
         # # Lock settings
         # self.pgLock_pin.textChanged.connect(self.Lock_onPinInputChanged)
@@ -719,7 +721,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             success = req.status_code == requests.codes.ok
         except:
             pass
-        self.toggleFilamentSensorButton.setEnabled(success)
+        # self.toggleFilamentSensorButton.setEnabled(success)
         return success
 
     def toggleFilamentSensor(self):
@@ -761,19 +763,19 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             pause_print = data["pause_print"]
 
         if triggered_extruder0 and self.stackedWidget.currentWidget() not in [self.changeFilamentPage, self.changeFilamentProgressPage,
-                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage]:
+                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,self.changeFilamentUnloadPage]:
             if dialog.WarningOk(self, "Filament outage in Extruder 0"):
                 pass
 
         if triggered_extruder1 and self.stackedWidget.currentWidget() not in [self.changeFilamentPage, self.changeFilamentProgressPage,
-                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage]:
+                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,self.changeFilamentUnloadPage]:
             if dialog.WarningOk(self, "Filament outage in Extruder 1"):
                 pass
 
         if triggered_door:
             if self.printerStatusText == "Printing":
                 no_pause_pages = [self.controlPage, self.changeFilamentPage, self.changeFilamentProgressPage,
-                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage]
+                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,]
                 if not pause_print or self.stackedWidget.currentWidget() in no_pause_pages:
                     if dialog.WarningOk(self, "Door opened"):
                         return
@@ -1152,20 +1154,20 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         os.system('ts_calibrate')
 
 
-    def showRotateDisplaySettingsPage(self):
-
-        txt = (subprocess.Popen("cat /boot/config.txt", stdout=subprocess.PIPE, shell=True).communicate()[0]).decode("utf-8")
-
-        reRot = r"dtoverlay\s*=\s*waveshare35a(\s*:\s*rotate\s*=\s*([0-9]{1,3})){0,1}"
-        mtRot = re.search(reRot, txt)
-        # print(mtRot.group(0))
-
-        if mtRot and len(mtRot.groups()) == 2 and str(mtRot.group(2)) == "270":
-            self.rotateDisplaySettingsComboBox.setCurrentIndex(1)
-        else:
-            self.rotateDisplaySettingsComboBox.setCurrentIndex(0)
-
-        self.stackedWidget.setCurrentWidget(self.rotateDisplaySettingsPage)
+    # def showRotateDisplaySettingsPage(self):
+    #
+    #     txt = (subprocess.Popen("cat /boot/config.txt", stdout=subprocess.PIPE, shell=True).communicate()[0]).decode("utf-8")
+    #
+    #     reRot = r"dtoverlay\s*=\s*waveshare35a(\s*:\s*rotate\s*=\s*([0-9]{1,3})){0,1}"
+    #     mtRot = re.search(reRot, txt)
+    #     # print(mtRot.group(0))
+    #
+    #     if mtRot and len(mtRot.groups()) == 2 and str(mtRot.group(2)) == "270":
+    #         self.rotateDisplaySettingsComboBox.setCurrentIndex(1)
+    #     else:
+    #         self.rotateDisplaySettingsComboBox.setCurrentIndex(0)
+    #
+    #     self.stackedWidget.setCurrentWidget(self.rotateDisplaySettingsPage)
 
     # def saveRotateDisplaySettings(self):
     #     txt1 = (subprocess.Popen("cat /boot/config.txt", stdout=subprocess.PIPE, shell=True).communicate()[0]).decode("utf-8")
@@ -1206,28 +1208,29 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
     #     self.askAndReboot()
     #     self.stackedWidget.setCurrentWidget(self.displaySettingsPage)
 
-    def saveRotateDisplaySettings(self):
-        txt1 = (subprocess.Popen("cat /boot/config.txt", stdout=subprocess.PIPE, shell=True).communicate()[0]).decode("utf-8")
-
-        try:
-            if self.rotateDisplaySettingsComboBox.currentIndex() == 1:
-                os.system('sudo cp -f config/config.txt /boot/config.txt')
-            else:
-                os.system('sudo cp -f config/config_rot.txt /boot/config.txt')
-        except:
-            if dialog.WarningOk(self, "Failed to change rotation settings", overlay=True):
-                return
-        try:
-            if self.rotateDisplaySettingsComboBox.currentIndex() == 1:
-                os.system('sudo cp -f config/99-calibration.conf /usr/share/X11/xorg.conf.d/99-calibration.conf')
-            else:
-                os.system('sudo cp -f config/99-calibration_rot.conf /usr/share/X11/xorg.conf.d/99-calibration.conf')
-        except:
-            if dialog.WarningOk(self, "Failed to change touch settings", overlay=True):
-                return
-
-        self.askAndReboot()
-        self.stackedWidget.setCurrentWidget(self.displaySettingsPage)
+    # def saveRotateDisplaySettings(self):
+    #     txt1 = (subprocess.Popen("cat /boot/config.txt", stdout=subprocess.PIPE, shell=True).communicate()[0]).decode("utf-8")
+    #
+    #     try:
+    #         if self.rotateDisplaySettingsComboBox.currentIndex() == 1:
+    #             os.system('sudo cp -f config/config.txt /boot/config.txt')
+    #         else:
+    #             os.system('sudo cp -f config/config_rot.txt /boot/config.txt')
+    #     except:
+    #         if dialog.WarningOk(self, "Failed to change rotation settings", overlay=True):
+    #             return
+    #     try:
+    #         if self.rotateDisplaySettingsComboBox.currentIndex() == 1:
+    #             os.system('sudo cp -f config/99-calibration.conf /usr/share/X11/xorg.conf.d/99-calibration.conf')
+    #         else:
+    #             os.system('sudo cp -f config/99-calibration_rot.conf /usr/share/X11/xorg.conf.d/99-calibration.conf')
+    #     except:
+    #         if dialog.WarningOk(self, "Failed to change touch settings", overlay=True):
+    #             return
+    #
+    #     self.askAndReboot()
+    #     self.stackedWidget.setCurrentWidget(self.displaySettingsPage)
+    #
 
     ''' +++++++++++++++++++++++++++++++++Change Filament+++++++++++++++++++++++++++++++ '''
 
@@ -1256,6 +1259,61 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         # this flag tells the updateTemperature function that runs every second to update the filament change progress bar as well, and to load or unload after heating done
         self.changeFilamentHeatingFlag = True
         self.loadFlag = True
+
+
+    @run_async
+    def changeFilamentLoadFunction(self):
+        '''
+        This function is called once the heating is done, which slowly moves the extruder so that it starts pulling filament
+        '''
+        self.stackedWidget.setCurrentWidget(self.changeFilamentLoadPage)
+        while self.stackedWidget.currentWidget() == self.changeFilamentLoadPage:
+            octopiclient.gcode("G91")
+            octopiclient.gcode("G1 E15 F1500")
+            octopiclient.gcode("G90")
+            time.sleep(1)
+
+    @run_async
+    def changeFilamentExtrudePageFunction(self):
+        '''
+        once filament is loaded, this function is called to extrude filament till the toolhead
+        '''
+        self.stackedWidget.setCurrentWidget(self.changeFilamentExtrudePage)
+        octopiclient.gcode("G91")
+        octopiclient.gcode("G1 E300 F2000")
+        octopiclient.gcode("G1 E300 F2000")
+        octopiclient.gcode("G1 E300 F2000")
+        octopiclient.gcode("G1 E300 F2000")
+        octopiclient.gcode("G1 E300 F2000")
+        octopiclient.gcode("G1 E500 F1000")
+        octopiclient.gcode("G90")
+        while self.stackedWidget.currentWidget() == self.changeFilamentExtrudePage:
+            octopiclient.gcode("G91")
+            octopiclient.gcode("G1 E5 F400")
+            octopiclient.gcode("G90")
+            time.sleep(3)
+    @run_async
+    def changeFilamentRetractFunction(self):
+        '''
+        Remove the filament from the toolhead
+        '''
+        self.stackedWidget.setCurrentWidget(self.changeFilamentRetractPage)
+        octopiclient.gcode("G91")
+        octopiclient.gcode("G1 E20 F1000")
+        octopiclient.gcode("G1 E-20 F1000")
+        octopiclient.gcode("G1 E-150 F500")
+        octopiclient.gcode("G1 E-300 F2000")
+        octopiclient.gcode("G1 E-300 F2000")
+        octopiclient.gcode("G1 E-300 F2000")
+        octopiclient.gcode("G1 E-300 F2000")
+        octopiclient.gcode("G1 E-400 F2000")
+        octopiclient.gcode("G1 E-400 F2000")
+        octopiclient.gcode("G90")
+        while self.stackedWidget.currentWidget() == self.changeFilamentRetractPage:
+            octopiclient.gcode("G91")
+            octopiclient.gcode("G1 E-20 F2000")
+            octopiclient.gcode("G90")
+            time.sleep(3)
 
     def changeFilament(self):
         self.stackedWidget.setCurrentWidget(self.changeFilamentPage)
@@ -1501,10 +1559,12 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
                     self.changeFilamentProgress.setMaximum(temperature['tool0Actual'])
                     self.changeFilamentHeatingFlag = False
                     if self.loadFlag:
-                        self.stackedWidget.setCurrentWidget(self.changeFilamentExtrudePage)
+                        self.changeFilamentLoadFunction()
+                        #self.stackedWidget.setCurrentWidget(self.changeFilamentExtrudePage)
                     else:
-                        self.stackedWidget.setCurrentWidget(self.changeFilamentRetractPage)
+                        #self.stackedWidget.setCurrentWidget(self.changeFilamentRetractPage)
                         octopiclient.extrude(5)     # extrudes some amount of filament to prevent plugging
+                        self.changeFilamentRetractFunction()
 
                 self.changeFilamentProgress.setValue(temperature['tool0Actual'])
             elif self.activeExtruder == 1:
@@ -1516,10 +1576,12 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
                     self.changeFilamentProgress.setMaximum(temperature['tool1Actual'])
                     self.changeFilamentHeatingFlag = False
                     if self.loadFlag:
-                        self.stackedWidget.setCurrentWidget(self.changeFilamentExtrudePage)
+                        self.changeFilamentLoadFunction()
+                        #self.stackedWidget.setCurrentWidget(self.changeFilamentExtrudePage)
                     else:
-                        self.stackedWidget.setCurrentWidget(self.changeFilamentRetractPage)
+                        #self.stackedWidget.setCurrentWidget(self.changeFilamentRetractPage)
                         octopiclient.extrude(5)     # extrudes some amount of filament to prevent plugging
+                        self.changeFilamentRetractFunction()
 
                 self.changeFilamentProgress.setValue(temperature['tool1Actual'])
 
