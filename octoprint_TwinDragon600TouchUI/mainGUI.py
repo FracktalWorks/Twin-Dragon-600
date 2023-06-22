@@ -3904,10 +3904,10 @@ class Ui_MainWindow(object):
         self.toolOffsetXDoubleSpinBox.setButtonSymbols(QtWidgets.QAbstractSpinBox.UpDownArrows)
         self.toolOffsetXDoubleSpinBox.setAccelerated(True)
         self.toolOffsetXDoubleSpinBox.setDecimals(2)
-        self.toolOffsetXDoubleSpinBox.setMinimum(32.0)
-        self.toolOffsetXDoubleSpinBox.setMaximum(40.0)
+        self.toolOffsetXDoubleSpinBox.setMinimum(-10.0)
+        self.toolOffsetXDoubleSpinBox.setMaximum(50.0)
         self.toolOffsetXDoubleSpinBox.setSingleStep(0.025)
-        self.toolOffsetXDoubleSpinBox.setProperty("value", 36.05)
+        self.toolOffsetXDoubleSpinBox.setProperty("value", 0.0)
         self.toolOffsetXDoubleSpinBox.setObjectName("toolOffsetXDoubleSpinBox")
         self.toolOffsetXSetButton = QtWidgets.QPushButton(self.toolOffsetXYPage)
         self.toolOffsetXSetButton.setGeometry(QtCore.QRect(510, 80, 91, 119))
@@ -8097,8 +8097,8 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.mainApplication)
 
         self.retranslateUi(MainWindow)
-        self.stackedWidget.setCurrentIndex(30)
-        self.controlTabWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(17)
+        self.controlTabWidget.setCurrentIndex(2)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
