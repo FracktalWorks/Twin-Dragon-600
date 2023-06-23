@@ -728,25 +728,27 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         # headers = {'X-Api-Key': apiKey}
         # # payload = {'sensor_enabled': self.toggleFilamentSensorButton.isChecked()}
         # requests.get('http://{}/plugin/Julia2018FilamentSensor/toggle'.format(ip), headers=headers)   # , data=payload)
-        octopiclient.gcode(command="SET_FILAMENT_SENSOR SENSOR=filament_sensor0 ENABLE={}".format(self.toggleFilamentSensorButton.isChecked()))
-        octopiclient.gcode(command="SET_FILAMENT_SENSOR SENSOR=filament_sensor1 ENABLE={}".format(self.toggleFilamentSensorButton.isChecked()))
+        icon = 'filamentSensorOn' if self.toggleFilamentSensorButton.isChecked() else 'filamentSensorOff'
+        self.toggleFilamentSensorButton.setIcon(QtGui.QIcon(_fromUtf8("templates/img/" + icon)))
+        octopiclient.gcode(command="SET_FILAMENT_SENSOR SENSOR=filament_sensor0 ENABLE={}".format(bool(self.toggleFilamentSensorButton.isChecked())))
+        octopiclient.gcode(command="SET_FILAMENT_SENSOR SENSOR=filament_sensor1 ENABLE={}".format(bool(self.toggleFilamentSensorButton.isChecked())))
     def filamentSensorHandler(self, data):
-        sensor_enabled = False
-        # print(data)
+        # sensor_enabled = False
+        # # print(data)
+        #
+        # if 'sensor_enabled' in data:
+        #     sensor_enabled = data["sensor_enabled"] == 1
 
-        if 'sensor_enabled' in data:
-            sensor_enabled = data["sensor_enabled"] == 1
-
-        icon = 'filamentSensorOn' if sensor_enabled else 'filamentSensorOff'
+        icon = 'filamentSensorOn' if self.toggleFilamentSensorButton.isChecked() else 'filamentSensorOff'
         self.toggleFilamentSensorButton.setIcon(QtGui.QIcon(_fromUtf8("templates/img/" + icon)))
 
-        if not sensor_enabled:
+        if not self.toggleFilamentSensorButton.isChecked():
             return
 
         triggered_extruder0 = False
         triggered_extruder1 = False
-        triggered_door = False
-        pause_print = False
+        # triggered_door = False
+        # pause_print = False
 
         if 'filament' in data:
             triggered_extruder0 = data["filament"] == 0
@@ -758,10 +760,10 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         elif 'extruder0' in data:
             triggered_extruder1 = data["extruder1"] == 0
 
-        if 'door' in data:
-            triggered_door = data["door"] == 0
-        if 'pause_print' in data:
-            pause_print = data["pause_print"]
+        # if 'door' in data:
+        #     triggered_door = data["door"] == 0
+        # if 'pause_print' in data:
+        #     pause_print = data["pause_print"]
 
         if triggered_extruder0 and self.stackedWidget.currentWidget() not in [self.changeFilamentPage, self.changeFilamentProgressPage,
                                   self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,self.changeFilamentUnloadPage]:
@@ -773,19 +775,19 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             if dialog.WarningOk(self, "Filament outage in Extruder 1"):
                 pass
 
-        if triggered_door:
-            if self.printerStatusText == "Printing":
-                no_pause_pages = [self.controlPage, self.changeFilamentPage, self.changeFilamentProgressPage,
-                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,]
-                if not pause_print or self.stackedWidget.currentWidget() in no_pause_pages:
-                    if dialog.WarningOk(self, "Door opened"):
-                        return
-                octopiclient.pausePrint()
-                if dialog.WarningOk(self, "Door opened. Print paused.", overlay=True):
-                    return
-            else:
-                if dialog.WarningOk(self, "Door opened"):
-                    return
+        # if triggered_door:
+        #     if self.printerStatusText == "Printing":
+        #         no_pause_pages = [self.controlPage, self.changeFilamentPage, self.changeFilamentProgressPage,
+        #                           self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,]
+        #         if not pause_print or self.stackedWidget.currentWidget() in no_pause_pages:
+        #             if dialog.WarningOk(self, "Door opened"):
+        #                 return
+        #         octopiclient.pausePrint()
+        #         if dialog.WarningOk(self, "Door opened. Print paused.", overlay=True):
+        #             return
+        #     else:
+        #         if dialog.WarningOk(self, "Door opened"):
+        #             return
 
     ''' +++++++++++++++++++++++++++ Firmware Update+++++++++++++++++++++++++++++++++++ '''
 
