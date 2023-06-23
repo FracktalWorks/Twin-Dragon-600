@@ -176,7 +176,7 @@ QStatusBar::item {
 background-color: rgb(40, 40, 40);</string>
     </property>
     <property name="currentIndex">
-     <number>17</number>
+     <number>30</number>
     </property>
     <widget class="QWidget" name="loadingPage">
      <widget class="QLabel" name="LoadingLabel">
@@ -10308,7 +10308,7 @@ QTabBar:focus {
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>3</number>
       </property>
       <property name="iconSize">
        <size>
@@ -13042,7 +13042,7 @@ background-color: rgba(255, 255, 255, 0);</string>
          <rect>
           <x>0</x>
           <y>10</y>
-          <width>801</width>
+          <width>431</width>
           <height>131</height>
          </rect>
         </property>
@@ -13094,10 +13094,79 @@ QToolButton :focus {
          <enum>Qt::ToolButtonTextUnderIcon</enum>
         </property>
        </widget>
+       <widget class="QToolButton" name="toggleFilamentSensorButton">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>430</x>
+          <y>10</y>
+          <width>371</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>MS Shell Dlg 2</family>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton  {
+     border: 1px solid rgb(87, 87, 87);
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));
+
+
+}
+
+QToolButton :pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #dadbde, stop: 1 #f6f7fa);
+	/* #dadbde #f6f7fa */
+}
+
+
+QToolButton :flat {
+    border: none; /* no border for a flat push button */
+}
+
+QToolButton :default {
+    border-color: navy; /* make the default button prominent */
+}
+
+QToolButton :focus {
+	outline: none;
+}</string>
+        </property>
+        <property name="text">
+         <string>Filament Sensor</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>templates/img/filamentSensorOn.png</normaloff>templates/img/filamentSensorOn.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>60</width>
+          <height>60</height>
+         </size>
+        </property>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextUnderIcon</enum>
+        </property>
+       </widget>
        <zorder>flowRateSpinBox</zorder>
        <zorder>setFlowRateButton</zorder>
        <zorder>flowRateLabelControlPage</zorder>
        <zorder>changeFilamentButton</zorder>
+       <zorder>toggleFilamentSensorButton</zorder>
       </widget>
      </widget>
      <widget class="QPushButton" name="controlBackButton">
