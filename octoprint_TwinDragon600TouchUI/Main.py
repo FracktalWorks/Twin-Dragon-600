@@ -2212,6 +2212,12 @@ class QtWebsocket(QtCore.QThread):
         if "current" in data:
             if data["current"]["messages"]:
                 for item in data["current"]["messages"]:
+                    if 'Filament runout' in item:
+                        print(item)
+                        print(item[item.index('Filament runout') + 16:].split(' ', 1)[0])
+                        item = json.loads(item[item.index('Filament runout') + 16:].split(' ', 1)[0])
+                        print(item)
+                        self.filament_sensor_triggered_signal.emit(item)
                     if 'M206' in item: #response to M503, send current Z offset value
                         self.z_home_offset_signal.emit(item[item.index('Z') + 1:].split(' ', 1)[0])
                     # if 'Count' in item:  # gets the current Z value, uses it to set Z offset
