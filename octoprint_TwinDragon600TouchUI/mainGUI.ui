@@ -176,7 +176,7 @@ QStatusBar::item {
 background-color: rgb(40, 40, 40);</string>
     </property>
     <property name="currentIndex">
-     <number>30</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="loadingPage">
      <widget class="QLabel" name="LoadingLabel">
@@ -1993,7 +1993,7 @@ QScrollBar::down-arrow:vertical {
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>778</width>
+         <width>309</width>
          <height>900</height>
         </rect>
        </property>
@@ -13140,7 +13140,7 @@ QToolButton :focus {
 }</string>
         </property>
         <property name="text">
-         <string>Filament Sensor</string>
+         <string>Toggle Filament Sensor</string>
         </property>
         <property name="icon">
          <iconset>
@@ -13153,10 +13153,10 @@ QToolButton :focus {
          </size>
         </property>
         <property name="checkable">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="checked">
-         <bool>false</bool>
+         <bool>true</bool>
         </property>
         <property name="toolButtonStyle">
          <enum>Qt::ToolButtonTextUnderIcon</enum>
