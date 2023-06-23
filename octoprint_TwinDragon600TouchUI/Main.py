@@ -733,61 +733,61 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         octopiclient.gcode(command="SET_FILAMENT_SENSOR SENSOR=filament_sensor0 ENABLE={}".format(int(self.toggleFilamentSensorButton.isChecked())))
         octopiclient.gcode(command="SET_FILAMENT_SENSOR SENSOR=filament_sensor1 ENABLE={}".format(int(self.toggleFilamentSensorButton.isChecked())))
     def filamentSensorHandler(self, data):
-        # sensor_enabled = False
-        # # print(data)
-        #
-        # if 'sensor_enabled' in data:
-        #     sensor_enabled = data["sensor_enabled"] == 1
+        try:
+            # sensor_enabled = False
+            # # print(data)
+            #
+            # if 'sensor_enabled' in data:
+            #     sensor_enabled = data["sensor_enabled"] == 1
+            print(data)
 
-        icon = 'filamentSensorOn' if self.toggleFilamentSensorButton.isChecked() else 'filamentSensorOff'
-        self.toggleFilamentSensorButton.setIcon(QtGui.QIcon(_fromUtf8("templates/img/" + icon)))
+            icon = 'filamentSensorOn' if self.toggleFilamentSensorButton.isChecked() else 'filamentSensorOff'
+            self.toggleFilamentSensorButton.setIcon(QtGui.QIcon(_fromUtf8("templates/img/" + icon)))
 
-        if not self.toggleFilamentSensorButton.isChecked():
-            return
+            if not self.toggleFilamentSensorButton.isChecked():
+                return
 
-        triggered_extruder0 = False
-        triggered_extruder1 = False
-        # triggered_door = False
-        # pause_print = False
+            triggered_extruder0 = False
+            triggered_extruder1 = False
+            # triggered_door = False
+            # pause_print = False
 
-        if 'filament' in data:
-            triggered_extruder0 = data["filament"] == 0
-        elif 'extruder0' in data:
-            triggered_extruder0 = data["extruder0"] == 0
+            if 'extruder0' in data:
+                triggered_extruder0 = True
 
-        if 'filament2' in data:
-            triggered_extruder1 = data["filament2"] == 0
-        elif 'extruder0' in data:
-            triggered_extruder1 = data["extruder1"] == 0
+            if 'extruder1' in data:
+                triggered_extruder1 = True
 
-        # if 'door' in data:
-        #     triggered_door = data["door"] == 0
-        # if 'pause_print' in data:
-        #     pause_print = data["pause_print"]
+            # if 'door' in data:
+            #     triggered_door = data["door"] == 0
+            # if 'pause_print' in data:
+            #     pause_print = data["pause_print"]
 
-        if triggered_extruder0 and self.stackedWidget.currentWidget() not in [self.changeFilamentPage, self.changeFilamentProgressPage,
-                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,self.changeFilamentUnloadPage]:
-            if dialog.WarningOk(self, "Filament outage in Extruder 0"):
-                pass
+            if triggered_extruder0 and self.stackedWidget.currentWidget() not in [self.changeFilamentPage, self.changeFilamentProgressPage,
+                                    self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage]:
+                if dialog.WarningOk(self, "Filament outage in Extruder 0"):
+                    pass
 
-        if triggered_extruder1 and self.stackedWidget.currentWidget() not in [self.changeFilamentPage, self.changeFilamentProgressPage,
-                                  self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,self.changeFilamentUnloadPage]:
-            if dialog.WarningOk(self, "Filament outage in Extruder 1"):
-                pass
+            if triggered_extruder1 and self.stackedWidget.currentWidget() not in [self.changeFilamentPage, self.changeFilamentProgressPage,
+                                    self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage]:
+                if dialog.WarningOk(self, "Filament outage in Extruder 1"):
+                    pass
 
-        # if triggered_door:
-        #     if self.printerStatusText == "Printing":
-        #         no_pause_pages = [self.controlPage, self.changeFilamentPage, self.changeFilamentProgressPage,
-        #                           self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,]
-        #         if not pause_print or self.stackedWidget.currentWidget() in no_pause_pages:
-        #             if dialog.WarningOk(self, "Door opened"):
-        #                 return
-        #         octopiclient.pausePrint()
-        #         if dialog.WarningOk(self, "Door opened. Print paused.", overlay=True):
-        #             return
-        #     else:
-        #         if dialog.WarningOk(self, "Door opened"):
-        #             return
+            # if triggered_door:
+            #     if self.printerStatusText == "Printing":
+            #         no_pause_pages = [self.controlPage, self.changeFilamentPage, self.changeFilamentProgressPage,
+            #                           self.changeFilamentExtrudePage, self.changeFilamentRetractPage,self.changeFilamentLoadPage,]
+            #         if not pause_print or self.stackedWidget.currentWidget() in no_pause_pages:
+            #             if dialog.WarningOk(self, "Door opened"):
+            #                 return
+            #         octopiclient.pausePrint()
+            #         if dialog.WarningOk(self, "Door opened. Print paused.", overlay=True):
+            #             return
+            #     else:
+            #         if dialog.WarningOk(self, "Door opened"):
+            #             return
+        except Exception as e:
+            print(e)
 
     ''' +++++++++++++++++++++++++++ Firmware Update+++++++++++++++++++++++++++++++++++ '''
 
@@ -2121,7 +2121,7 @@ class QtWebsocket(QtCore.QThread):
     update_log_result_signal = QtCore.pyqtSignal(dict)
     update_failed_signal = QtCore.pyqtSignal(dict)
     connected_signal = QtCore.pyqtSignal()
-    filament_sensor_triggered_signal = QtCore.pyqtSignal(dict)
+    filament_sensor_triggered_signal = QtCore.pyqtSignal(str)
     firmware_updater_signal = QtCore.pyqtSignal(dict)
     set_z_tool_offset_signal = QtCore.pyqtSignal(str,bool)
     tool_offset_signal = QtCore.pyqtSignal(str)
@@ -2196,8 +2196,8 @@ class QtWebsocket(QtCore.QThread):
                 self.connected_signal.emit()
                 print("connected")
         if "plugin" in data:
-            if data["plugin"]["plugin"] == 'Julia2018FilamentSensor':
-                 self.filament_sensor_triggered_signal.emit(data["plugin"]["data"])
+            # if data["plugin"]["plugin"] == 'Julia2018FilamentSensor':
+            #      self.filament_sensor_triggered_signal.emit(data["plugin"]["data"])
 
             if data["plugin"]["plugin"] == 'JuliaFirmwareUpdater':
                 self.firmware_updater_signal.emit(data["plugin"]["data"])
@@ -2216,11 +2216,7 @@ class QtWebsocket(QtCore.QThread):
             if data["current"]["messages"]:
                 for item in data["current"]["messages"]:
                     if 'Filament runout' in item:
-                        print(item)
-                        print(item[item.index('Filament runout') + 16:].split(' ', 1)[0])
-                        item = json.loads(item[item.index('Filament runout') + 16:].split(' ', 1)[0])
-                        print(item)
-                        self.filament_sensor_triggered_signal.emit(item)
+                        self.filament_sensor_triggered_signal.emit(item[item.index('Filament runout') + 16:].split(' ', 1)[0])
                     if 'M206' in item: #response to M503, send current Z offset value
                         self.z_home_offset_signal.emit(item[item.index('Z') + 1:].split(' ', 1)[0])
                     # if 'Count' in item:  # gets the current Z value, uses it to set Z offset
