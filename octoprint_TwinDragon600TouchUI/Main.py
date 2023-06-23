@@ -728,8 +728,8 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         # headers = {'X-Api-Key': apiKey}
         # # payload = {'sensor_enabled': self.toggleFilamentSensorButton.isChecked()}
         # requests.get('http://{}/plugin/Julia2018FilamentSensor/toggle'.format(ip), headers=headers)   # , data=payload)
-        self.octopiclient.gcode(command="SET_FILAMENT_SENSOR SENSOR=filament_sensor0 ENABLE={}".format(self.toggleFilamentSensorButton.isChecked()))
-        self.octopiclient.gcode(command="SET_FILAMENT_SENSOR SENSOR=filament_sensor1 ENABLE={}".format(self.toggleFilamentSensorButton.isChecked()))
+        octopiclient.gcode(command="SET_FILAMENT_SENSOR SENSOR=filament_sensor0 ENABLE={}".format(self.toggleFilamentSensorButton.isChecked()))
+        octopiclient.gcode(command="SET_FILAMENT_SENSOR SENSOR=filament_sensor1 ENABLE={}".format(self.toggleFilamentSensorButton.isChecked()))
     def filamentSensorHandler(self, data):
         sensor_enabled = False
         # print(data)
