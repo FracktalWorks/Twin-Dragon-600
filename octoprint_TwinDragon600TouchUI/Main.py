@@ -626,7 +626,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.firmwareUpdateBackButton.pressed.connect(self.firmwareUpdateBack)
 
         # Filament sensor toggle
-        # self.toggleFilamentSensorButton.clicked.connect(self.toggleFilamentSensor)
+        self.toggleFilamentSensorButton.clicked.connect(self.toggleFilamentSensor)
 
         # # Lock settings
         # self.pgLock_pin.textChanged.connect(self.Lock_onPinInputChanged)
@@ -725,10 +725,11 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         return success
 
     def toggleFilamentSensor(self):
-        headers = {'X-Api-Key': apiKey}
-        # payload = {'sensor_enabled': self.toggleFilamentSensorButton.isChecked()}
-        requests.get('http://{}/plugin/Julia2018FilamentSensor/toggle'.format(ip), headers=headers)   # , data=payload)
-
+        # headers = {'X-Api-Key': apiKey}
+        # # payload = {'sensor_enabled': self.toggleFilamentSensorButton.isChecked()}
+        # requests.get('http://{}/plugin/Julia2018FilamentSensor/toggle'.format(ip), headers=headers)   # , data=payload)
+        self.octopiclient.gcode(command="SET_FILAMENT_SENSOR SENSOR=filament_sensor0 ENABLE={}".format(self.toggleFilamentSensorButton.isChecked()))
+        self.octopiclient.gcode(command="SET_FILAMENT_SENSOR SENSOR=filament_sensor1 ENABLE={}".format(self.toggleFilamentSensorButton.isChecked()))
     def filamentSensorHandler(self, data):
         sensor_enabled = False
         # print(data)
