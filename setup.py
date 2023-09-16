@@ -23,10 +23,10 @@ plugin_version = versioneer.get_version()   # replaced by versioneer
 plugin_description = """TouchScreen Plugin for Twin Dragon 600"""
 
 # The plugin's author. Can be overwritten within OctoPrint's internal data via __plugin_author__ in the plugin module
-plugin_author = "Nishant Bilurkar"
+plugin_author = "Fracktal Works"
 
 # The plugin's author's mail address.
-plugin_author_email = "nishant@fracktal.in"
+plugin_author_email = "support@fracktal.in"
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
 plugin_url = "https://github.com/FracktalWorks/TwinDragon600TouchUI"
@@ -35,7 +35,8 @@ plugin_url = "https://github.com/FracktalWorks/TwinDragon600TouchUI"
 plugin_license = "AGPLv3"
 
 # Any additional requirements besides OctoPrint should be listed here
-plugin_requires = ['RPi.GPIO']
+#plugin_requires = ['RPi.GPIO']
+plugin_requires = []
 
 ### --------------------------------------------------------------------------------------------------------------------
 ### More advanced options that you usually shouldn't have to touch follow after this point

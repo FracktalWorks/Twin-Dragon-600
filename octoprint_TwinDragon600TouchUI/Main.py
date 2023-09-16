@@ -1287,7 +1287,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         octopiclient.gcode("G1 E300 F2000")
         octopiclient.gcode("G1 E300 F2000")
         octopiclient.gcode("G1 E300 F2000")
-        octopiclient.gcode("G1 E300 F2000")
+        octopiclient.gcode("G1 E400 F2000")
         octopiclient.gcode("G1 E500 F1000")
         octopiclient.gcode("G90")
         while self.stackedWidget.currentWidget() == self.changeFilamentExtrudePage:
