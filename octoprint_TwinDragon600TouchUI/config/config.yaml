@@ -5,78 +5,63 @@ accessControl:
   - 127.0.0.0/8
   - 192.168.0.0/24
   - 192.168.1.0/24
-  salt: 1jjovY7wxfFi7NrEuFv6eTAXgmyvECPc
 api:
   allowCrossOrigin: true
   key: B508534ED20348F090B4D0AD637D3660
 appearance:
   name: Twin Dragon 600
 plugins:
-  Julia2018PrintRestore:
-    _config_version: 2
   announcements:
     _config_version: 1
     channels:
       _blog:
-        read_until: 1677590400
+        read_until: 1691060700
       _important:
         read_until: 1521111600
       _octopi:
-        read_until: 1677062400
+        read_until: 1684929600
       _plugins:
-        read_until: 1682985600
+        read_until: 1692748800
       _releases:
-        read_until: 1683552600
+        read_until: 1689678900
   discovery:
-    upnpUuid: e3b59d31-7778-4758-80ee-12ba9a463e4e
+    upnpUuid: 888a871c-079d-428d-9d51-6bec46da048d
   errortracking:
-    unique_id: 754e62f6-5624-4fed-a4e5-be911ab81a3a
-  firmwareupdater:
-    _config_version: 3
-    _selected_profile: 0
-    profiles:
-    - _id: 0
-      _name: Default
+    unique_id: 304746e3-bdf4-4d26-89ac-d4889b6b6e3c
   gcodeviewer:
     _config_version: 1
   klipper:
     _config_version: 4
-    configuration:
-      config_path: /home/biqu/printer_data/config/
-      confirm_reload: false
-      logpath: /home/biqu/printer_data/logs/klippy.log
     connection:
-      port: /home/biqu/printer_data/comms/klippy.serial
       replace_connection_panel: false
   softwareupdate:
     _config_version: 9
   tracking:
     enabled: true
-    unique_id: 8a5f3c71-9601-481e-82d2-fd62032e53d7
+    unique_id: e471d667-5165-4507-96b7-612d3ebeb5d5
   virtual_printer:
     _config_version: 1
 printerProfiles:
   default: _default
 serial:
   additionalPorts:
-  - /home/biqu/printer_data/comms/klippy.serial
   - /tmp/printer
   autoconnect: true
-  baudrate: 250000
-  blacklistedPorts:
-  - /dev/ttyS*
-  port: /home/biqu/printer_data/comms/klippy.serial
+  baudrate: 115200
+  disconnectOnErrors: false
+  ignoreErrorsFromFirmware: true
+  port: /tmp/printer
 server:
   commands:
     serverRestartCommand: sudo service octoprint restart
-    systemRestartCommand: sudo reboot
+    systemRestartCommand: sudo reboot now
     systemShutdownCommand: sudo shutdown
   firstRun: false
   onlineCheck:
     enabled: true
   pluginBlacklist:
     enabled: true
-  secretKey: VdoRcQLeGTl1wnCydf3KAoEMeN0cipk5
+  secretKey: elyHYxDKQTwpDSko8ah24qV72ImN977G
   seenWizards:
     backup: null
     corewizard: 4
@@ -91,5 +76,3 @@ temperature:
     chamber: null
     extruder: 180
     name: PLA
-webcam:
-  stream: /webcam/?action=stream
