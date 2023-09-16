@@ -365,6 +365,122 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         except Exception as e:
             self._logger.error(e)
 
+
+    def safeProceed(self):
+        '''
+        When Octoprint server cannot connect for whatever reason, still show the home screen to conduct diagnostics
+        '''
+        self.movie.stop()
+        if not Development:
+            self.stackedWidget.setCurrentWidget(self.homePage)
+            # self.Lock_showLock()
+            self.setIPStatus()
+        else:
+            self.stackedWidget.setCurrentWidget(self.homePage)
+
+        # # Text Input events
+        self.wifiPasswordLineEdit.clicked_signal.connect(lambda: self.startKeyboard(self.wifiPasswordLineEdit.setText))
+        self.ethStaticIpLineEdit.clicked_signal.connect(lambda: self.ethShowKeyboard(self.ethStaticIpLineEdit))
+        self.ethStaticGatewayLineEdit.clicked_signal.connect(lambda: self.ethShowKeyboard(self.ethStaticGatewayLineEdit))
+
+        # Button Events:
+
+        # Home Screen:
+        self.stopButton.setDisabled()
+        # self.menuButton.pressed.connect(self.keyboardButton)
+        self.menuButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.MenuPage))
+        self.controlButton.setDisabled()
+        self.playPauseButton.setDisabled()
+
+        # MenuScreen
+        self.menuBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.homePage))
+        self.menuControlButton.setDisabled()
+        self.menuPrintButton.setDisabled()
+        self.menuCalibrateButton.setDisabled()
+        self.menuSettingsButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
+
+
+        # Settings Page
+        self.networkSettingsButton.pressed.connect(
+            lambda: self.stackedWidget.setCurrentWidget(self.networkSettingsPage))
+        self.displaySettingsButton.pressed.connect(
+            lambda: self.stackedWidget.setCurrentWidget(self.displaySettingsPage))
+        self.settingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.MenuPage))
+        self.pairPhoneButton.pressed.connect(self.pairPhoneApp)
+        self.OTAButton.setDisabled()
+        self.versionButton.setDisabled()
+
+        self.restartButton.pressed.connect(self.askAndReboot)
+        self.restoreFactoryDefaultsButton.pressed.connect(self.restoreFactoryDefaults)
+        self.restorePrintSettingsButton.pressed.connect(self.restorePrintDefaults)
+
+        # Network settings page
+        self.networkInfoButton.pressed.connect(self.networkInfo)
+        self.configureWifiButton.pressed.connect(self.wifiSettings)
+        self.configureEthButton.pressed.connect(self.ethSettings)
+        self.networkSettingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
+
+        # Network Info Page
+        self.networkInfoBackButton.pressed.connect(
+            lambda: self.stackedWidget.setCurrentWidget(self.networkSettingsPage))
+
+        # WifiSetings page
+        self.wifiSettingsSSIDKeyboardButton.pressed.connect(
+            lambda: self.startKeyboard(self.wifiSettingsComboBox.addItem))
+        self.wifiSettingsCancelButton.pressed.connect(
+            lambda: self.stackedWidget.setCurrentWidget(self.networkSettingsPage))
+        self.wifiSettingsDoneButton.pressed.connect(self.acceptWifiSettings)
+
+        # Ethernet setings page
+        self.ethStaticCheckBox.stateChanged.connect(self.ethStaticChanged)
+        # self.ethStaticCheckBox.stateChanged.connect(lambda: self.ethStaticSettings.setVisible(self.ethStaticCheckBox.isChecked()))
+        self.ethStaticIpKeyboardButton.pressed.connect(lambda: self.ethShowKeyboard(self.ethStaticIpLineEdit))
+        self.ethStaticGatewayKeyboardButton.pressed.connect(lambda: self.ethShowKeyboard(self.ethStaticGatewayLineEdit))
+        self.ethSettingsDoneButton.pressed.connect(self.ethSaveStaticNetworkInfo)
+        self.ethSettingsCancelButton.pressed.connect(
+            lambda: self.stackedWidget.setCurrentWidget(self.networkSettingsPage))
+
+        # Display settings
+        self.rotateDisplay.pressed.connect(self.showRotateDisplaySettingsPage)
+        self.calibrateTouch.pressed.connect(self.touchCalibration)
+        self.displaySettingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
+
+        # Rotate Display Settings
+        self.rotateDisplaySettingsDoneButton.pressed.connect(self.saveRotateDisplaySettings)
+        self.rotateDisplaySettingsCancelButton.pressed.connect(
+            lambda: self.stackedWidget.setCurrentWidget(self.displaySettingsPage))
+
+        # QR Code
+        self.QRCodeBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
+
+        # SoftwareUpdatePage
+        self.softwareUpdateBackButton.setDisabled()
+        self.performUpdateButton.setDisabled()
+
+        # Firmware update page
+        self.firmwareUpdateBackButton.setDisabled()
+
+        # Filament sensor toggle
+        self.toggleFilamentSensorButton.setDisabled()
+
+
+    def handleStartupError(self):
+        '''
+        Error Handler when Octoprint gives up
+        '''
+
+        print('Unable to connect to Octoprint Server')
+        if dialog.WarningYesNo(self,  "Server Error, Restore failsafe settings?", overlay=True):
+            os.system('sudo rm -rf /home/biqu/.octoprint/users.yaml')
+            os.system('sudo rm -rf /home/biqu/.octoprint/config.yaml')
+            os.system('sudo cp -f config/users.yaml /home/biqu/.octoprint/users.yaml')
+            os.system('sudo cp -f config/config.yaml /home/biqu/.octoprint/config.yaml')
+            subprocess.call(["sudo", "systemctl", "restart", "octoprint"])
+            self.sanityCheck.start()
+        else:
+            self.safeProceed()
+
+
     def proceed(self):
         '''
         Startes websocket, as well as initialises button actions and callbacks. THis is done in such a manner so that the callbacks that depend on websockets
@@ -2089,10 +2205,6 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             return True
         return False
 
-    def handleStartupError(self):
-        print('Shutting Down. Unable to connect')
-        if dialog.WarningOk(self, "Error. Contact Support. Shutting down...", overlay=True):
-            os.system('sudo shutdown now')
 
     def pairPhoneApp(self):
         if getIP(ThreadRestartNetworking.ETH) is not None:
@@ -2309,22 +2421,23 @@ class ThreadSanityCheck(QtCore.QThread):
                     break
                 octopiclient = octoprintAPI(ip, apiKey)
                 if not self.virtual:
-                    result = subprocess.Popen("dmesg | grep 'ttyUSB'", stdout=subprocess.PIPE, shell=True).communicate()[0]
-                    result = result.split(b'\n')  # each ssid and pass from an item in a list ([ssid pass,ssid paas])
-                    print(result)
-                    result = [s.strip() for s in result]
-                    for line in result:
-                        if b'FTDI' in line:
-                            self.MKSPort = line[line.index(b'ttyUSB'):line.index(b'ttyUSB') + 7].decode('utf-8')
-                            print(self.MKSPort)
-                        if b'ch34' in line:
-                            self.MKSPort = line[line.index(b'ttyUSB'):line.index(b'ttyUSB') + 7].decode('utf-8')
-                            print(self.MKSPort)
-
-                    if not self.MKSPort:
+                    # result = subprocess.Popen("dmesg | grep 'ttyUSB'", stdout=subprocess.PIPE, shell=True).communicate()[0]
+                    # result = result.split(b'\n')  # each ssid and pass from an item in a list ([ssid pass,ssid paas])
+                    # print(result)
+                    # result = [s.strip() for s in result]
+                    # for line in result:
+                    #     if b'FTDI' in line:
+                    #         self.MKSPort = line[line.index(b'ttyUSB'):line.index(b'ttyUSB') + 7].decode('utf-8')
+                    #         print(self.MKSPort)
+                    #     if b'ch34' in line:
+                    #         self.MKSPort = line[line.index(b'ttyUSB'):line.index(b'ttyUSB') + 7].decode('utf-8')
+                    #         print(self.MKSPort)
+                    try:
+                        octopiclient.connectPrinter(port="/tmp/printer", baudrate=115200)
+                    except Exception as e:
                         octopiclient.connectPrinter(port="VIRTUAL", baudrate=115200)
-                    else:
-                        octopiclient.connectPrinter(port="/dev/" + self.MKSPort, baudrate=115200)
+                    # else:
+                    #     octopiclient.connectPrinter(port="/dev/" + self.MKSPort, baudrate=115200)
                 break
             except Exception as e:
                 time.sleep(1)
