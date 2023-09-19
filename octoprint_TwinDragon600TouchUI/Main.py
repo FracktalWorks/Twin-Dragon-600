@@ -1981,7 +1981,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
 
         octopiclient.gcode(command='M851 Z{}'.format(offset)) #M851 only ajusts nozzle offset
         self.nozzleOffsetDoubleSpinBox.setValue(0)
-        self.currentNozzleOffset.setTest(str(float(self.currentNozzleOffset.currentTest)+float(offset))) # show nozzle offset after adjustment
+        self.currentNozzleOffset.setText(str(float(self.currentNozzleOffset.currentText)+float(offset))) # show nozzle offset after adjustment
         octopiclient.gcode(command='M500')
 
     def requestEEPROMProbeOffset(self):
