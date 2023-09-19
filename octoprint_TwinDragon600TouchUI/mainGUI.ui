@@ -1993,7 +1993,7 @@ QScrollBar::down-arrow:vertical {
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>309</width>
+         <width>778</width>
          <height>900</height>
         </rect>
        </property>
@@ -8405,11 +8405,67 @@ QPushButton:focus {
        <bool>true</bool>
       </property>
      </widget>
+     <widget class="QLabel" name="feedRateLabelControlPage_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>320</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Current Z Offset: </string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="currentNozzleOffset">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>320</y>
+        <width>211</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Gotham</family>
+        <pointsize>16</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
      <zorder>feedRateLabelControlPage_3</zorder>
      <zorder>nozzleOffsetDoubleSpinBox</zorder>
      <zorder>nozzleOffsetSetButton</zorder>
      <zorder>nozzleOffsetBackButton</zorder>
      <zorder>printPreviewSelected_2</zorder>
+     <zorder>feedRateLabelControlPage_4</zorder>
+     <zorder>currentNozzleOffset</zorder>
     </widget>
     <widget class="QWidget" name="printLocationPage">
      <widget class="QPushButton" name="fromUsbButton">

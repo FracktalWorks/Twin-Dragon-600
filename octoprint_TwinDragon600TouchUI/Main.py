@@ -378,25 +378,26 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         else:
             self.stackedWidget.setCurrentWidget(self.homePage)
 
-        # # Text Input events
+        # Text Input events
         self.wifiPasswordLineEdit.clicked_signal.connect(lambda: self.startKeyboard(self.wifiPasswordLineEdit.setText))
-        self.ethStaticIpLineEdit.clicked_signal.connect(lambda: self.ethShowKeyboard(self.ethStaticIpLineEdit))
-        self.ethStaticGatewayLineEdit.clicked_signal.connect(lambda: self.ethShowKeyboard(self.ethStaticGatewayLineEdit))
+        self.staticIPLineEdit.clicked_signal.connect(lambda: self.staticIPShowKeyboard(self.staticIPLineEdit))
+        self.staticIPGatewayLineEdit.clicked_signal.connect(lambda: self.staticIPShowKeyboard(self.staticIPGatewayLineEdit))
+        self.staticIPNameServerLineEdit.clicked_signal.connect(lambda: self.staticIPShowKeyboard(self.staticIPNameServerLineEdit))
 
         # Button Events:
 
         # Home Screen:
-        self.stopButton.setDisabled()
+        self.stopButton.setDisabled(True)
         # self.menuButton.pressed.connect(self.keyboardButton)
         self.menuButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.MenuPage))
-        self.controlButton.setDisabled()
-        self.playPauseButton.setDisabled()
+        self.controlButton.setDisabled(True)
+        self.playPauseButton.setDisabled(True)
 
         # MenuScreen
         self.menuBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.homePage))
-        self.menuControlButton.setDisabled()
-        self.menuPrintButton.setDisabled()
-        self.menuCalibrateButton.setDisabled()
+        self.menuControlButton.setDisabled(True)
+        self.menuPrintButton.setDisabled(True)
+        self.menuCalibrateButton.setDisabled(True)
         self.menuSettingsButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
 
 
@@ -407,8 +408,8 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             lambda: self.stackedWidget.setCurrentWidget(self.displaySettingsPage))
         self.settingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.MenuPage))
         self.pairPhoneButton.pressed.connect(self.pairPhoneApp)
-        self.OTAButton.setDisabled()
-        self.versionButton.setDisabled()
+        self.OTAButton.setDisabled(True)
+        self.versionButton.setDisabled(True)
 
         self.restartButton.pressed.connect(self.askAndReboot)
         self.restoreFactoryDefaultsButton.pressed.connect(self.restoreFactoryDefaults)
@@ -417,7 +418,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         # Network settings page
         self.networkInfoButton.pressed.connect(self.networkInfo)
         self.configureWifiButton.pressed.connect(self.wifiSettings)
-        self.configureEthButton.pressed.connect(self.ethSettings)
+        self.configureStaticIPButton.pressed.connect(self.staticIPSettings)
         self.networkSettingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
 
         # Network Info Page
@@ -431,37 +432,39 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
             lambda: self.stackedWidget.setCurrentWidget(self.networkSettingsPage))
         self.wifiSettingsDoneButton.pressed.connect(self.acceptWifiSettings)
 
-        # Ethernet setings page
-        self.ethStaticCheckBox.stateChanged.connect(self.ethStaticChanged)
-        # self.ethStaticCheckBox.stateChanged.connect(lambda: self.ethStaticSettings.setVisible(self.ethStaticCheckBox.isChecked()))
-        self.ethStaticIpKeyboardButton.pressed.connect(lambda: self.ethShowKeyboard(self.ethStaticIpLineEdit))
-        self.ethStaticGatewayKeyboardButton.pressed.connect(lambda: self.ethShowKeyboard(self.ethStaticGatewayLineEdit))
-        self.ethSettingsDoneButton.pressed.connect(self.ethSaveStaticNetworkInfo)
-        self.ethSettingsCancelButton.pressed.connect(
+        # Static IP settings page
+        self.staticIPKeyboardButton.pressed.connect(lambda: self.staticIPShowKeyboard(self.staticIPLineEdit))
+        self.staticIPGatewayKeyboardButton.pressed.connect(
+            lambda: self.staticIPShowKeyboard(self.staticIPGatewayLineEdit))
+        self.staticIPNameServerKeyboardButton.pressed.connect(
+            lambda: self.staticIPShowKeyboard(self.staticIPNameServerLineEdit))
+        self.staticIPSettingsDoneButton.pressed.connect(self.staticIPSaveStaticNetworkInfo)
+        self.staticIPSettingsCancelButton.pressed.connect(
             lambda: self.stackedWidget.setCurrentWidget(self.networkSettingsPage))
+        self.deleteStaticIPSettingsButton.pressed.connect(self.deleteStaticIPSettings)
 
-        # Display settings
-        self.rotateDisplay.pressed.connect(self.showRotateDisplaySettingsPage)
-        self.calibrateTouch.pressed.connect(self.touchCalibration)
+        # # Display settings
+        # self.rotateDisplay.pressed.connect(self.showRotateDisplaySettingsPage)
+        # self.calibrateTouch.pressed.connect(self.touchCalibration)
         self.displaySettingsBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
-
-        # Rotate Display Settings
-        self.rotateDisplaySettingsDoneButton.pressed.connect(self.saveRotateDisplaySettings)
-        self.rotateDisplaySettingsCancelButton.pressed.connect(
-            lambda: self.stackedWidget.setCurrentWidget(self.displaySettingsPage))
+        #
+        # # Rotate Display Settings
+        # self.rotateDisplaySettingsDoneButton.pressed.connect(self.saveRotateDisplaySettings)
+        # self.rotateDisplaySettingsCancelButton.pressed.connect(
+        #     lambda: self.stackedWidget.setCurrentWidget(self.displaySettingsPage))
 
         # QR Code
         self.QRCodeBackButton.pressed.connect(lambda: self.stackedWidget.setCurrentWidget(self.settingsPage))
 
         # SoftwareUpdatePage
-        self.softwareUpdateBackButton.setDisabled()
-        self.performUpdateButton.setDisabled()
+        self.softwareUpdateBackButton.setDisabled(True)
+        self.performUpdateButton.setDisabled(True)
 
         # Firmware update page
-        self.firmwareUpdateBackButton.setDisabled()
+        self.firmwareUpdateBackButton.setDisabled(True)
 
         # Filament sensor toggle
-        self.toggleFilamentSensorButton.setDisabled()
+        self.toggleFilamentSensorButton.setDisabled(True)
 
 
     def handleStartupError(self):
@@ -1965,7 +1968,9 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         :param offset:
         :return:
         '''
-        self.nozzleOffsetDoubleSpinBox.setValue(float(offset))
+        self.CurrentNozzleOffset.setText(str(float(offset)))
+        self.nozzleOffsetDoubleSpinBox.setValue(0)
+
 
     def setZProbeOffset(self, offset):
         '''
@@ -1974,7 +1979,9 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         #TODO can make this simpler, asset the offset value to string float to begin with instead of doing confitionals
         '''
 
-        octopiclient.gcode(command='M851 Z{}'.format(offset))
+        octopiclient.gcode(command='M851 Z{}'.format(offset)) #M851 only ajusts nozzle offset
+        self.nozzleOffsetDoubleSpinBox.setValue(0)
+        self.currentNozzleOffset.setTest(str(float(self.currentNozzleOffset.currentTest)+float(offset))) # show nozzle offset after adjustment
         octopiclient.gcode(command='M500')
 
     def requestEEPROMProbeOffset(self):
@@ -2002,16 +2009,16 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         self.stackedWidget.setCurrentWidget(self.toolOffsetZpage)
 
     def setToolOffsetX(self):
-        octopiclient.gcode(command='M218 T1 X{}'.format(self.toolOffsetXDoubleSpinBox.value()))  # restore eeprom settings to get Z home offset, mesh bed leveling back
+        octopiclient.gcode(command='M218 T1 X{}'.format(round(self.toolOffsetXDoubleSpinBox.value(),2)))  # restore eeprom settings to get Z home offset, mesh bed leveling back
         octopiclient.gcode(command='M500')
 
     def setToolOffsetY(self):
-        octopiclient.gcode(command='M218 T1 Y{}'.format(self.toolOffsetYDoubleSpinBox.value()))  # restore eeprom settings to get Z home offset, mesh bed leveling back
+        octopiclient.gcode(command='M218 T1 Y{}'.format(round(self.toolOffsetYDoubleSpinBox.value(),2)))  # restore eeprom settings to get Z home offset, mesh bed leveling back
         octopiclient.gcode(command='M500')
         octopiclient.gcode(command='M500')
 
     def setToolOffsetZ(self):
-        octopiclient.gcode(command='M218 T1 Z{}'.format(self.toolOffsetZDoubleSpinBox.value()))  # restore eeprom settings to get Z home offset, mesh bed leveling back
+        octopiclient.gcode(command='M218 T1 Z{}'.format(round(self.toolOffsetZDoubleSpinBox.value(),2)))  # restore eeprom settings to get Z home offset, mesh bed leveling back
         octopiclient.gcode(command='M500')
 
     def getToolOffset(self, M218Data):
