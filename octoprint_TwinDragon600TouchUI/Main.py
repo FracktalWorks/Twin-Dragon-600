@@ -1979,9 +1979,9 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         #TODO can make this simpler, asset the offset value to string float to begin with instead of doing confitionals
         '''
 
-        octopiclient.gcode(command='M851 Z{}'.format(offset)) #M851 only ajusts nozzle offset
+        octopiclient.gcode(command='M851 Z{}'.format(-offset)) #M851 only ajusts nozzle offset
         self.nozzleOffsetDoubleSpinBox.setValue(0)
-        self.currentNozzleOffset.setText(str(float(self.currentNozzleOffset.text())+float(offset))) # show nozzle offset after adjustment
+        self.currentNozzleOffset.setText(str(float(self.currentNozzleOffset.text())-float(offset))) # show nozzle offset after adjustment
         octopiclient.gcode(command='M500')
 
     def requestEEPROMProbeOffset(self):
