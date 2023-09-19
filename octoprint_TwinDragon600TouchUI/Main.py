@@ -1968,7 +1968,7 @@ class MainUiClass(QtWidgets.QMainWindow, mainGUI.Ui_MainWindow):
         :param offset:
         :return:
         '''
-        self.CurrentNozzleOffset.setText(str(float(offset)))
+        self.currentNozzleOffset.setText(str(float(offset)))
         self.nozzleOffsetDoubleSpinBox.setValue(0)
 
 
