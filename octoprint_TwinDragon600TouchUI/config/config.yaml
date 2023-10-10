@@ -32,6 +32,8 @@ plugins:
     _config_version: 1
   klipper:
     _config_version: 4
+    configuration:
+      confirm_reload: false
     connection:
       replace_connection_panel: false
   softwareupdate:
@@ -51,6 +53,10 @@ serial:
   disconnectOnErrors: false
   ignoreErrorsFromFirmware: true
   port: /tmp/printer
+  timeout:
+    communication: 60.0
+    communicationBusy: 10.0
+    connection: 30.0
 server:
   commands:
     serverRestartCommand: sudo service octoprint restart
@@ -65,7 +71,6 @@ server:
   seenWizards:
     backup: null
     corewizard: 4
-    tracking: null
 temperature:
   profiles:
   - bed: 100
